@@ -45,14 +45,14 @@
 };
 const LOGO_SRC = 'images/logo.webp';
 
-const TG_TOKEN = '8640996270:AAHfGeVhvMwBkqa4GUu9ueIyUOc8tr0H3O4';
-const TG_CHAT  = '322274101';
+// TG handled by Cloudflare Worker
+// TG_CHAT handled by Cloudflare Worker
 function sendTelegram(text) {
-  return fetch('https://api.telegram.org/bot'+TG_TOKEN+'/sendMessage', {
+  return fetch('https://hushnow-notify.amirhmz1996.workers.dev', {
     method: 'POST',
     headers: {'Content-Type': 'application/json'},
-    body: JSON.stringify({ chat_id: TG_CHAT, text: text, parse_mode: 'HTML' })
-  }).catch(function(e){ console.log('Telegram error:', e); });
+    body: JSON.stringify({ message: text })
+  }).catch(function(e){ console.log('Notification error:', e); });
 }
 
 document.getElementById('resBgImg').src = LOGO_SRC;
@@ -187,6 +187,33 @@ document.getElementById('menuTabs').querySelectorAll('.menu-tab').forEach(btn =>
     renderMenu(btn.dataset.cat);
   });
 });
+// ─── LOCALSTORAGE PERSISTENCE ─────────────────────────────────────────────
+function saveToStorage() {
+  try {
+    localStorage.setItem('hn_menu', JSON.stringify(menuData));
+    localStorage.setItem('hn_hours', JSON.stringify(hoursData));
+  } catch(e) { console.log('Storage error:', e); }
+}
+
+function loadFromStorage() {
+  try {
+    var savedMenu = localStorage.getItem('hn_menu');
+    var savedHours = localStorage.getItem('hn_hours');
+    if(savedMenu) {
+      var parsed = JSON.parse(savedMenu);
+      Object.keys(parsed).forEach(function(cat) {
+        if(menuData[cat]) menuData[cat] = parsed[cat];
+      });
+    }
+    if(savedHours) {
+      var parsedH = JSON.parse(savedHours);
+      parsedH.forEach(function(h, i) {
+        if(hoursData[i]) hoursData[i].time = h.time;
+      });
+    }
+  } catch(e) { console.log('Load error:', e); }
+}
+loadFromStorage();
 renderMenu('colazione');
 
 const hoursData = [
@@ -548,9 +575,11 @@ function saveMenuAdmin(lang) {
     if(menuData[cat] && menuData[cat][idx]) menuData[cat][idx].price = el.value;
   });
   renderMenu(currentAdminCat);
+  saveToStorage();
   var saved = document.getElementById('saved-menu-'+lang);
   saved.style.opacity='1';
   setTimeout(function(){ saved.style.opacity='0'; }, 2500);
+  // Changes saved to localStorage ✓
 }
 
 function addMenuItem(cat, lang) {
@@ -585,6 +614,7 @@ function saveHoursAdmin() {
     hoursData[i].time = (open && close) ? open + ' – ' + close : '';
   });
   renderHours();
+  saveToStorage();
   const saved = document.getElementById('saved-hours');
   saved.style.opacity = '1';
   setTimeout(() => saved.style.opacity = '0', 2500);
