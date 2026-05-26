@@ -120,7 +120,7 @@
     .hero-eyebrow{font-size:0.65rem;letter-spacing:0.38em;text-transform:uppercase;color:var(--gold);margin-bottom:1.6rem;animation:fadeUp 1s 2.4s both;}
     .hero-title{font-family:'Josefin Sans',sans-serif;font-size:clamp(2.8rem,7vw,6rem);font-weight:300;line-height:1.08;letter-spacing:0.06em;color:var(--white);animation:fadeUp 1s 2.5s both;}
     .hero-title em{font-style:italic;color:var(--gold2);}
-    .hero-sep{width:80px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:1.8rem auto;animation:fadeUp 1s 2.6s both;}
+    .hero-sep{width:60px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:1.8rem auto;animation:fadeUp 1s 2.6s both;}
     .hero-sub{font-size:0.72rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--white-dim);animation:fadeUp 1s 2.7s both;}
     .hero-ctas{margin-top:2.6rem;display:flex;gap:1.2rem;justify-content:center;flex-wrap:wrap;animation:fadeUp 1s 2.9s both;}
     .scroll-hint{position:absolute;bottom:2.2rem;left:50%;transform:translateX(-50%);z-index:2;animation:bounce 2s 3.5s infinite;}
@@ -308,14 +308,14 @@
           Hush Now is more than a café: it is an experience. A space where elegance and pleasure blend from the first morning coffee to a refined lunch, to a cocktail experience that turns every moment into something unique.
         </p> <div class="pillars"> <span class="pillar" data-it="Colazione" data-en="Breakfast">Colazione</span> <span class="pillar" data-it="Pranzo" data-en="Lunch">Pranzo</span> <span class="pillar" data-it="Aperitivo" data-en="Aperitif">Aperitivo</span> <span class="pillar" data-it="Cocktail" data-en="Cocktails">Cocktail</span> </div> </div> <div class="about-img-wrap"><div class="about-img-inner"><img id="aboutImg" src="" alt="HUSHNOW CAFÉ °5"/></div></div> </div> </div>
 </section> <section id="menu" class="page-section" style="background:var(--bg2);"> <div class="section-inner"> <p class="section-label" data-it="Il Menù" data-en="Our Menu">Il Menù</p> <h2 class="section-title" data-it="Sapori che <em>ispirano</em>" data-en="Flavours that <em>inspire</em>">Sapori che <em>ispirano</em></h2> <div class="gold-line"></div> <div class="menu-tabs">
-        <button class="menu-tab active" onclick="renderMenu('caffetteria',this)" data-it="Caffetteria" data-en="Coffee Bar" data-de="Kaffeebar">Caffetteria</button>
-        <button class="menu-tab" onclick="renderMenu('dolce',this)" data-it="Dolce" data-en="Sweet" data-de="Süßes">Dolce</button>
-        <button class="menu-tab" onclick="renderMenu('cucina',this)" data-it="Cucina" data-en="Kitchen" data-de="Küche">Cucina</button>
-        <button class="menu-tab" onclick="renderMenu('cocktails',this)" data-it="Cocktails" data-en="Cocktails" data-de="Cocktails">Cocktails</button>
-        <button class="menu-tab" onclick="renderMenu('gin',this)" data-it="Gin Tonic" data-en="Gin Tonic" data-de="Gin Tonic">Gin Tonic</button>
-        <button class="menu-tab" onclick="renderMenu('vini',this)" data-it="Vini" data-en="Wines" data-de="Weine">Vini</button>
-        <button class="menu-tab" onclick="renderMenu('spirits',this)" data-it="Spirits" data-en="Spirits" data-de="Spirituosen">Spirits</button>
-        <button class="menu-tab" onclick="renderMenu('birre',this)" data-it="Birre" data-en="Beers" data-de="Biere">Birre</button>
+        <button class="menu-tab active" onclick="renderMenu('caffetteria',this)" data-it="Caffetteria" data-en="Coffee Bar" data-de="Kaffeebar" data-es="Cafetería" data-fr="Café">Caffetteria</button>
+        <button class="menu-tab" onclick="renderMenu('dolce',this)" data-it="Dolce" data-en="Sweet" data-de="Süßes" data-es="Dulce" data-fr="Sucré">Dolce</button>
+        <button class="menu-tab" onclick="renderMenu('cucina',this)" data-it="Cucina" data-en="Kitchen" data-de="Küche" data-es="Cocina" data-fr="Cuisine">Cucina</button>
+        <button class="menu-tab" onclick="renderMenu('cocktails',this)" data-it="Cocktails" data-en="Cocktails" data-de="Cocktails" data-es="Cócteles" data-fr="Cocktails">Cocktails</button>
+        <button class="menu-tab" onclick="renderMenu('gin_tonics',this)" data-it="Gin Tonic" data-en="Gin Tonic" data-de="Gin Tonic" data-es="Gin Tonic" data-fr="Gin Tonic">Gin Tonic</button>
+        <button class="menu-tab" onclick="renderMenu('vini',this)" data-it="Vini" data-en="Wines" data-de="Weine" data-es="Vinos" data-fr="Vins">Vini</button>
+        <button class="menu-tab" onclick="renderMenu('spirits',this)" data-it="Spirits" data-en="Spirits" data-de="Spirituosen" data-es="Destilados" data-fr="Spiritueux">Spirits</button>
+        <button class="menu-tab" onclick="renderMenu('bevande',this)" data-it="Bevande" data-en="Drinks" data-de="Getränke" data-es="Bebidas" data-fr="Boissons">Bevande</button>
       </div> <div class="menu-grid" id="menuGrid"></div>  </div>
 </section> <section id="hours" class="page-section"> <div class="section-inner"> <p class="section-label" data-it="Orari di Apertura" data-en="Opening Hours">Orari di Apertura</p> <h2 class="section-title" data-it="Quando <em>siamo</em> aperti" data-en="When we <em>are</em> open">Quando <em>siamo</em> aperti</h2> <div class="gold-line"></div> <div class="hours-grid" id="hoursGrid"></div> </div>
 </section> <section id="reservation" class="page-section" style="position:relative;overflow:hidden;"> <img id="resBgImg" src="" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;filter:grayscale(1) brightness(0.12);z-index:0;"/> <div class="section-inner" style="position:relative;z-index:1;"> <p class="section-label" data-it="Prenotazione Online" data-en="Online Reservation">Prenotazione Online</p> <h2 class="section-title" data-it="Riserva il tuo <em>tavolo</em>" data-en="Reserve your <em>table</em>">Riserva il tuo <em>tavolo</em></h2> <div class="gold-line"></div> <div class="res-form"> <form id="resForm" onsubmit="submitReservation(event)"> <div class="form-row"> <div><label data-it="Nome e Cognome" data-en="Full Name">Nome e Cognome</label><input type="text" id="resName" placeholder="Mario Rossi" required/></div> <div><label data-it="Email o Telefono" data-en="Email or Phone">Email o Telefono</label><input type="text" id="resContact" placeholder="+39 333 000 0000" required/></div> </div> <div class="form-row"> <div><label data-it="Data" data-en="Date">Data</label><input type="date" id="resDate" required/></div> <div><label data-it="Orario" data-en="Time">Orario</label> <select id="resTime" required><option value="" disabled selected>—</option> <option>08:00</option><option>08:30</option><option>09:00</option><option>10:00</option> <option>12:00</option><option>12:30</option><option>13:00</option><option>14:00</option> <option>17:00</option><option>18:00</option><option>19:00</option><option>20:00</option></select> </div> </div> <div class="form-row"> <div><label data-it="Persone" data-en="Guests">Persone</label> <select id="resGuests" required><option value="" disabled selected>—</option> <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option> <option value="7+">7+</option></select> </div> <div><label data-it="Occasione" data-en="Occasion">Occasione</label> <select id="resOccasion"> <option value="">—</option> <option data-it="Compleanno"   data-en="Birthday"  data-de="Geburtstag">Compleanno</option> <option data-it="Anniversario" data-en="Anniversary" data-de="Jubiläum">Anniversario</option> <option data-it="Business"     data-en="Business"  data-de="Geschäftlich">Business</option> <option data-it="Romantica"    data-en="Romantic"  data-de="Romantisch">Romantica</option> </select> </div> </div> <div class="form-row single"><div><label data-it="Note" data-en="Notes">Note</label><textarea id="resNotes" placeholder="Allergie, richieste..."></textarea></div></div> <button type="submit" class="btn btn-filled" style="margin-top:0.8rem;width:100%;" data-it="Invia Prenotazione" data-en="Send Reservation">Invia Prenotazione</button> </form> <div class="form-confirm" id="formConfirm"> <div class="check-icon">✓</div> <h3 data-it="Prenotazione Inviata!" data-en="Reservation Sent!">Prenotazione Inviata!</h3> <p data-it="Ti contatteremo presto." data-en="We will contact you shortly.">Ti contatteremo presto.</p> <br/><button class="btn btn-outline" onclick="resetForm()" style="margin-top:0.6rem" data-it="Nuova Prenotazione" data-en="New">Nuova Prenotazione</button> </div> </div> </div>
@@ -329,28 +329,28 @@
           <button class="admin-tab" onclick="loadMenuAdmin('dolce','it',this)">Dolce</button>
           <button class="admin-tab" onclick="loadMenuAdmin('cucina','it',this)">Cucina</button>
           <button class="admin-tab" onclick="loadMenuAdmin('cocktails','it',this)">Cocktails</button>
-          <button class="admin-tab" onclick="loadMenuAdmin('gin','it',this)">Gin Tonic</button>
+          <button class="admin-tab" onclick="loadMenuAdmin('gin_tonics','it',this)">Gin Tonic</button>
           <button class="admin-tab" onclick="loadMenuAdmin('vini','it',this)">Vini</button>
           <button class="admin-tab" onclick="loadMenuAdmin('spirits','it',this)">Spirits</button>
-          <button class="admin-tab" onclick="loadMenuAdmin('birre','it',this)">Birre</button>
+          <button class="admin-tab" onclick="loadMenuAdmin('bevande','it',this)">Bevande</button>
         </div> <div id="menuAdminList-it"></div> <button class="admin-add" onclick="addMenuItem(currentAdminCat,'it')">+ Aggiungi voce</button> <br/> <button class="admin-save" onclick="saveMenuAdmin('it')">Salva Modifiche</button> <span class="admin-saved" id="saved-menu-it">✓ Salvato!</span> </div> <div class="admin-section" id="admin-menu-en"> <p style="color:var(--white-dim);font-size:0.75rem;margin-bottom:1.2rem;">Edit names and descriptions in English</p> <div style="display:flex;gap:0.6rem;flex-wrap:wrap;margin-bottom:1.2rem;"> <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:1.2rem;">
           <button class="admin-tab active" onclick="loadMenuAdmin('caffetteria','en',this)">Caffetteria</button>
           <button class="admin-tab" onclick="loadMenuAdmin('dolce','en',this)">Dolce</button>
           <button class="admin-tab" onclick="loadMenuAdmin('cucina','en',this)">Cucina</button>
           <button class="admin-tab" onclick="loadMenuAdmin('cocktails','en',this)">Cocktails</button>
-          <button class="admin-tab" onclick="loadMenuAdmin('gin','en',this)">Gin Tonic</button>
+          <button class="admin-tab" onclick="loadMenuAdmin('gin_tonics','en',this)">Gin Tonic</button>
           <button class="admin-tab" onclick="loadMenuAdmin('vini','en',this)">Vini</button>
           <button class="admin-tab" onclick="loadMenuAdmin('spirits','en',this)">Spirits</button>
-          <button class="admin-tab" onclick="loadMenuAdmin('birre','en',this)">Birre</button>
+          <button class="admin-tab" onclick="loadMenuAdmin('bevande','en',this)">Bevande</button>
         </div> <div id="menuAdminList-en"></div> <button class="admin-add" onclick="addMenuItem(currentAdminCat,'en')">+ Add item</button> <br/> <button class="admin-save" onclick="saveMenuAdmin('en')">Save Changes</button> <span class="admin-saved" id="saved-menu-en">✓ Saved!</span> </div> <div class="admin-section" id="admin-menu-de"> <p style="color:var(--white-dim);font-size:0.75rem;margin-bottom:1.2rem;">Namen und Beschreibungen auf Deutsch bearbeiten</p> <div style="display:flex;gap:0.6rem;flex-wrap:wrap;margin-bottom:1.2rem;"> <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:1.2rem;">
           <button class="admin-tab active" onclick="loadMenuAdmin('caffetteria','de',this)">Caffetteria</button>
           <button class="admin-tab" onclick="loadMenuAdmin('dolce','de',this)">Dolce</button>
           <button class="admin-tab" onclick="loadMenuAdmin('cucina','de',this)">Cucina</button>
           <button class="admin-tab" onclick="loadMenuAdmin('cocktails','de',this)">Cocktails</button>
-          <button class="admin-tab" onclick="loadMenuAdmin('gin','de',this)">Gin Tonic</button>
+          <button class="admin-tab" onclick="loadMenuAdmin('gin_tonics','de',this)">Gin Tonic</button>
           <button class="admin-tab" onclick="loadMenuAdmin('vini','de',this)">Vini</button>
           <button class="admin-tab" onclick="loadMenuAdmin('spirits','de',this)">Spirits</button>
-          <button class="admin-tab" onclick="loadMenuAdmin('birre','de',this)">Birre</button>
+          <button class="admin-tab" onclick="loadMenuAdmin('bevande','de',this)">Bevande</button>
         </div> <div id="menuAdminList-de"></div> <button class="admin-add" onclick="addMenuItem(currentAdminCat,'de')">+ Element hinzufügen</button> <br/> <button class="admin-save" onclick="saveMenuAdmin('de')">Änderungen speichern</button> <span class="admin-saved" id="saved-menu-de">✓ Gespeichert!</span> </div> <div class="admin-section" id="admin-hours-admin"> <p style="color:var(--white-dim);font-size:0.75rem;margin-bottom:1.2rem;">Modifica gli orari. Lascia vuoto per segnare come chiuso.</p> <div id="hoursAdminList"></div> <button class="admin-save" onclick="saveHoursAdmin()">Salva Orari</button> <span class="admin-saved" id="saved-hours">✓ Salvato!</span> </div> <div class="admin-section" id="admin-info-admin"> <p style="color:var(--white-dim);font-size:0.75rem;margin-bottom:1.5rem;">Informazioni generali del caffè</p> <div style="display:grid;gap:1rem;"> <div><div class="admin-label">Indirizzo</div><input type="text" id="ai-address" value="Via Carlo Poerio 20-21, Napoli, Italia 80121"/></div> <div><div class="admin-label">Email</div><input type="text" id="ai-email" value="hushnowcafe.5@gmail.com"/></div> <div><div class="admin-label">Instagram</div><input type="text" id="ai-instagram" value="https://www.instagram.com/hushnowcafe/"/></div> <div><div class="admin-label">Facebook</div><input type="text" id="ai-facebook" value="https://www.facebook.com/profile.php?id=61572115232384"/></div> </div> <button class="admin-save" onclick="saveInfoAdmin()">Salva Info</button> <span class="admin-saved" id="saved-info">✓ Salvato!</span> </div> </div>
 </div> <footer> <span class="footer-logo">HUSHNOW CAFÉ <sup>°5</sup></span> <div class="footer-links"> <a href="#" onclick="showSection('menu');return false;" data-it="Menù" data-en="Menu">Menù</a> <a href="#" onclick="showSection('reservation');return false;" data-it="Prenota" data-en="Book">Prenota</a> <a href="#" onclick="showSection('contact');return false;" data-it="Contatti" data-en="Contact">Contatti</a> <a href="https://www.facebook.com/profile.php?id=61572115232384" target="_blank">Facebook</a> </div> <span style="font-size:0.62rem;color:var(--white-faint);">© 2025 HUSHNOW CAFÉ °5 — Napoli</span>
 </footer> <div id="cookieBanner" style="
@@ -502,154 +502,85 @@ document.querySelectorAll('.nav-links a').forEach(a => {
 
 const menuData = {
   caffetteria: [
-    {it:'Espresso',en:'Espresso',de:'Espresso',dit:'',den:'',dde:'',price:'€1.20'},
-    {it:'Decaffeinato',en:'Decaffeinated',de:'Entkoffeiniert',dit:'',den:'',dde:'',price:'€1.40'},
-    {it:'Cappuccino Classico',en:'Classic Cappuccino',de:'Klassischer Cappuccino',dit:'',den:'',dde:'',price:'€2.20'},
-    {it:'Cappuccino Special',en:'Special Cappuccino',de:'Special Cappuccino',dit:'Deca / Latte di mandorla / Soia / Senza lattosio',den:'Decaf / Almond milk / Soy / Lactose free',dde:'Deka / Mandelmilch / Soja / Laktosefrei',price:'€2.50'},
-    {it:'Latte Macchiato Classico',en:'Classic Latte Macchiato',de:'Klassischer Latte Macchiato',dit:'',den:'',dde:'',price:'€2.00'},
-    {it:'Latte Macchiato Special',en:'Special Latte Macchiato',de:'Special Latte Macchiato',dit:'Deca / Latte di mandorla / Soia / Senza lattosio',den:'Decaf / Almond milk / Soy / Lactose free',dde:'Deka / Mandelmilch / Soja / Laktosefrei',price:'€2.30'},
-    {it:'Americano',en:'Americano',de:'Americano',dit:'',den:'',dde:'',price:'€2.50'},
-    {it:'Ginseng Small / Large',en:'Ginseng Small / Large',de:'Ginseng Klein / Groß',dit:'',den:'',dde:'',price:'€1.80 / 2.50'},
-    {it:'Orzo Small / Large',en:'Barley coffee Small / Large',de:'Gerstenkaffee Klein / Groß',dit:'',den:'',dde:'',price:'€1.80 / 2.50'},
-    {it:'Tè / Infuso Classico / Special',en:'Tea / Infusion Classic / Special',de:'Tee / Aufguss Klassisch / Special',dit:'Servito con biscotti',den:'Served with cookies',dde:'Mit Keksen serviert',price:'€2.50 / 3.00'},
-    {it:'Crema di Caffè',en:'Coffee Cream',de:'Kaffeecreme',dit:'',den:'',dde:'',price:'€2.00'},
-    {it:'Caffè Freddo',en:'Iced Coffee',de:'Eiskaffee',dit:'Da giugno a ottobre',den:'June to October',dde:'Juni bis Oktober',price:'€1.60'},
-    {it:'Cioccolata Calda',en:'Hot Chocolate',de:'Heiße Schokolade',dit:'Bianca, Gianduia, Fondente — con panna +0.50',den:'White, Gianduia, Dark — with cream +0.50',dde:'Weiß, Gianduia, Dunkel — mit Sahne +0.50',price:'€4.00'},
-    {it:'Cioccolata Calda Senza Lattosio',en:'Lactose-Free Hot Chocolate',de:'Laktosefreie heiße Schokolade',dit:'Da ottobre a marzo',den:'October to March',dde:'Oktober bis März',price:'€5.00'},
-    {it:'Diletta',en:'Diletta',de:'Diletta',dit:'Tè Matcha, latte di mandorla schiumato caldo, senza zuccheri aggiunti',den:'Matcha tea, hot steamed almond milk, no added sugar',dde:'Matcha-Tee, heiße aufgeschäumte Mandelmilch, ohne Zuckerzusatz',price:'€6.00'},
-    {it:'Hush Cream',en:'Hush Cream',de:'Hush Cream',dit:'Espresso, latte condensato, latte montato',den:'Espresso, condensed milk, whipped milk',dde:'Espresso, Kondensmilch, aufgeschäumte Milch',price:'€5.00'},
+    {it:'Espresso',en:'Espresso',de:'Espresso',es:'Espresso',fr:'Expresso',dit:'',den:'',dde:'',des:'',dfr:'',price:'€1.20'},
+    {it:'Decaffeinato',en:'Decaffeinated',de:'Entkoffeiniert',es:'Descafeinado',fr:'Décaféiné',dit:'',den:'',dde:'',des:'',dfr:'',price:'€1.40'},
+    {it:'Cappuccino Classico',en:'Classic Cappuccino',de:'Klassischer Cappuccino',es:'Capuchino Clásico',fr:'Cappuccino Classique',dit:'',den:'',dde:'',des:'',dfr:'',price:'€2.20'},
+    {it:'Cappuccino Special',en:'Special Cappuccino',de:'Special Cappuccino',es:'Capuchino Especial',fr:'Cappuccino Spécial',dit:'Deca / Latte di mandorla / Soia / Senza lattosio',den:'Decaf / Almond milk / Soy / Lactose-free',dde:'Entkoffeiniert / Mandelmilch / Soja / Laktosefrei',des:'Desca / Leche de almendra / Soja / Sin lactosa',dfr:'Déca / Lait d\'amande / Soja / Sans lactose',price:'€2.50'},
+    {it:'Latte Macchiato Classico',en:'Classic Latte Macchiato',de:'Klassischer Latte Macchiato',es:'Latte Macchiato Clásico',fr:'Latte Macchiato Classique',dit:'',den:'',dde:'',des:'',dfr:'',price:'€2.00'},
+    {it:'Latte Macchiato Special',en:'Special Latte Macchiato',de:'Special Latte Macchiato',es:'Latte Macchiato Especial',fr:'Latte Macchiato Spécial',dit:'Deca / Latte di mandorla / Soia / Senza lattosio',den:'Decaf / Almond milk / Soy / Lactose-free',dde:'Entkoffeiniert / Mandelmilch / Soja / Laktosefrei',des:'Desca / Leche de almendra / Soja / Sin lactosa',dfr:'Déca / Lait d\'amande / Soja / Sans lactose',price:'€2.30'},
+    {it:'Americano',en:'Americano',de:'Americano',es:'Americano',fr:'Americano',dit:'',den:'',dde:'',des:'',dfr:'',price:'€2.50'},
+    {it:'Ginseng Small / Large',en:'Ginseng Small / Large',de:'Ginseng Klein / Groß',es:'Ginseng Pequeño / Grande',fr:'Ginseng Petit / Grand',dit:'',den:'',dde:'',des:'',dfr:'',price:'€1.80 / 2.50'},
+    {it:'Orzo Small / Large',en:'Barley Coffee Small / Large',de:'Gerstenkaffee Klein / Groß',es:'Café de cebada Pequeño / Grande',fr:"Café d'orge Petit / Grand",dit:'',den:'',dde:'',des:'',dfr:'',price:'€1.80 / 2.50'},
+    {it:'Tè / Infuso Classico / Special',en:'Tea / Infusion Classic / Special',de:'Tee / Aufguss Klassisch / Special',es:'Té / Infusión Clásico / Especial',fr:'Thé / Infusion Classique / Spécial',dit:'Servito con biscotti',den:'Served with biscuits',dde:'Mit Keksen serviert',des:'Servido con galletas',dfr:'Servi avec des biscuits',price:'€2.50 / 3.00'},
+    {it:'Crema di Caffè',en:'Coffee Cream',de:'Kaffeecreme',es:'Crema de café',fr:'Crème de café',dit:'',den:'',dde:'',des:'',dfr:'',price:'€2.00'},
+    {it:'Caffè Freddo',en:'Iced Coffee',de:'Eiskaffee',es:'Café helado',fr:'Café glacé',dit:'Da giugno a ottobre',den:'June to October',dde:'Juni bis Oktober',des:'De junio a octubre',dfr:'Juin à octobre',price:'€1.60'},
+    {it:'Cioccolata Calda',en:'Hot Chocolate',de:'Heiße Schokolade',es:'Chocolate caliente',fr:'Chocolat chaud',dit:'Bianca, Gianduia, Fondente — con panna +0.50',den:'White, Gianduja, Dark — with cream +0.50',dde:'Weiß, Gianduia, Dunkel — mit Sahne +0.50',des:'Blanco, Gianduia, Negro — con nata +0.50',dfr:'Blanc, Gianduia, Noir — avec crème +0.50',price:'€4.00'},
+    {it:'Cioccolata Calda Senza Lattosio',en:'Lactose-Free Hot Chocolate',de:'Laktosefreie heiße Schokolade',es:'Chocolate caliente sin lactosa',fr:'Chocolat chaud sans lactose',dit:'Da ottobre a marzo',den:'October to March',dde:'Oktober bis März',des:'De octubre a marzo',dfr:'Octobre à mars',price:'€5.00'},
+    {it:'Diletta',en:'Diletta',de:'Diletta',es:'Diletta',fr:'Diletta',dit:'Tè Matcha, latte di mandorla, senza zuccheri',den:'Matcha tea, almond milk, sugar-free',dde:'Matcha-Tee, Mandelmilch, zuckerfrei',des:'Té matcha, leche de almendra, sin azúcar',dfr:'Thé matcha, lait d\'amande, sans sucre',price:'€6.00'},
+    {it:'Hush Cream',en:'Hush Cream',de:'Hush Cream',es:'Hush Cream',fr:'Hush Cream',dit:'Espresso, latte condensato, latte montato',den:'Espresso, condensed milk, frothed milk',dde:'Espresso, Kondensmilch, aufgeschäumte Milch',des:'Espresso, leche condensada, leche montada',dfr:'Espresso, lait concentré, lait mousseux',price:'€5.00'},
   ],
   dolce: [
-    {it:'Brioche Vuota / Ripiena',en:'Brioche Plain / Filled',de:'Brioche Leer / Gefüllt',dit:'',den:'',dde:'',price:'€1.80 / 2.00'},
-    {it:'Cornetto Piccolo Vuoto / Pieno',en:'Small Croissant Plain / Filled',de:'Kleines Croissant Leer / Gefüllt',dit:'',den:'',dde:'',price:'€1.30 / 1.60'},
-    {it:'Cornetto Grande Vuoto / Pieno',en:'Large Croissant Plain / Filled',de:'Großes Croissant Leer / Gefüllt',dit:'',den:'',dde:'',price:'€2.00 / 2.20'},
-    {it:'Pane Tostato ai Cereali',en:'Toasted Grain Bread',de:'Geröstetes Körner­brot',dit:'Burro e marmellata / Nutella',den:'Butter and jam / Nutella',dde:'Butter und Marmelade / Nutella',price:'€4.00'},
-    {it:'French Toast Fatti in Casa',en:'Homemade French Toast',de:'Hausgemachter French Toast',dit:'Sciroppo d\'acero / Nutella / Marmellata',den:'Maple syrup / Nutella / Jam',dde:'Ahornsirup / Nutella / Marmelade',price:'€6.00'},
-    {it:'Pancake',en:'Pancake',de:'Pancake',dit:'Sciroppo d\'acero / Nutella / Marmellata',den:'Maple syrup / Nutella / Jam',dde:'Ahornsirup / Nutella / Marmelade',price:'€6.00'},
-    {it:'Le Nostre Crostate',en:'Our Fruit Tarts',de:'Unsere Obstkuchen',dit:'Fatti in casa — Classic €4 / Special €5',den:'Homemade — Classic €4 / Special €5',dde:'Hausgemacht — Classic €4 / Special €5',price:'€4.00 / 5.00'},
-    {it:'I Nostri Cookies',en:'Our Cookies',de:'Unsere Cookies',dit:'Fatti in casa — Classic €3 / Special €4',den:'Homemade — Classic €3 / Special €4',dde:'Hausgemacht — Classic €3 / Special €4',price:'€3.00 / 4.00'},
-    {it:'I Nostri Biscotti',en:'Our Biscuits',de:'Unsere Kekse',dit:'Fatti in casa — Shortbread, Danese, Girella, alla Nocciola',den:'Homemade — Shortbread, Danish, Girella, Hazelnut',dde:'Hausgemacht — Shortbread, Dänisch, Girella, Haselnuss',price:'€1.00 / 1.50 / 2.00'},
-    {it:'Cinnamon Roll',en:'Cinnamon Roll',de:'Zimtschnecke',dit:'Fatti in casa — Solo nel weekend — Classic €4 / Special €5',den:'Homemade — Weekends only — Classic €4 / Special €5',dde:'Hausgemacht — Nur am Wochenende — Classic €4 / Special €5',price:'€4.00 / 5.00'},
-    {it:'Yogurt e la Nostra Granola',en:'Yogurt and Our Granola',de:'Joghurt mit unserer Granola',dit:'Classico €4 / Greco €5 / Special €8',den:'Classic €4 / Greek €5 / Special €8',dde:'Klassisch €4 / Griechisch €5 / Special €8',price:'€4.00 – 8.00'},
-    {it:'Special Double Chocolate',en:'Special Double Chocolate',de:'Special Double Chocolate',dit:'Da ottobre a marzo — Arancia e Cannella €7, Caramello Salato €7, Black Hush €7',den:'October to March — Orange & Cinnamon €7, Salted Caramel €7, Black Hush €7',dde:'Oktober bis März — Orange & Zimt €7, Gesalzenes Karamell €7, Black Hush €7',price:'€7.00'},
+    {it:'Brioche Vuota / Ripiena',en:'Brioche Plain / Filled',de:'Brioche Leer / Gefüllt',es:'Brioche Vacío / Relleno',fr:'Brioche Vide / Fourrée',dit:'',den:'',dde:'',des:'',dfr:'',price:'€1.80 / 2.00'},
+    {it:'Cornetto Piccolo Vuoto / Pieno',en:'Small Croissant Plain / Filled',de:'Kleines Croissant Leer / Gefüllt',es:'Mini Croissant Vacío / Relleno',fr:'Mini Croissant Vide / Fourré',dit:'',den:'',dde:'',des:'',dfr:'',price:'€1.30 / 1.60'},
+    {it:'Cornetto Grande Vuoto / Pieno',en:'Large Croissant Plain / Filled',de:'Großes Croissant Leer / Gefüllt',es:'Croissant Grande Vacío / Relleno',fr:'Grand Croissant Vide / Fourré',dit:'',den:'',dde:'',des:'',dfr:'',price:'€2.00 / 2.20'},
+    {it:'Pane Tostato ai Cereali',en:'Toasted Grain Bread',de:'Geröstetes Körnerbrot',es:'Pan tostado de cereales',fr:'Pain grillé aux céréales',dit:'Burro e marmellata / Nutella',den:'Butter and jam / Nutella',dde:'Butter und Marmelade / Nutella',des:'Mantequilla y mermelada / Nutella',dfr:'Beurre et confiture / Nutella',price:'€4.00'},
+    {it:'French Toast Fatti in Casa',en:'Homemade French Toast',de:'Hausgemachter French Toast',es:'French Toast casero',fr:'Pain perdu maison',dit:"Sciroppo d'acero / Nutella / Marmellata",den:'Maple syrup / Nutella / Jam',dde:'Ahornsirup / Nutella / Marmelade',des:'Sirope de arce / Nutella / Mermelada',dfr:'Sirop d\'érable / Nutella / Confiture',price:'€6.00'},
+    {it:'Pancake',en:'Pancake',de:'Pancake',es:'Tortitas',fr:'Pancakes',dit:"Sciroppo d'acero / Nutella / Marmellata",den:'Maple syrup / Nutella / Jam',dde:'Ahornsirup / Nutella / Marmelade',des:'Sirope de arce / Nutella / Mermelada',dfr:'Sirop d\'érable / Nutella / Confiture',price:'€6.00'},
+    {it:'Le Nostre Crostate',en:'Our Fruit Tarts',de:'Unsere Obstkuchen',es:'Nuestras tartas de frutas',fr:'Nos tartes aux fruits',dit:'Fatti in casa',den:'Homemade',dde:'Hausgemacht',des:'Caseras',dfr:'Faites maison',price:'€4.00 / 5.00'},
+    {it:'I Nostri Cookies',en:'Our Cookies',de:'Unsere Cookies',es:'Nuestras galletas',fr:'Nos cookies',dit:'Fatti in casa',den:'Homemade',dde:'Hausgemacht',des:'Caseras',dfr:'Faits maison',price:'€3.00 / 4.00'},
+    {it:'I Nostri Biscotti',en:'Our Biscuits',de:'Unsere Kekse',es:'Nuestras galletas',fr:'Nos biscuits',dit:'Fatti in casa',den:'Homemade',dde:'Hausgemacht',des:'Caseras',dfr:'Faits maison',price:'€1.00 / 1.50 / 2.00'},
+    {it:'Cinnamon Roll',en:'Cinnamon Roll',de:'Zimtschnecke',es:'Rollo de canela',fr:'Roulé à la cannelle',dit:'Solo nel weekend',den:'Weekends only',dde:'Nur am Wochenende',des:'Solo fines de semana',dfr:'Week-end uniquement',price:'€4.00 / 5.00'},
+    {it:'Yogurt e la Nostra Granola',en:'Yogurt and Our Granola',de:'Joghurt mit unserer Granola',es:'Yogur con nuestra granola',fr:'Yaourt avec notre granola',dit:'',den:'',dde:'',des:'',dfr:'',price:'€4.00 – 8.00'},
   ],
   cucina: [
-    {it:'Brioche o Cornetto ai Cereali',en:'Brioche or Grain Croissant',de:'Brioche oder Körner-Croissant',dit:'Crema di formaggio, mortadella o prosciutto €7 — Ragù €8',den:'Cheese cream, mortadella or ham €7 — Ragù €8',dde:'Frischkäse, Mortadella oder Schinken €7 — Ragù €8',price:'€7.00 / 8.00'},
-    {it:'15x15 Big Toast',en:'15x15 Big Toast',de:'15x15 Big Toast',dit:'Prosciutto cotto e formaggio €7 / Pancetta e formaggio fumé €8 / Vegetariano €7',den:'Ham and cheese €7 / Smoked pancetta and cheese €8 / Vegetarian €7',dde:'Schinken und Käse €7 / Speck und Räucherkäse €8 / Vegetarisch €7',price:'€7.00 / 8.00'},
-    {it:'Avocado Toast ai Cereali',en:'Grain Avocado Toast',de:'Körner Avocado Toast',dit:'Classico €10 / Special €12',den:'Classic €10 / Special €12',dde:'Klassisch €10 / Special €12',price:'€10.00 / 12.00'},
-    {it:'Croque Hush',en:'Croque Hush',de:'Croque Hush',dit:'15 min cottura — Gratinato con béchamelle al formaggio. Prosciutto cotto e formaggio €8 / Prosciutto, formaggio e blu €8 / Prosciutto, formaggio e miele tartufato €10',den:'15 min cooking — Gratinated with cheese béchamel. Ham & cheese €8 / Ham, cheese & blue €8 / Ham, cheese & truffle honey €10',dde:'15 Min. Garzeit — Mit Käsebéchamel überbacken. Schinken & Käse €8 / Schinken, Käse & Blauschimmel €8 / Schinken, Käse & Trüffelhonig €10',price:'€8.00 / 10.00'},
-    {it:'Insalata del Giorno',en:'Salad of the Day',de:'Tagessalat',dit:'Tonno, uovo sodo, feta, salmone, patate, pollo',den:'Tuna, hard-boiled egg, feta, salmon, potatoes, chicken',dde:'Thunfisch, gekochtes Ei, Feta, Lachs, Kartoffeln, Hähnchen',price:'€8.00 / 10.00 / 12.00'},
-    {it:'Piatto o Zuppa del Giorno',en:'Dish or Soup of the Day',de:'Tagesgericht oder Suppe',dit:'',den:'',dde:'',price:'€8.00 / 10.00 / 12.00'},
-    {it:'Aperitivo Gourmet',en:'Gourmet Aperitif',de:'Gourmet-Aperitif',dit:'Min. 2 persone',den:'Min. 2 people',dde:'Min. 2 Personen',price:'€12.00'},
+    {it:'Brioche o Cornetto ai Cereali',en:'Brioche or Grain Croissant',de:'Brioche oder Körner-Croissant',es:'Brioche o Croissant de cereales',fr:'Brioche ou Croissant aux céréales',dit:'Crema di formaggio, mortadella o prosciutto / Ragù',den:'Cream cheese, mortadella or ham / Ragù',dde:'Frischkäse, Mortadella oder Schinken / Ragù',des:'Queso crema, mortadela o jamón / Ragù',dfr:'Fromage frais, mortadelle ou jambon / Ragù',price:'€7.00 / 8.00'},
+    {it:'15 x 15 Big Toast',en:'15 x 15 Big Toast',de:'15 x 15 Big Toast',es:'15 x 15 Big Toast',fr:'15 x 15 Big Toast',dit:'Prosciutto e formaggio / Pancetta e formaggio fumé / Vegetariano',den:'Ham and cheese / Bacon and smoked cheese / Vegetarian',dde:'Schinken und Käse / Speck und Räucherkäse / Vegetarisch',des:'Jamón y queso / Bacon y queso ahumado / Vegetariano',dfr:'Jambon et fromage / Bacon et fromage fumé / Végétarien',price:'€7.00 / 8.00'},
+    {it:'Avocado Toast ai Cereali',en:'Grain Avocado Toast',de:'Körner Avocado Toast',es:'Tostada de aguacate con cereales',fr:'Toast à l\'avocat aux céréales',dit:'',den:'',dde:'',des:'',dfr:'',price:'€10.00 / 12.00'},
+    {it:'Croque Hush',en:'Croque Hush',de:'Croque Hush',es:'Croque Hush',fr:'Croque Hush',dit:'Gratinato con béchamelle al formaggio',den:'Gratinated with cheese béchamel',dde:'Überbacken mit Käse-Béchamel',des:'Gratinado con bechamel de queso',dfr:'Gratiné à la béchamel au fromage',price:'€8.00 / 10.00'},
+    {it:'Insalata del Giorno',en:'Salad of the Day',de:'Tagessalat',es:'Ensalada del día',fr:'Salade du jour',dit:'',den:'',dde:'',des:'',dfr:'',price:'€8.00 / 10.00 / 12.00'},
+    {it:'Aperitivo Gourmet',en:'Gourmet Aperitif',de:'Gourmet-Aperitif',es:'Aperitivo Gourmet',fr:'Apéritif Gourmet',dit:'Min. 2 persone',den:'Min. 2 people',dde:'Mind. 2 Personen',des:'Mín. 2 personas',dfr:'Min. 2 personnes',price:'€12.00'},
   ],
   cocktails: [
-    {it:'Aperol Spritz',en:'Aperol Spritz',de:'Aperol Spritz',dit:'Prosecco Extra Dry, Aperol, Soda',den:'Prosecco Extra Dry, Aperol, Soda',dde:'Prosecco Extra Dry, Aperol, Soda',price:'€8.00'},
-    {it:'Campari Spritz',en:'Campari Spritz',de:'Campari Spritz',dit:'Prosecco Extra Dry, Campari, Soda',den:'Prosecco Extra Dry, Campari, Soda',dde:'Prosecco Extra Dry, Campari, Soda',price:'€8.00'},
-    {it:'Hugo Spritz',en:'Hugo Spritz',de:'Hugo Spritz',dit:'Prosecco Extra Dry, Elderflower, Soda',den:'Prosecco Extra Dry, Elderflower, Soda',dde:'Prosecco Extra Dry, Holunderblüte, Soda',price:'€8.00'},
-    {it:'Amalfi Spritz',en:'Amalfi Spritz',de:'Amalfi Spritz',dit:'Prosecco Extra Dry, Limoncello, Soda',den:'Prosecco Extra Dry, Limoncello, Soda',dde:'Prosecco Extra Dry, Limoncello, Soda',price:'€8.00'},
-    {it:'Falltime Spritz',en:'Falltime Spritz',de:'Falltime Spritz',dit:'Prosecco Extra Dry, Nocillo, Soda',den:'Prosecco Extra Dry, Nocillo, Soda',dde:'Prosecco Extra Dry, Nocillo, Soda',price:'€8.00'},
-    {it:'Black Spritz',en:'Black Spritz',de:'Black Spritz',dit:'Prosecco Extra Dry, Liquirizia, Soda',den:'Prosecco Extra Dry, Liquorice, Soda',dde:'Prosecco Extra Dry, Lakritze, Soda',price:'€8.00'},
-    {it:'Virgin Spritz',en:'Virgin Spritz',de:'Virgin Spritz',dit:'Succo d\'arancia, Bitter analcolico, Soda',den:'Orange juice, Alcohol-free bitter, Soda',dde:'Orangensaft, Alkoholfreier Bitter, Soda',price:'€8.00'},
-    {it:'N°5',en:'N°5',de:'N°5',dit:'Bourbon Four Roses, Lime, Sciroppo di zucchero, Campari',den:'Bourbon Four Roses, Lime, Sugar syrup, Campari',dde:'Bourbon Four Roses, Limette, Zuckersirup, Campari',price:'€10.00'},
-    {it:'Exotic Vesuvius',en:'Exotic Vesuvius',de:'Exotic Vesuvius',dit:'Passoa, Gin Vesuvius, Lime, Top Schweppes Lemon',den:'Passoa, Gin Vesuvius, Lime, Top Schweppes Lemon',dde:'Passoa, Gin Vesuvius, Limette, Top Schweppes Lemon',price:'€10.00'},
-    {it:'Mr Hush',en:'Mr Hush',de:'Mr Hush',dit:'Tequila bianca, Tequila invecchiata, Triplesec, Lime, Sciroppo di zucchero, Frutto della passione',den:'White tequila, Aged tequila, Triple sec, Lime, Sugar syrup, Passion fruit',dde:'Weißer Tequila, Gereifter Tequila, Triple Sec, Limette, Zuckersirup, Maracuja',price:'€12.00'},
-    {it:'Boulevardier',en:'Boulevardier',de:'Boulevardier',dit:'Whiskey, Vermouth Rosso, Campari',den:'Whiskey, Red Vermouth, Campari',dde:'Whiskey, Roter Wermut, Campari',price:'€10.00'},
-    {it:'Americano',en:'Americano',de:'Americano',dit:'Vermouth Rosso, Campari, Soda',den:'Red Vermouth, Campari, Soda',dde:'Roter Wermut, Campari, Soda',price:'€9.00'},
-    {it:'Old Fashioned',en:'Old Fashioned',de:'Old Fashioned',dit:'Bourbon, Zucchero, Angostura, Soda',den:'Bourbon, Sugar, Angostura, Soda',dde:'Bourbon, Zucker, Angostura, Soda',price:'€9.00'},
-    {it:'Margarita',en:'Margarita',de:'Margarita',dit:'Tequila, Triple Sec, Lime',den:'Tequila, Triple Sec, Lime',dde:'Tequila, Triple Sec, Limette',price:'€9.00'},
-    {it:'Negroni',en:'Negroni',de:'Negroni',dit:'Gin, Vermouth Rosso, Campari',den:'Gin, Red Vermouth, Campari',dde:'Gin, Roter Wermut, Campari',price:'€9.00'},
-    {it:'Martini Dry',en:'Martini Dry',de:'Martini Dry',dit:'Gin, Dry Vermouth',den:'Gin, Dry Vermouth',dde:'Gin, Trockener Wermut',price:'€9.00'},
-    {it:'Paloma',en:'Paloma',de:'Paloma',dit:'Tequila, Soda al pompelmo, Lime, Sale',den:'Tequila, Grapefruit soda, Lime, Salt',dde:'Tequila, Grapefruitsoda, Limette, Salz',price:'€9.00'},
-    {it:'Gin Tonic 0.0',en:'Gin Tonic 0.0',de:'Gin Tonic 0.0',dit:'Gin Tanqueray 0.0',den:'Gin Tanqueray 0.0',dde:'Gin Tanqueray 0.0',price:'€9.00'},
-    {it:'Shirley Temple',en:'Shirley Temple',de:'Shirley Temple',dit:'Ginger Ale, Granatina',den:'Ginger Ale, Grenadine',dde:'Ginger Ale, Grenadine',price:'€8.00'},
-    {it:'Virgin Paloma',en:'Virgin Paloma',de:'Virgin Paloma',dit:'Succo di lime, Soda al pompelmo rosa, Sciroppo d\'agave, Sale',den:'Lime juice, Pink grapefruit soda, Agave syrup, Salt',dde:'Limettensaft, Rosa Grapefruitsoda, Agavensirup, Salz',price:'€8.00'},
+    {it:'Aperol Spritz',en:'Aperol Spritz',de:'Aperol Spritz',es:'Aperol Spritz',fr:'Aperol Spritz',dit:'Prosecco Extra Dry, Aperol, Soda',den:'Prosecco Extra Dry, Aperol, Soda',dde:'Prosecco Extra Dry, Aperol, Soda',des:'Prosecco Extra Dry, Aperol, Soda',dfr:'Prosecco Extra Dry, Aperol, Soda',price:'€8.00'},
+    {it:'Campari Spritz',en:'Campari Spritz',de:'Campari Spritz',es:'Campari Spritz',fr:'Campari Spritz',dit:'Prosecco Extra Dry, Campari, Soda',den:'Prosecco Extra Dry, Campari, Soda',dde:'Prosecco Extra Dry, Campari, Soda',des:'Prosecco Extra Dry, Campari, Soda',dfr:'Prosecco Extra Dry, Campari, Soda',price:'€8.00'},
+    {it:'Hugo Spritz',en:'Hugo Spritz',de:'Hugo Spritz',es:'Hugo Spritz',fr:'Hugo Spritz',dit:'Prosecco Extra Dry, Fiori di Sambuco, Soda',den:'Prosecco Extra Dry, Elderflower, Soda',dde:'Prosecco Extra Dry, Holunderblüte, Soda',des:'Prosecco Extra Dry, Flor de saúco, Soda',dfr:'Prosecco Extra Dry, Fleur de sureau, Soda',price:'€8.00'},
+    {it:'Amalfi Spritz',en:'Amalfi Spritz',de:'Amalfi Spritz',es:'Amalfi Spritz',fr:'Amalfi Spritz',dit:'Prosecco Extra Dry, Limoncello, Soda',den:'Prosecco Extra Dry, Limoncello, Soda',dde:'Prosecco Extra Dry, Limoncello, Soda',des:'Prosecco Extra Dry, Limoncello, Soda',dfr:'Prosecco Extra Dry, Limoncello, Soda',price:'€8.00'},
+    {it:'Falltime Spritz',en:'Falltime Spritz',de:'Falltime Spritz',es:'Falltime Spritz',fr:'Falltime Spritz',dit:'Prosecco Extra Dry, Nocillo, Soda',den:'Prosecco Extra Dry, Walnut Liqueur, Soda',dde:'Prosecco Extra Dry, Walnusslikör, Soda',des:'Prosecco Extra Dry, Licor de nuez, Soda',dfr:'Prosecco Extra Dry, Liqueur de noix, Soda',price:'€8.00'},
+    {it:'Black Spritz',en:'Black Spritz',de:'Black Spritz',es:'Black Spritz',fr:'Black Spritz',dit:'Prosecco Extra Dry, Liquirizia, Soda',den:'Prosecco Extra Dry, Liquorice, Soda',dde:'Prosecco Extra Dry, Lakritze, Soda',des:'Prosecco Extra Dry, Regaliz, Soda',dfr:'Prosecco Extra Dry, Réglisse, Soda',price:'€8.00'},
+    {it:'Boulevardier',en:'Boulevardier',de:'Boulevardier',es:'Boulevardier',fr:'Boulevardier',dit:'Whiskey, Vermouth Rosso, Campari',den:'Whiskey, Red Vermouth, Campari',dde:'Whiskey, Roter Wermut, Campari',des:'Whiskey, Vermut rojo, Campari',dfr:'Whiskey, Vermouth rouge, Campari',price:'€10.00'},
+    {it:'Americano',en:'Americano',de:'Americano',es:'Americano',fr:'Américano',dit:'Vermouth Rosso, Campari, Soda',den:'Red Vermouth, Campari, Soda',dde:'Roter Wermut, Campari, Soda',des:'Vermut rojo, Campari, Soda',dfr:'Vermouth rouge, Campari, Soda',price:'€9.00'},
+    {it:'Old Fashioned',en:'Old Fashioned',de:'Old Fashioned',es:'Old Fashioned',fr:'Old Fashioned',dit:'Bourbon, Zucchero, Angostura, Soda',den:'Bourbon, Sugar, Angostura, Soda',dde:'Bourbon, Zucker, Angostura, Soda',des:'Bourbon, Azúcar, Angostura, Soda',dfr:'Bourbon, Sucre, Angostura, Soda',price:'€9.00'},
   ],
-  gin: [
-    {it:'Tanqueray',en:'Tanqueray',de:'Tanqueray',dit:'London Dry',den:'London Dry',dde:'London Dry',price:'€8.00'},
-    {it:'Plymouth',en:'Plymouth',de:'Plymouth',dit:'Inghilterra, Plymouth Gin',den:'England, Plymouth Gin',dde:'England, Plymouth Gin',price:'€8.00'},
-    {it:'Gin Mare',en:'Gin Mare',de:'Gin Mare',dit:'Spagna',den:'Spain',dde:'Spanien',price:'€9.00'},
-    {it:'Bombay',en:'Bombay',de:'Bombay',dit:'Inghilterra',den:'England',dde:'England',price:'€9.00'},
-    {it:'Hendrick\'s',en:'Hendrick\'s',de:'Hendrick\'s',dit:'Scozia',den:'Scotland',dde:'Schottland',price:'€10.00'},
-    {it:'Roku',en:'Roku',de:'Roku',dit:'Giappone',den:'Japan',dde:'Japan',price:'€10.00'},
-    {it:'Vesuvius',en:'Vesuvius',de:'Vesuvius',dit:'Campania',den:'Campania',dde:'Kampanien',price:'€12.00'},
+  gin_tonics: [
+    {it:'Tanqueray 🥃',en:'Tanqueray 🥃',de:'Tanqueray 🥃',es:'Tanqueray 🥃',fr:'Tanqueray 🥃',dit:'London Dry',den:'London Dry',dde:'London Dry',des:'London Dry',dfr:'London Dry',price:'€8.00'},
+    {it:'Gin Mare 🥃',en:'Gin Mare 🥃',de:'Gin Mare 🥃',es:'Gin Mare 🥃',fr:'Gin Mare 🥃',dit:'Spagna',den:'Spain',dde:'Spanien',des:'España',dfr:'Espagne',price:'€9.00'},
+    {it:"Hendrick's 🥃",en:"Hendrick's 🥃",de:"Hendrick's 🥃",es:"Hendrick's 🥃",fr:"Hendrick's 🥃",dit:'Scozia',den:'Scotland',dde:'Schottland',des:'Escocia',dfr:'Écosse',price:'€10.00'},
+    {it:'Vesuvius 🥃',en:'Vesuvius 🥃',de:'Vesuvius 🥃',es:'Vesuvius 🥃',fr:'Vesuvius 🥃',dit:'Campania',den:'Campania',dde:'Kampanien',des:'Campania',dfr:'Campanie',price:'€12.00'},
   ],
   vini: [
-    {it:'Falanghina',en:'Falanghina',de:'Falanghina',dit:'Vino Bianco',den:'White Wine',dde:'Weißwein',price:'€6 / 25'},
-    {it:'Fiano',en:'Fiano',de:'Fiano',dit:'Vino Bianco',den:'White Wine',dde:'Weißwein',price:'€7 / 28'},
-    {it:'Greco di Tufo',en:'Greco di Tufo',de:'Greco di Tufo',dit:'Vino Bianco',den:'White Wine',dde:'Weißwein',price:'€7 / 30'},
-    {it:'Chardonnay',en:'Chardonnay',de:'Chardonnay',dit:'Vino Bianco',den:'White Wine',dde:'Weißwein',price:'€7 / 28'},
-    {it:'Gewürztraminer',en:'Gewürztraminer',de:'Gewürztraminer',dit:'Vino Bianco',den:'White Wine',dde:'Weißwein',price:'€7 / 30'},
-    {it:'Sauvignon',en:'Sauvignon',de:'Sauvignon',dit:'Vino Bianco',den:'White Wine',dde:'Weißwein',price:'€7 / 28'},
-    {it:'Ribolla Gialla',en:'Ribolla Gialla',de:'Ribolla Gialla',dit:'Vino Bianco',den:'White Wine',dde:'Weißwein',price:'€7 / 28'},
-    {it:'Vita Nuova',en:'Vita Nuova',de:'Vita Nuova',dit:'Vino Rosè',den:'Rosé Wine',dde:'Roséwein',price:'€7 / 28'},
-    {it:'Pinot Ramato',en:'Pinot Ramato',de:'Pinot Ramato',dit:'Vino Rosè',den:'Rosé Wine',dde:'Roséwein',price:'€7 / 28'},
-    {it:'Aglianico',en:'Aglianico',de:'Aglianico',dit:'Vino Rosso',den:'Red Wine',dde:'Rotwein',price:'€6 / 25'},
-    {it:'Taurasi',en:'Taurasi',de:'Taurasi',dit:'Vino Rosso',den:'Red Wine',dde:'Rotwein',price:'€8 / 35'},
-    {it:'Piedirosso',en:'Piedirosso',de:'Piedirosso',dit:'Vino Rosso',den:'Red Wine',dde:'Rotwein',price:'€7 / 30'},
-    {it:'Pinot Nero',en:'Pinot Nero',de:'Pinot Nero',dit:'Vino Rosso',den:'Red Wine',dde:'Rotwein',price:'€7 / 30'},
-    {it:'Morellino',en:'Morellino',de:'Morellino',dit:'Vino Rosso',den:'Red Wine',dde:'Rotwein',price:'€6 / 25'},
-    {it:'Valpolicella Classico',en:'Valpolicella Classico',de:'Valpolicella Classico',dit:'Vino Rosso',den:'Red Wine',dde:'Rotwein',price:'€8 / 30'},
-    {it:'Chianti',en:'Chianti',de:'Chianti',dit:'Vino Rosso',den:'Red Wine',dde:'Rotwein',price:'€6 / 25'},
-    {it:'El Sior Prosecco Extra Dry',en:'El Sior Prosecco Extra Dry',de:'El Sior Prosecco Extra Dry',dit:'Veneto — Calice / Bottiglia',den:'Veneto — Glass / Bottle',dde:'Veneto — Glas / Flasche',price:'€7 / 28'},
-    {it:'Berlucchi Saten',en:'Berlucchi Saten',de:'Berlucchi Saten',dit:'Franciacorta, 70% Chardonnay, 30% Pinot Nero',den:'Franciacorta, 70% Chardonnay, 30% Pinot Nero',dde:'Franciacorta, 70% Chardonnay, 30% Pinot Nero',price:'€10 / 40'},
-    {it:'Berlucchi Rosé',en:'Berlucchi Rosé',de:'Berlucchi Rosé',dit:'Franciacorta, 60% Pinot Nero, 40% Chardonnay',den:'Franciacorta, 60% Pinot Nero, 40% Chardonnay',dde:'Franciacorta, 60% Pinot Nero, 40% Chardonnay',price:'€10 / 40'},
-    {it:'Santa Margherita Valdobbiadene',en:'Santa Margherita Valdobbiadene',de:'Santa Margherita Valdobbiadene',dit:'Calice / Bottiglia',den:'Glass / Bottle',dde:'Glas / Flasche',price:'€7 / 25'},
-    {it:'Ca\' del Bosco',en:'Ca\' del Bosco',de:'Ca\' del Bosco',dit:'Chardonnay 79.5%, Pinot Nero 19%, Pinot Bianco 1.5%',den:'Chardonnay 79.5%, Pinot Nero 19%, Pinot Bianco 1.5%',dde:'Chardonnay 79.5%, Pinot Nero 19%, Pinot Bianco 1.5%',price:'€70'},
-    {it:'Laurent Perrier Champagne',en:'Laurent Perrier Champagne',de:'Laurent Perrier Champagne',dit:'Chardonnay 55%, Pinot Nero 35%, Pinot Meunier 10%',den:'Chardonnay 55%, Pinot Nero 35%, Pinot Meunier 10%',dde:'Chardonnay 55%, Pinot Nero 35%, Pinot Meunier 10%',price:'€80'},
-    {it:'Louis Roederer — Collection',en:'Louis Roederer — Collection',de:'Louis Roederer — Collection',dit:'42% Chardonnay 36% Pinot Noir 22% Pinot Meunier',den:'42% Chardonnay 36% Pinot Noir 22% Pinot Meunier',dde:'42% Chardonnay 36% Pinot Noir 22% Pinot Meunier',price:'€115'},
-    {it:'Louis Roederer — Vintage',en:'Louis Roederer — Vintage',de:'Louis Roederer — Vintage',dit:'70% Pinot Noir 30% Chardonnay',den:'70% Pinot Noir 30% Chardonnay',dde:'70% Pinot Noir 30% Chardonnay',price:'€170'},
-    {it:'Louis Roederer — Rosé',en:'Louis Roederer — Rosé',de:'Louis Roederer — Rosé',dit:'65% Pinot Noir 35% Chardonnay',den:'65% Pinot Noir 35% Chardonnay',dde:'65% Pinot Noir 35% Chardonnay',price:'€180'},
-    {it:'Louis Roederer — Blanc de Blancs',en:'Louis Roederer — Blanc de Blancs',de:'Louis Roederer — Blanc de Blancs',dit:'100% Chardonnay',den:'100% Chardonnay',dde:'100% Chardonnay',price:'€185'},
-    {it:'Louis Roederer — Cristal',en:'Louis Roederer — Cristal',de:'Louis Roederer — Cristal',dit:'55% Pinot Nero 45% Chardonnay',den:'55% Pinot Nero 45% Chardonnay',dde:'55% Pinot Nero 45% Chardonnay',price:'€470'},
+    {it:'El Sior Prosecco 🍾',en:'El Sior Prosecco 🍾',de:'El Sior Prosecco 🍾',es:'El Sior Prosecco 🍾',fr:'El Sior Prosecco 🍾',dit:'Veneto',den:'Veneto',dde:'Venetien',des:'Veneto',dfr:'Vénétie',price:'€7 / 28'},
+    {it:'Berlucchi Satèn 🍾',en:'Berlucchi Satèn 🍾',de:'Berlucchi Satèn 🍾',es:'Berlucchi Satèn 🍾',fr:'Berlucchi Satèn 🍾',dit:'Franciacorta',den:'Franciacorta',dde:'Franciacorta',des:'Franciacorta',dfr:'Franciacorta',price:'€10 / 40'},
+    {it:'Vino Bianco',en:'White Wine',de:'Weißwein',es:'Vino blanco',fr:'Vin blanc',dit:'Falanghina / Fiano / Greco / Chardonnay / Gewürztraminer / Sauvignon / Ribolla',den:'Falanghina / Fiano / Greco / Chardonnay / Gewürztraminer / Sauvignon / Ribolla',dde:'Falanghina / Fiano / Greco / Chardonnay / Gewürztraminer / Sauvignon / Ribolla',des:'Falanghina / Fiano / Greco / Chardonnay / Gewürztraminer / Sauvignon / Ribolla',dfr:'Falanghina / Fiano / Greco / Chardonnay / Gewürztraminer / Sauvignon / Ribolla',price:'€6.00 – 30.00'},
+    {it:'Vino Rosè',en:'Rosé Wine',de:'Roséwein',es:'Vino rosado',fr:'Vin rosé',dit:'Vita Nuova / Pinot Ramato',den:'Vita Nuova / Pinot Ramato',dde:'Vita Nuova / Pinot Ramato',des:'Vita Nuova / Pinot Ramato',dfr:'Vita Nuova / Pinot Ramato',price:'€7.00 / 28.00'},
+    {it:'Vino Rosso',en:'Red Wine',de:'Rotwein',es:'Vino tinto',fr:'Vin rouge',dit:'Aglianico / Taurasi / Piedirosso / Pinot Nero / Morellino / Valpolicella / Chianti',den:'Aglianico / Taurasi / Piedirosso / Pinot Nero / Morellino / Valpolicella / Chianti',dde:'Aglianico / Taurasi / Piedirosso / Pinot Nero / Morellino / Valpolicella / Chianti',des:'Aglianico / Taurasi / Piedirosso / Pinot Nero / Morellino / Valpolicella / Chianti',dfr:'Aglianico / Taurasi / Piedirosso / Pinot Nero / Morellino / Valpolicella / Chianti',price:'€6.00 – 35.00'},
+    {it:'Laurent Perrier Champagne 🍾',en:'Laurent Perrier Champagne 🍾',de:'Laurent Perrier Champagne 🍾',es:'Laurent Perrier Champagne 🍾',fr:'Laurent Perrier Champagne 🍾',dit:'Champagne, Francia',den:'Champagne, France',dde:'Champagne, Frankreich',des:'Champagne, Francia',dfr:'Champagne, France',price:'€80'},
+    {it:'Louis Roederer Cristal 🍾',en:'Louis Roederer Cristal 🍾',de:'Louis Roederer Cristal 🍾',es:'Louis Roederer Cristal 🍾',fr:'Louis Roederer Cristal 🍾',dit:'Champagne, Francia',den:'Champagne, France',dde:'Champagne, Frankreich',des:'Champagne, Francia',dfr:'Champagne, France',price:'€470'},
   ],
   spirits: [
-    {it:'Macallan',en:'Macallan',de:'Macallan',dit:'Whiskey — Ispeyside, Scozia',den:'Whiskey — Ispeyside, Scotland',dde:'Whiskey — Ispeyside, Schottland',price:'€14.00'},
-    {it:'Lagavulin 16',en:'Lagavulin 16',de:'Lagavulin 16',dit:'Whiskey — Islay, Scozia',den:'Whiskey — Islay, Scotland',dde:'Whiskey — Islay, Schottland',price:'€14.00'},
-    {it:'Oban 14',en:'Oban 14',de:'Oban 14',dit:'Whiskey — Highland, Scozia',den:'Whiskey — Highland, Scotland',dde:'Whiskey — Highland, Schottland',price:'€12.00'},
-    {it:'Nikka From The Barrel',en:'Nikka From The Barrel',de:'Nikka From The Barrel',dit:'Whiskey — Giappone',den:'Whiskey — Japan',dde:'Whiskey — Japan',price:'€12.00'},
-    {it:'Bulleit Rye',en:'Bulleit Rye',de:'Bulleit Rye',dit:'Whiskey — Kentucky, Stati Uniti',den:'Whiskey — Kentucky, USA',dde:'Whiskey — Kentucky, USA',price:'€8.00'},
-    {it:'Johnnie Walker Black Label',en:'Johnnie Walker Black Label',de:'Johnnie Walker Black Label',dit:'Whiskey — Scozia',den:'Whiskey — Scotland',dde:'Whiskey — Schottland',price:'€8.00'},
-    {it:'Zacapa 23',en:'Zacapa 23',de:'Zacapa 23',dit:'Rum — Cuba',den:'Rum — Cuba',dde:'Rum — Kuba',price:'€12.00'},
-    {it:'Havana Club 3',en:'Havana Club 3',de:'Havana Club 3',dit:'Rum — Cuba',den:'Rum — Cuba',dde:'Rum — Kuba',price:'€8.00'},
-    {it:'Havana Club 7',en:'Havana Club 7',de:'Havana Club 7',dit:'Rum — Cuba',den:'Rum — Cuba',dde:'Rum — Kuba',price:'€8.00'},
-    {it:'Diplomatico',en:'Diplomatico',de:'Diplomatico',dit:'Rum — Lara, Venezuela',den:'Rum — Lara, Venezuela',dde:'Rum — Lara, Venezuela',price:'€10.00'},
-    {it:'Agricol J.M. Fumée Volcanique',en:'Agricol J.M. Fumée Volcanique',de:'Agricol J.M. Fumée Volcanique',dit:'Rum — Martinica, Caraibi',den:'Rum — Martinique, Caribbean',dde:'Rum — Martinique, Karibik',price:'€10.00'},
-    {it:'Don Papa Baroko',en:'Don Papa Baroko',de:'Don Papa Baroko',dit:'Rum — Isola di Negros, Philippine',den:'Rum — Negros Island, Philippines',dde:'Rum — Insel Negros, Philippinen',price:'€10.00'},
-    {it:'Hors d\'Age Dartigalongue',en:'Hors d\'Age Dartigalongue',de:'Hors d\'Age Dartigalongue',dit:'Cognac & Brandy — Armagnac, Francia',den:'Cognac & Brandy — Armagnac, France',dde:'Cognac & Brandy — Armagnac, Frankreich',price:'€10.00'},
-    {it:'Nistru XO',en:'Nistru XO',de:'Nistru XO',dit:'Cognac & Brandy — Moldova',den:'Cognac & Brandy — Moldova',dde:'Cognac & Brandy — Moldau',price:'€8.00'},
-    {it:'Poli Bassano Bianca',en:'Poli Bassano Bianca',de:'Poli Bassano Bianca',dit:'Grappa — Veneto',den:'Grappa — Veneto',dde:'Grappa — Venetien',price:'€6.00'},
-    {it:'Poli Bassano Barrique',en:'Poli Bassano Barrique',de:'Poli Bassano Barrique',dit:'Grappa — Veneto',den:'Grappa — Veneto',dde:'Grappa — Venetien',price:'€6.00'},
-    {it:'Espolon Blanco',en:'Espolon Blanco',de:'Espolon Blanco',dit:'Tequila — Jalisco, Messico',den:'Tequila — Jalisco, Mexico',dde:'Tequila — Jalisco, Mexiko',price:'€8.00'},
-    {it:'Espolon Reposado',en:'Espolon Reposado',de:'Espolon Reposado',dit:'Tequila — Jalisco, Messico',den:'Tequila — Jalisco, Mexico',dde:'Tequila — Jalisco, Mexiko',price:'€8.00'},
-    {it:'Montelobos Oaxaca',en:'Montelobos Oaxaca',de:'Montelobos Oaxaca',dit:'Tequila — Oaxaca, Messico',den:'Tequila — Oaxaca, Mexico',dde:'Tequila — Oaxaca, Mexiko',price:'€10.00'},
-    {it:'Stolichnaya Elit',en:'Stolichnaya Elit',de:'Stolichnaya Elit',dit:'Vodka — Tambov, Russia',den:'Vodka — Tambov, Russia',dde:'Vodka — Tambov, Russland',price:'€10.00'},
-    {it:'Hetman',en:'Hetman',de:'Hetman',dit:'Vodka — Ucraina',den:'Vodka — Ukraine',dde:'Vodka — Ukraine',price:'€8.00'},
-    {it:'Zubrowka Black',en:'Zubrowka Black',de:'Zubrowka Black',dit:'Vodka — Polonia',den:'Vodka — Poland',dde:'Vodka — Polen',price:'€8.00'},
-    {it:'Vin Santo Frescobaldi',en:'Vin Santo Frescobaldi',de:'Vin Santo Frescobaldi',dit:'Vini Dolci — Toscana, Frescobaldi',den:'Dessert Wine — Tuscany, Frescobaldi',dde:'Dessertwein — Toskana, Frescobaldi',price:'€8.00'},
-    {it:'Dios',en:'Dios',de:'Dios',dit:'Amaro — Campania',den:'Amaro — Campania',dde:'Amaro — Kampanien',price:'€6.00'},
-    {it:'Jefferson',en:'Jefferson',de:'Jefferson',dit:'Amaro — Calabria',den:'Amaro — Calabria',dde:'Amaro — Kalabrien',price:'€6.00'},
-    {it:'Limoncello',en:'Limoncello',de:'Limoncello',dit:'Amaro',den:'Amaro',dde:'Amaro',price:'€5.00'},
-    {it:'Liquirizia',en:'Liquorice',de:'Lakritze',dit:'Amaro',den:'Amaro',dde:'Amaro',price:'€5.00'},
-    {it:'Rucolino',en:'Rucolino',de:'Rucolino',dit:'Amaro',den:'Amaro',dde:'Amaro',price:'€5.00'},
-    {it:'Nocino',en:'Nocino',de:'Nocino',dit:'Amaro — Campania',den:'Amaro — Campania',dde:'Amaro — Kampanien',price:'€5.00'},
+    {it:'Macallan 🥃',en:'Macallan 🥃',de:'Macallan 🥃',es:'Macallan 🥃',fr:'Macallan 🥃',dit:'Whisky — Speyside, Scozia',den:'Whisky — Speyside, Scotland',dde:'Whisky — Speyside, Schottland',des:'Whisky — Speyside, Escocia',dfr:'Whisky — Speyside, Écosse',price:'€14.00'},
+    {it:'Lagavulin 16 🥃',en:'Lagavulin 16 🥃',de:'Lagavulin 16 🥃',es:'Lagavulin 16 🥃',fr:'Lagavulin 16 🥃',dit:'Whisky — Islay, Scozia',den:'Whisky — Islay, Scotland',dde:'Whisky — Islay, Schottland',des:'Whisky — Islay, Escocia',dfr:'Whisky — Islay, Écosse',price:'€14.00'},
+    {it:'Zacapa 23 🥃',en:'Zacapa 23 🥃',de:'Zacapa 23 🥃',es:'Zacapa 23 🥃',fr:'Zacapa 23 🥃',dit:'Rum — Guatemala',den:'Rum — Guatemala',dde:'Rum — Guatemala',des:'Ron — Guatemala',dfr:'Rhum — Guatemala',price:'€12.00'},
+    {it:'Espolon Blanco 🥃',en:'Espolon Blanco 🥃',de:'Espolon Blanco 🥃',es:'Espolon Blanco 🥃',fr:'Espolon Blanco 🥃',dit:'Tequila — Jalisco, Messico',den:'Tequila — Jalisco, Mexico',dde:'Tequila — Jalisco, Mexiko',des:'Tequila — Jalisco, México',dfr:'Tequila — Jalisco, Mexique',price:'€8.00'},
   ],
-  birre: [
-    {it:'Nastro Azzurro',en:'Nastro Azzurro',de:'Nastro Azzurro',dit:'Birra',den:'Beer',dde:'Bier',price:'€5.00'},
-    {it:'Ichnusa Non Filtrata',en:'Ichnusa Unfiltered',de:'Ichnusa Ungefiltert',dit:'Birra',den:'Beer',dde:'Bier',price:'€5.00'},
-    {it:'Artigianale',en:'Craft Beer',de:'Handwerksbier',dit:'Birra',den:'Beer',dde:'Bier',price:'€6.00'},
-    {it:'Corona',en:'Corona',de:'Corona',dit:'Birra',den:'Beer',dde:'Bier',price:'€6.00'},
-    {it:'Spremuta d\'Arancia',en:'Fresh Orange Juice',de:'Frisch gepresster Orangensaft',dit:'',den:'',dde:'',price:'€5.00'},
-    {it:'Succhi di Frutta',en:'Fruit Juices',de:'Fruchtsäfte',dit:'',den:'',dde:'',price:'€3.00'},
-    {it:'Succo di Pomodoro Condito',en:'Seasoned Tomato Juice',de:'Gewürzter Tomatensaft',dit:'',den:'',dde:'',price:'€4.00'},
-    {it:'Acqua Filette Piccola / Grande',en:'Filette Water Small / Large',de:'Filette Wasser Klein / Groß',dit:'',den:'',dde:'',price:'€2.50 / 3.00'},
-    {it:'Tè Freddo / Special',en:'Iced Tea / Special',de:'Eistee / Special',dit:'',den:'',dde:'',price:'€3.00'},
-    {it:'Coca Cola Original / Zero',en:'Coca Cola Original / Zero',de:'Coca Cola Original / Zero',dit:'',den:'',dde:'',price:'€2.50'},
-    {it:'Tassoni / Chinotto',en:'Tassoni / Chinotto',de:'Tassoni / Chinotto',dit:'',den:'',dde:'',price:'€3.00'},
-    {it:'Bitter Bianco / Rosso',en:'White / Red Bitter',de:'Weißer / Roter Bitter',dit:'',den:'',dde:'',price:'€3.00'},
-    {it:'Campari Soda',en:'Campari Soda',de:'Campari Soda',dit:'',den:'',dde:'',price:'€3.00'},
-    {it:'Fever Tree Acqua Tonica',en:'Fever Tree Tonic Water',de:'Fever Tree Tonic Water',dit:'Indian, Mediterranea, Elderflower',den:'Indian, Mediterranean, Elderflower',dde:'Indian, Mediterran, Holunderblüte',price:'€3.00'},
-    {it:'Ginger Beer Fever Tree',en:'Ginger Beer Fever Tree',de:'Ginger Beer Fever Tree',dit:'',den:'',dde:'',price:'€3.00'},
-    {it:'Ginger Ale Fever Tree',en:'Ginger Ale Fever Tree',de:'Ginger Ale Fever Tree',dit:'',den:'',dde:'',price:'€3.00'},
+  bevande: [
+    {it:'Birre',en:'Beers',de:'Biere',es:'Cervezas',fr:'Bières',dit:'Nastro Azzurro / Ichnusa Non Filtrata / Artigianale / Corona',den:'Nastro Azzurro / Ichnusa Unfiltered / Craft / Corona',dde:'Nastro Azzurro / Ichnusa Ungefiltert / Handwerksbier / Corona',des:'Nastro Azzurro / Ichnusa Sin Filtrar / Artesanal / Corona',dfr:'Nastro Azzurro / Ichnusa Non Filtrée / Artisanale / Corona',price:'€5.00 / 6.00'},
+    {it:"Spremuta d'Arancia",en:'Fresh Orange Juice',de:'Frisch gepresster Orangensaft',es:'Zumo de naranja natural',fr:"Jus d'orange frais",dit:'',den:'',dde:'',des:'',dfr:'',price:'€5.00'},
+    {it:'Succhi di Frutta',en:'Fruit Juices',de:'Fruchtsäfte',es:'Zumos de frutas',fr:'Jus de fruits',dit:'',den:'',dde:'',des:'',dfr:'',price:'€3.00'},
+    {it:'Succo di Pomodoro Condito',en:'Seasoned Tomato Juice',de:'Gewürzter Tomatensaft',es:'Zumo de tomate condimentado',fr:'Jus de tomate assaisonné',dit:'',den:'',dde:'',des:'',dfr:'',price:'€4.00'},
+    {it:'Acqua Filette',en:'Filette Water',de:'Filette Wasser',es:'Agua Filette',fr:'Eau Filette',dit:'Piccola / Grande',den:'Small / Large',dde:'Klein / Groß',des:'Pequeña / Grande',dfr:'Petite / Grande',price:'€2.50 / 3.00'},
+    {it:'Tè Freddo / Special',en:'Iced Tea / Special',de:'Eistee / Special',es:'Té frío / Especial',fr:'Thé glacé / Spécial',dit:'',den:'',dde:'',des:'',dfr:'',price:'€3.00'},
+    {it:'Coca Cola / Chinotto / Bitter',en:'Soft Drinks',de:'Softdrinks',es:'Refrescos',fr:'Boissons gazeuses',dit:'Coca Cola Original/Zero, Tassoni, Chinotto, Bitter Bianco/Rosso, Campari Soda',den:'Coca Cola Original/Zero, Tassoni, Chinotto, White/Red Bitter, Campari Soda',dde:'Coca Cola Original/Zero, Tassoni, Chinotto, Weißer/Roter Bitter, Campari Soda',des:'Coca Cola Original/Zero, Tassoni, Chinotto, Bitter Blanco/Rojo, Campari Soda',dfr:'Coca Cola Original/Zero, Tassoni, Chinotto, Bitter Blanc/Rouge, Campari Soda',price:'€2.50 / 3.00'},
+    {it:'Fever Tree Selection',en:'Fever Tree Selection',de:'Fever Tree Auswahl',es:'Selección Fever Tree',fr:'Sélection Fever Tree',dit:'Tonica Indian / Mediterranea / Elderflower — Ginger Beer — Ginger Ale',den:'Indian / Mediterranean / Elderflower Tonic — Ginger Beer — Ginger Ale',dde:'Indian / Mediterran / Holunderblüten Tonic — Ginger Beer — Ginger Ale',des:'Tónica Indian / Mediterránea / Flor de saúco — Ginger Beer — Ginger Ale',dfr:'Tonique Indian / Méditerranéen / Fleur de sureau — Ginger Beer — Ginger Ale',price:'€3.00'},
   ],
 };
 
@@ -842,7 +773,7 @@ const lb=document.getElementById('lightbox');
 if(lb) lb.addEventListener('click',()=>{lb.style.display='none';document.body.style.overflow='';});
 
 document.getElementById('heroBg').style.backgroundImage = 'url(' + LOGO_SRC + ')';
-document.getElementById('heroBg').style.backgroundSize = 'cover';
+document.getElementById('heroBg').style.backgroundSize = 'contain';
 document.getElementById('heroBg').style.backgroundRepeat = 'no-repeat';
 document.getElementById('heroBg').style.backgroundPosition = 'center center';
 const reviews = [
