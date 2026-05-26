@@ -237,6 +237,23 @@
 .lang-option{display:flex;align-items:center;gap:0.6rem;width:100%;padding:0.65rem 1rem;background:none;border:none;color:var(--white-d);font-family:'Montserrat',sans-serif;font-size:0.75rem;letter-spacing:0.1em;cursor:pointer;transition:background 0.2s;}
 .lang-option:hover{background:rgba(201,169,110,0.12);color:var(--gold);}
 .lang-option.active{color:var(--gold);background:rgba(201,169,110,0.08);}
+
+/* ── Admin Panel ─────────────────────────────────────────────── */
+#adminBtn{position:fixed;bottom:1.8rem;right:1.8rem;z-index:8000;width:48px;height:48px;border-radius:50%;background:rgba(8,8,8,0.85);border:1px solid rgba(201,169,110,0.3);color:var(--gold);cursor:pointer;font-size:1.2rem;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(0,0,0,0.5);transition:all 0.3s;backdrop-filter:blur(10px);opacity:0.7;}
+#adminBtn:hover{opacity:1;border-color:var(--gold);transform:rotate(30deg);}
+#adminPanel{display:none!important;position:fixed!important;top:0!important;left:0!important;right:0!important;bottom:0!important;z-index:99999!important;background:#050505!important;overflow-y:auto!important;-webkit-overflow-scrolling:touch!important;}
+#adminPanel.open{display:block!important;}
+.admin-tab{background:rgba(201,169,110,0.08);border:1px solid rgba(201,169,110,0.2);color:var(--white-d);border-radius:50px;padding:0.4rem 1rem;cursor:pointer;font-family:'Montserrat',sans-serif;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;transition:all 0.2s;}
+.admin-tab.active,.admin-tab:hover{background:var(--gold);color:#000;}
+.admin-section{display:none;}
+.admin-section.active{display:block;}
+.admin-add{background:rgba(201,169,110,0.1);border:1px dashed rgba(201,169,110,0.4);color:var(--gold);border-radius:10px;padding:0.6rem 1.2rem;cursor:pointer;font-family:'Montserrat',sans-serif;font-size:0.7rem;margin-top:0.8rem;transition:all 0.2s;}
+.admin-add:hover{background:rgba(201,169,110,0.2);}
+
+/* ── Menu Tabs ───────────────────────────────────────────────── */
+.menu-tab{background:rgba(201,169,110,0.05);border:1px solid rgba(201,169,110,0.25);color:var(--white-d);border-radius:50px;padding:0.5rem 1.2rem;cursor:pointer;font-family:'Montserrat',sans-serif;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;transition:all 0.3s;white-space:nowrap;}
+.menu-tab.active,.menu-tab:hover{background:var(--gold);color:#000;border-color:var(--gold);}
+.menu-tabs{display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:2rem;}
 </style>
 </head>
 <body> <div id="splash"> <div class="splash-content"> <div class="splash-line"></div> <p class="splash-eyebrow">Napoli, Italia</p> <h1 class="splash-title">HUSHNOW<br><em>CAFÉ °5</em></h1> <p class="splash-welcome">Benvenuti &nbsp;·&nbsp; Welcome</p> <div class="splash-line"></div> </div>
@@ -255,7 +272,7 @@
           <button onclick="setLang('fr');document.getElementById('langMenu').classList.remove('open');document.getElementById('langDropdown').classList.remove('open');" class="lang-option" data-lang="fr"><span>🇫🇷</span> Français</button>
         </div>
       </div> <div class="nav-burger" id="burger" onclick="toggleMenu()"><span></span><span></span><span></span></div> </div>
-</nav> <section id="hero" class="page-section active"> <div class="hero-bg-img" id="heroBg"></div> <div class="hero-overlay"></div> <div class="hero-content"> <p class="hero-eyebrow" data-it="Napoli, Italia" data-en="Naples, Italy" data-de="Neapel, Italien">Napoli, Italia</p> <h1 class="hero-title">HUSHNOW<br><em>CAFÉ °5</em></h1> <div class="hero-sep"></div> <p class="hero-sub" data-it="Breakfast · Lunch · Aperitivo" data-en="Breakfast · Lunch · Aperitif" data-de="Frühstück · Mittagessen · Aperitif" data-es="Desayuno · Almuerzo · Aperitivo" data-fr="Petit-déjeuner · Déjeuner · Apéritif" data-de="Frühstück · Mittagessen · Aperitif">Breakfast · Lunch · Aperitivo</p> <div class="hero-ctas"> <button onclick="showSection('menu')" class="btn btn-gold" data-it="Sfoglia il Menù" data-en="View Menu" data-de="Speisekarte">Sfoglia il Menù</button> <button onclick="showSection('reservation')" class="btn btn-outline" data-it="Prenota un Tavolo" data-en="Book a Table" data-de="Tisch Reservieren">Prenota un Tavolo</button> </div> </div> <div class="scroll-hint"><span></span></div>
+</nav> <section id="hero" class="page-section active"> <div class="hero-bg-img" id="heroBg"></div> <div class="hero-overlay"></div> <div class="hero-content"> <p class="hero-eyebrow" data-it="Napoli, Italia" data-en="Naples, Italy" data-de="Neapel, Italien" data-es="Nápoles, Italia" data-fr="Naples, Italie">Napoli, Italia</p> <h1 class="hero-title">HUSHNOW<br><em>CAFÉ °5</em></h1> <div class="hero-sep"></div> <p class="hero-sub" data-it="Breakfast · Lunch · Aperitivo" data-en="Breakfast · Lunch · Aperitif" data-de="Frühstück · Mittagessen · Aperitif" data-es="Desayuno · Almuerzo · Aperitivo" data-fr="Petit-déjeuner · Déjeuner · Apéritif" data-de="Frühstück · Mittagessen · Aperitif">Breakfast · Lunch · Aperitivo</p> <div class="hero-ctas"> <button onclick="showSection('menu')" class="btn btn-gold" data-it="Sfoglia il Menù" data-en="View Menu" data-de="Speisekarte">Sfoglia il Menù</button> <button onclick="showSection('reservation')" class="btn btn-outline" data-it="Prenota un Tavolo" data-en="Book a Table" data-de="Tisch Reservieren">Prenota un Tavolo</button> </div> </div> <div class="scroll-hint"><span></span></div>
 </section> <section id="about" class="page-section"> <div class="section-inner"> <div class="grid-2"> <div> <p class="section-label" data-it="La Nostra Storia" data-en="Our Story">La Nostra Storia</p> <h2 class="section-title" data-it="Un luogo dove il<br>silenzio ha <em>sapore</em>" data-en="A place where<br>silence has <em>flavour</em>">Un luogo dove il<br>silenzio ha <em>sapore</em></h2> <div class="gold-line"></div> <p class="about-main-text"
            data-en="Hush Now is more than a café: it is an experience. A space where elegance and pleasure blend from the first morning coffee to a refined lunch, to a cocktail experience that turns every moment into something unique."
            data-it="Hush Now è più di una caffetteria: è un&#39;esperienza. Uno spazio dove eleganza e piacere si fondono, dal primo caffè del mattino a un pranzo ricercato, fino a una cocktail experience che trasforma ogni momento in qualcosa di unico."
@@ -263,14 +280,14 @@
           Hush Now is more than a café: it is an experience. A space where elegance and pleasure blend from the first morning coffee to a refined lunch, to a cocktail experience that turns every moment into something unique.
         </p> <div class="pillars"> <span class="pillar" data-it="Colazione" data-en="Breakfast">Colazione</span> <span class="pillar" data-it="Pranzo" data-en="Lunch">Pranzo</span> <span class="pillar" data-it="Aperitivo" data-en="Aperitif">Aperitivo</span> <span class="pillar" data-it="Cocktail" data-en="Cocktails">Cocktail</span> </div> </div> <div class="about-img-wrap"><div class="about-img-inner"><img id="aboutImg" src="" alt="HUSHNOW CAFÉ °5"/></div></div> </div> </div>
 </section> <section id="menu" class="page-section" style="background:var(--bg2);"> <div class="section-inner"> <p class="section-label" data-it="Il Menù" data-en="Our Menu">Il Menù</p> <h2 class="section-title" data-it="Sapori che <em>ispirano</em>" data-en="Flavours that <em>inspire</em>">Sapori che <em>ispirano</em></h2> <div class="gold-line"></div> <div class="menu-tabs">
-        <button class="tab-btn active" onclick="renderMenu('caffetteria',this)" data-it="Caffetteria" data-en="Coffee Bar" data-de="Kaffeebar">Caffetteria</button>
-        <button class="tab-btn" onclick="renderMenu('dolce',this)" data-it="Dolce" data-en="Sweet" data-de="Süßes">Dolce</button>
-        <button class="tab-btn" onclick="renderMenu('cucina',this)" data-it="Cucina" data-en="Kitchen" data-de="Küche">Cucina</button>
-        <button class="tab-btn" onclick="renderMenu('cocktails',this)" data-it="Cocktails" data-en="Cocktails" data-de="Cocktails">Cocktails</button>
-        <button class="tab-btn" onclick="renderMenu('gin',this)" data-it="Gin Tonic" data-en="Gin Tonic" data-de="Gin Tonic">Gin Tonic</button>
-        <button class="tab-btn" onclick="renderMenu('vini',this)" data-it="Vini" data-en="Wines" data-de="Weine">Vini</button>
-        <button class="tab-btn" onclick="renderMenu('spirits',this)" data-it="Spirits" data-en="Spirits" data-de="Spirituosen">Spirits</button>
-        <button class="tab-btn" onclick="renderMenu('birre',this)" data-it="Birre" data-en="Beers" data-de="Biere">Birre</button>
+        <button class="menu-tab active" onclick="renderMenu('caffetteria',this)" data-it="Caffetteria" data-en="Coffee Bar" data-de="Kaffeebar">Caffetteria</button>
+        <button class="menu-tab" onclick="renderMenu('dolce',this)" data-it="Dolce" data-en="Sweet" data-de="Süßes">Dolce</button>
+        <button class="menu-tab" onclick="renderMenu('cucina',this)" data-it="Cucina" data-en="Kitchen" data-de="Küche">Cucina</button>
+        <button class="menu-tab" onclick="renderMenu('cocktails',this)" data-it="Cocktails" data-en="Cocktails" data-de="Cocktails">Cocktails</button>
+        <button class="menu-tab" onclick="renderMenu('gin',this)" data-it="Gin Tonic" data-en="Gin Tonic" data-de="Gin Tonic">Gin Tonic</button>
+        <button class="menu-tab" onclick="renderMenu('vini',this)" data-it="Vini" data-en="Wines" data-de="Weine">Vini</button>
+        <button class="menu-tab" onclick="renderMenu('spirits',this)" data-it="Spirits" data-en="Spirits" data-de="Spirituosen">Spirits</button>
+        <button class="menu-tab" onclick="renderMenu('birre',this)" data-it="Birre" data-en="Beers" data-de="Biere">Birre</button>
       </div> <div class="menu-grid" id="menuGrid"></div>  </div>
 </section> <section id="hours" class="page-section"> <div class="section-inner"> <p class="section-label" data-it="Orari di Apertura" data-en="Opening Hours">Orari di Apertura</p> <h2 class="section-title" data-it="Quando <em>siamo</em> aperti" data-en="When we <em>are</em> open">Quando <em>siamo</em> aperti</h2> <div class="gold-line"></div> <div class="hours-grid" id="hoursGrid"></div> </div>
 </section> <section id="reservation" class="page-section" style="position:relative;overflow:hidden;"> <img id="resBgImg" src="" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;filter:grayscale(1) brightness(0.12);z-index:0;"/> <div class="section-inner" style="position:relative;z-index:1;"> <p class="section-label" data-it="Prenotazione Online" data-en="Online Reservation">Prenotazione Online</p> <h2 class="section-title" data-it="Riserva il tuo <em>tavolo</em>" data-en="Reserve your <em>table</em>">Riserva il tuo <em>tavolo</em></h2> <div class="gold-line"></div> <div class="res-form"> <form id="resForm" onsubmit="submitReservation(event)"> <div class="form-row"> <div><label data-it="Nome e Cognome" data-en="Full Name">Nome e Cognome</label><input type="text" id="resName" placeholder="Mario Rossi" required/></div> <div><label data-it="Email o Telefono" data-en="Email or Phone">Email o Telefono</label><input type="text" id="resContact" placeholder="+39 333 000 0000" required/></div> </div> <div class="form-row"> <div><label data-it="Data" data-en="Date">Data</label><input type="date" id="resDate" required/></div> <div><label data-it="Orario" data-en="Time">Orario</label> <select id="resTime" required><option value="" disabled selected>—</option> <option>08:00</option><option>08:30</option><option>09:00</option><option>10:00</option> <option>12:00</option><option>12:30</option><option>13:00</option><option>14:00</option> <option>17:00</option><option>18:00</option><option>19:00</option><option>20:00</option></select> </div> </div> <div class="form-row"> <div><label data-it="Persone" data-en="Guests">Persone</label> <select id="resGuests" required><option value="" disabled selected>—</option> <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option> <option value="7+">7+</option></select> </div> <div><label data-it="Occasione" data-en="Occasion">Occasione</label> <select id="resOccasion"> <option value="">—</option> <option data-it="Compleanno"   data-en="Birthday"  data-de="Geburtstag">Compleanno</option> <option data-it="Anniversario" data-en="Anniversary" data-de="Jubiläum">Anniversario</option> <option data-it="Business"     data-en="Business"  data-de="Geschäftlich">Business</option> <option data-it="Romantica"    data-en="Romantic"  data-de="Romantisch">Romantica</option> </select> </div> </div> <div class="form-row single"><div><label data-it="Note" data-en="Notes">Note</label><textarea id="resNotes" placeholder="Allergie, richieste..."></textarea></div></div> <button type="submit" class="btn btn-filled" style="margin-top:0.8rem;width:100%;" data-it="Invia Prenotazione" data-en="Send Reservation">Invia Prenotazione</button> </form> <div class="form-confirm" id="formConfirm"> <div class="check-icon">✓</div> <h3 data-it="Prenotazione Inviata!" data-en="Reservation Sent!">Prenotazione Inviata!</h3> <p data-it="Ti contatteremo presto." data-en="We will contact you shortly.">Ti contatteremo presto.</p> <br/><button class="btn btn-outline" onclick="resetForm()" style="margin-top:0.6rem" data-it="Nuova Prenotazione" data-en="New">Nuova Prenotazione</button> </div> </div> </div>
@@ -601,10 +618,30 @@ const menuData = {
 
 
 let activeCat = 'colazione';
-function renderMenu(cat) {
+function renderMenu(cat, btn) {
+  currentCat = cat;
   activeCat = cat;
-  document.getElementById('menuGrid').innerHTML = menuData[cat].map(i => `
-    <div class="menu-item"> <div> <div class="menu-item-name">${lang==='de'?(i.de||i.en):lang==='en'?i.en:i.it}</div> <div class="menu-item-desc">${lang==='de'?(i.dde||i.den):lang==='en'?i.den:i.dit}</div> </div> <div class="menu-item-price">${i.price}</div> </div>`).join('');
+  // Update active tab
+  document.querySelectorAll('.menu-tab').forEach(function(t){ t.classList.remove('active'); });
+  if(btn) {
+    btn.classList.add('active');
+  } else {
+    // Find and activate by data or first tab
+    var tabs = document.querySelectorAll('.menu-tab');
+    tabs.forEach(function(t){
+      if(t.getAttribute('onclick') && t.getAttribute('onclick').indexOf("'"+cat+"'") > -1) {
+        t.classList.add('active');
+      }
+    });
+  }
+  var grid = document.getElementById('menuGrid');
+  if(!grid || !menuData[cat]) return;
+  var items = menuData[cat];
+  grid.innerHTML = items.map(function(i) {
+    var name = lang==='de'?(i.de||i.en):lang==='es'?(i.es||i.en):lang==='fr'?(i.fr||i.en):lang==='en'?i.en:i.it;
+    var desc = lang==='de'?(i.dde||i.den):lang==='es'?(i.des||i.den):lang==='fr'?(i.dfr||i.den):lang==='en'?i.den:i.dit;
+    return '<div class="menu-item"><div><div class="menu-item-name">'+(name||'')+'</div>'+(desc?'<div class="menu-item-desc">'+desc+'</div>':'')+'</div><div class="menu-item-price">'+(i.price||'')+'</div></div>';
+  }).join('');
 }
 document.getElementById('menuTabs').querySelectorAll('.menu-tab').forEach(btn => {
   btn.addEventListener('click', () => {
@@ -890,18 +927,15 @@ let currentAdminCat = 'colazione';
 let currentAdminLang = 'it';
 
 function openAdmin() {
-  const panel = document.getElementById('adminPanel');
-  panel.style.setProperty('display', 'block', 'important');
+  var panel = document.getElementById('adminPanel');
+  if(!panel) return;
+  panel.style.cssText = 'display:block!important;position:fixed!important;top:0!important;left:0!important;right:0!important;bottom:0!important;z-index:99999!important;background:#050505!important;overflow-y:auto!important;';
   panel.classList.add('open');
-  document.getElementById('loginBox').style.display = 'block';
-  document.getElementById('adminDash').style.display = 'none';
-  document.getElementById('loginErr').style.display = 'none';
-  document.getElementById('adminPwd').value = '';
-  // body scroll kept free for admin
-  setTimeout(() => {
-    const pwd = document.getElementById('adminPwd');
-    if(pwd) pwd.focus();
-  }, 100);
+  var lb = document.getElementById('loginBox');
+  var ad = document.getElementById('adminDash');
+  if(lb) lb.style.display = 'block';
+  if(ad) ad.style.display = 'none';
+  panel.scrollTop = 0;
 }
 
 let adminKeySeq = '';
