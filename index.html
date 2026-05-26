@@ -251,9 +251,37 @@
 .admin-add:hover{background:rgba(201,169,110,0.2);}
 
 /* ── Menu Tabs ───────────────────────────────────────────────── */
-.menu-tab{background:rgba(201,169,110,0.05);border:1px solid rgba(201,169,110,0.25);color:var(--white-d);border-radius:50px;padding:0.5rem 1.2rem;cursor:pointer;font-family:'Montserrat',sans-serif;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;transition:all 0.3s;white-space:nowrap;}
+.menu-tab{background:var(--bg3);border:1px solid rgba(201,169,110,0.35);color:var(--gold2);border-radius:50px;padding:0.55rem 1.3rem;cursor:pointer;font-family:'Montserrat',sans-serif;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;transition:all 0.3s;white-space:nowrap;}
 .menu-tab.active,.menu-tab:hover{background:var(--gold);color:#000;border-color:var(--gold);}
 .menu-tabs{display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:2rem;}
+
+/* ── Review Cards ───────────────────────────────────────────── */
+.review-card{background:var(--bg3);border:1px solid var(--gold-line);border-radius:var(--radius);padding:1.6rem 1.8rem;display:flex;flex-direction:column;gap:0.8rem;transition:border-color 0.3s;}
+.review-card:hover{border-color:var(--gold);}
+.review-stars{color:var(--gold);font-size:0.9rem;letter-spacing:0.1em;}
+.review-text{color:var(--white-dim);font-size:0.82rem;line-height:1.75;font-style:italic;}
+.review-author{font-family:'Josefin Sans',sans-serif;font-size:0.78rem;letter-spacing:0.14em;color:var(--gold2);display:flex;align-items:center;gap:0.5rem;margin-top:0.2rem;}
+.review-flag{font-size:1rem;}
+
+/* ── QR Section ─────────────────────────────────────────────── */
+.qr-wrap{display:flex;align-items:center;gap:2rem;background:var(--bg3);border:1px solid var(--gold-line);border-radius:var(--radius-lg);padding:2rem 2.4rem;max-width:520px;margin-top:2.5rem;}
+.qr-info h3{font-family:'Josefin Sans',sans-serif;font-size:1.2rem;font-weight:300;color:var(--gold2);margin-bottom:0.5rem;}
+.qr-info p{color:var(--white-dim);font-size:0.78rem;line-height:1.7;margin-bottom:1rem;}
+@media(max-width:600px){.qr-wrap{flex-direction:column;align-items:flex-start;}}
+
+/* ── Admin Panel Styles ─────────────────────────────────────── */
+.admin-header{display:flex;justify-content:space-between;align-items:center;padding:2rem 2.5rem 1rem;border-bottom:1px solid var(--gold-line);}
+.admin-header h2{font-family:'Josefin Sans',sans-serif;font-size:1.6rem;font-weight:300;color:var(--gold2);}
+.admin-tabs{display:flex;gap:0.6rem;flex-wrap:wrap;padding:1.5rem 2.5rem 0;}
+.admin-section{padding:1.5rem 2.5rem;}
+.admin-label{font-size:0.58rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:0.4rem;}
+.admin-save{background:var(--gold);color:#000;border:none;border-radius:50px;padding:0.7rem 2rem;cursor:pointer;font-family:'Montserrat',sans-serif;font-size:0.7rem;letter-spacing:0.15em;font-weight:500;margin-top:1rem;transition:background 0.3s;}
+.admin-save:hover{background:var(--gold2);}
+.admin-saved{font-size:0.7rem;color:var(--gold);margin-left:1rem;opacity:0;transition:opacity 0.3s;}
+.hours-admin-item{display:grid;grid-template-columns:120px 1fr 1fr;gap:1rem;align-items:center;background:var(--bg3);border:1px solid rgba(201,169,110,0.15);border-radius:12px;padding:1rem 1.2rem;margin-bottom:0.7rem;}
+.day-name{font-family:'Josefin Sans',sans-serif;font-size:0.9rem;color:var(--gold2);}
+#loginErr{display:none;color:#ff6b6b;font-size:0.75rem;margin-top:0.8rem;}
+#adminPanel h3{font-family:'Josefin Sans',sans-serif;font-size:1.4rem;font-weight:300;color:var(--white);margin-bottom:0.5rem;}
 </style>
 </head>
 <body> <div id="splash"> <div class="splash-content"> <div class="splash-line"></div> <p class="splash-eyebrow">Napoli, Italia</p> <h1 class="splash-title">HUSHNOW<br><em>CAFÉ °5</em></h1> <p class="splash-welcome">Benvenuti &nbsp;·&nbsp; Welcome</p> <div class="splash-line"></div> </div>
@@ -261,7 +289,7 @@
       Home
     </button> </div> <ul class="nav-links" id="navLinks"> <button class="menu-close" onclick="toggleMenu()">✕</button> <div class="nav-gold-line"></div> <li><a href="#about"       data-it="Chi Siamo"  data-en="About" data-de="Über Uns">Chi Siamo</a></li> <li><a href="#menu"        data-it="Menù"        data-en="Menu" data-de="Speisekarte">Menù</a></li> <li><a href="#hours"       data-it="Orari"       data-en="Hours" data-de="Öffnungszeiten">Orari</a></li> <li><a href="#reservation" data-it="Prenota"     data-en="Reserve" data-de="Reservieren">Prenota</a></li> <li><a href="#events"      data-it="Eventi"      data-en="Events" data-de="Veranstaltungen">Eventi</a></li> <li><a href="#reviews"     data-it="Recensioni"  data-en="Reviews" data-de="Bewertungen">Recensioni</a></li> <li><a href="#gallery"     data-it="Galleria"    data-en="Gallery" data-de="Galerie">Galleria</a></li> <li><a href="#contact"     data-it="Contatti"    data-en="Contact" data-de="Kontakt">Contatti</a></li> </ul> <div style="display:flex;align-items:center;gap:1rem;"> <div class="lang-dropdown" id="langDropdown">
         <button class="lang-selected" onclick="toggleLangMenu(event)" id="langSelectedBtn">
-          <span id="langFlag" style="font-size:1.3rem;">🇮🇹</span>
+          <span id="langFlag" style="font-size:1.4rem;">🇮🇹</span>
           <span class="lang-arrow" style="font-size:0.55rem;opacity:0.7;">▾</span>
         </button>
         <div class="lang-menu" id="langMenu">
@@ -335,17 +363,17 @@
     Utilizziamo i cookie per migliorare la tua esperienza. Continuando la navigazione accetti la nostra <a href="#" style="color:var(--gold2);">Privacy Policy</a>. 🇪🇺 GDPR
   </p> <div style="display:flex;gap:0.8rem;flex-shrink:0;"> <button onclick="acceptCookies()" class="btn btn-filled" style="padding:0.6rem 1.6rem;" id="cookieAccept">Accetta</button> <button onclick="declineCookies()" class="btn btn-outline" style="padding:0.6rem 1.2rem;" id="cookieDecline">Solo necessari</button> </div>
 </div> <div id="lightbox"><img id="lbImg" src="" alt=""/></div> <script>const IMGS = {
-  branded: 'images/branded.webp',
-  matcha: 'images/matcha.webp',
-  tea: 'images/tea.webp',
-  dryice: 'images/dryice.webp',
-  hn_mug: 'images/hn_mug.webp',
-  espresso: 'images/espresso.webp',
-  cappuccino: 'images/cappuccino.webp',
-  cocktail_red: 'images/cocktail_red.webp',
-  croissants: 'images/croissants.webp',
+  branded: 'https://raw.githubusercontent.com/amirhmz1996/hushnow-cafe/main/images/branded.webp',
+  matcha: 'https://raw.githubusercontent.com/amirhmz1996/hushnow-cafe/main/images/matcha.webp',
+  tea: 'https://raw.githubusercontent.com/amirhmz1996/hushnow-cafe/main/images/tea.webp',
+  dryice: 'https://raw.githubusercontent.com/amirhmz1996/hushnow-cafe/main/images/dryice.webp',
+  hn_mug: 'https://raw.githubusercontent.com/amirhmz1996/hushnow-cafe/main/images/hn_mug.webp',
+  espresso: 'https://raw.githubusercontent.com/amirhmz1996/hushnow-cafe/main/images/espresso.webp',
+  cappuccino: 'https://raw.githubusercontent.com/amirhmz1996/hushnow-cafe/main/images/cappuccino.webp',
+  cocktail_red: 'https://raw.githubusercontent.com/amirhmz1996/hushnow-cafe/main/images/cocktail_red.webp',
+  croissants: 'https://raw.githubusercontent.com/amirhmz1996/hushnow-cafe/main/images/croissants.webp',
 };
-const LOGO_SRC = 'images/logo.webp';
+const LOGO_SRC = 'https://raw.githubusercontent.com/amirhmz1996/hushnow-cafe/main/images/logo.webp';
 
 // TG handled by Cloudflare Worker
 // TG_CHAT handled by Cloudflare Worker
@@ -394,17 +422,16 @@ function setLang(l) {
   lang = l;
   localStorage.setItem('hn_lang', l);
   var flagMap = {it:'🇮🇹',en:'🇬🇧',de:'🇩🇪',es:'🇪🇸',fr:'🇫🇷'};
-  var codeMap = {it:'IT',en:'EN',de:'DE',es:'ES',fr:'FR'};
   var flagEl = document.getElementById('langFlag');
-  if(flagEl) flagEl.textContent = flagMap[l];
+  if(flagEl) flagEl.textContent = flagMap[l] || flagMap.en;
   var langOpts = document.querySelectorAll('.lang-option');
   if(langOpts) langOpts.forEach(function(btn){
     btn.classList.toggle('active', btn.dataset.lang === l);
   });
+  // Translate all elements with data-it attribute
   var dataItEls = document.querySelectorAll('[data-it]');
-  if(!dataItEls) return;
-  dataItEls.forEach(function(el) {
-    var txt = el.getAttribute('data-'+l) || el.getAttribute('data-en');
+  if(dataItEls) dataItEls.forEach(function(el) {
+    var txt = el.getAttribute('data-'+l) || el.getAttribute('data-en') || el.getAttribute('data-it');
     if(!txt) return;
     if(el.tagName==='INPUT'||el.tagName==='TEXTAREA') {
       el.placeholder = txt;
@@ -414,7 +441,11 @@ function setLang(l) {
       el.innerHTML = txt;
     }
   });
-  renderMenu(currentCat);
+  // Re-render dynamic components in new language
+  if(typeof renderMenu === 'function') renderMenu(currentCat || 'caffetteria');
+  if(typeof renderHours === 'function') renderHours();
+  if(typeof renderReviews === 'function') renderReviews();
+  if(typeof renderGallery === 'function') renderGallery();
 }
 
 window.addEventListener('scroll', () => {
@@ -453,6 +484,12 @@ function showSection(id) {
     a.classList.toggle('active-link', a.getAttribute('href') === '#'+id);
   });
   window.scrollTo({top:0,behavior:'instant'});
+  // Draw QR when contact section is opened
+  if(id === 'contact') {
+    setTimeout(function(){
+      if(!document.getElementById('qrDiv')) drawQR();
+    }, 200);
+  }
 }
 
 document.querySelectorAll('.nav-links a').forEach(a => {
@@ -617,7 +654,8 @@ const menuData = {
 };
 
 
-let activeCat = 'colazione';
+let activeCat = 'caffetteria';
+let currentCat = 'caffetteria';
 function renderMenu(cat, btn) {
   currentCat = cat;
   activeCat = cat;
@@ -643,13 +681,7 @@ function renderMenu(cat, btn) {
     return '<div class="menu-item"><div><div class="menu-item-name">'+(name||'')+'</div>'+(desc?'<div class="menu-item-desc">'+desc+'</div>':'')+'</div><div class="menu-item-price">'+(i.price||'')+'</div></div>';
   }).join('');
 }
-document.getElementById('menuTabs').querySelectorAll('.menu-tab').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document.querySelectorAll('.menu-tab').forEach(b=>b.classList.remove('active'));
-    btn.classList.add('active');
-    renderMenu(btn.dataset.cat);
-  });
-});
+// Menu tab listeners are handled via inline onclick in HTML
 // ─── LOCALSTORAGE PERSISTENCE ─────────────────────────────────────────────
 function saveToStorage() {
   try {
@@ -810,7 +842,9 @@ const lb=document.getElementById('lightbox');
 if(lb) lb.addEventListener('click',()=>{lb.style.display='none';document.body.style.overflow='';});
 
 document.getElementById('heroBg').style.backgroundImage = 'url(' + LOGO_SRC + ')';
-
+document.getElementById('heroBg').style.backgroundSize = 'contain';
+document.getElementById('heroBg').style.backgroundRepeat = 'no-repeat';
+document.getElementById('heroBg').style.backgroundPosition = 'center center';
 const reviews = [
   { stars:5, text_it:"Un posto meraviglioso nel cuore di Napoli. Il caffè è eccezionale e l'atmosfera è unica. Ci torneremo sicuramente!", text_en:"A wonderful place in the heart of Naples. The coffee is exceptional and the atmosphere is unique. We will definitely come back!", text_de:"Ein wunderbarer Ort im Herzen von Neapel. Der Kaffee ist außergewöhnlich und die Atmosphäre einzigartig. Wir kommen definitiv wieder!", author:"Sofia M.", flag:"🇮🇹" },
   { stars:5, text_it:"Il miglior matcha latte che abbia mai assaggiato a Napoli. Il design del locale è raffinatissimo.", text_en:"The best matcha latte I've ever had in Naples. The interior design is incredibly refined.", text_de:"Der beste Matcha Latte, den ich je in Neapel getrunken habe. Das Interieur ist unglaublich raffiniert.", author:"Thomas K.", flag:"🇩🇪" },
@@ -862,7 +896,7 @@ function drawQR() {
   document.head.appendChild(script);
 }
 
-setTimeout(drawQR, 100);
+setTimeout(drawQR, 300);
 
 function downloadQR() {
   const div = document.getElementById('qrDiv');
@@ -907,7 +941,6 @@ const cookieTexts = {
 const cookieBtnTexts = {
   it: ['Accetta', 'Solo necessari'], en: ['Accept', 'Necessary only'], de: ['Akzeptieren', 'Nur notwendige']
 };
-const origSetLang = setLang;
 
 const _setLang = setLang;
 window.setLang = function(l) {
@@ -923,7 +956,7 @@ window.setLang = function(l) {
 ;
 
 const ADMIN_PWD = 'hushnow5';
-let currentAdminCat = 'colazione';
+let currentAdminCat = 'caffetteria';
 let currentAdminLang = 'it';
 
 function openAdmin() {
@@ -958,7 +991,8 @@ function checkPwd() {
   if (pwd === ADMIN_PWD) {
     document.getElementById('loginBox').style.display = 'none';
     document.getElementById('adminDash').style.display = 'block';
-    loadMenuAdmin('colazione', 'it');
+    currentAdminCat = 'caffetteria';
+    loadMenuAdmin('caffetteria', 'it');
     loadHoursAdmin();
   } else {
     document.getElementById('loginErr').style.display = 'block';
@@ -966,8 +1000,9 @@ function checkPwd() {
   }
 }
 
-function switchAdminTab(tabId, clickedBtn) {
-  document.querySelectorAll('#mainAdminTabs .admin-tab').forEach(function(t){ t.classList.remove('active'); });
+function switchAdminTab(tabId) {
+  document.querySelectorAll('.admin-tabs .admin-tab').forEach(function(t){ t.classList.remove('active'); });
+  var clickedBtn = document.querySelector('.admin-tabs .admin-tab[onclick*="' + tabId + '"]');
   if(clickedBtn) clickedBtn.classList.add('active');
   document.querySelectorAll('.admin-section').forEach(function(s){ s.classList.remove('active'); });
   var sec = document.getElementById('admin-' + tabId);
