@@ -287,23 +287,11 @@
 <body> <div id="splash"> <div class="splash-content"> <div class="splash-line"></div> <p class="splash-eyebrow">Napoli, Italia</p> <h1 class="splash-title">HUSHNOW<br><em>CAFÉ °5</em></h1> <p class="splash-welcome">Benvenuti &nbsp;·&nbsp; Welcome</p> <div class="splash-line"></div> </div>
 </div> <nav id="navbar"> <div style="display:flex;align-items:center;gap:1rem;"> <button id="backBtn" onclick="showSection('hero')"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
       Home
-    </button> </div> <ul class="nav-links" id="navLinks"> 
-  <button class="menu-close" onclick="toggleMenu()">✕</button> 
-  <div class="nav-gold-line"></div> 
-  <li><a href="#about"       data-it="Chi Siamo"  data-en="About" data-de="Über Uns" data-es="Quiénes Somos" data-fr="Qui Sommes-Nous">Chi Siamo</a></li> 
-  <li><a href="#menu"        data-it="Menù"        data-en="Menu" data-de="Speisekarte" data-es="Menú" data-fr="Menu">Menù</a></li> 
-  <li><a href="#hours"       data-it="Orari"       data-en="Hours" data-de="Öffnungszeiten" data-es="Horarios" data-fr="Horaires">Orari</a></li> 
-  <li><a href="#reservation" data-it="Prenota"     data-en="Reserve" data-de="Reservieren" data-es="Reservar" data-fr="Réserver">Prenota</a></li> 
-  <li><a href="#events"      data-it="Eventi"      data-en="Events" data-de="Veranstaltungen" data-es="Eventos" data-fr="Événements">Eventi</a></li> 
-  <li><a href="#reviews"     data-it="Recensioni"  data-en="Reviews" data-de="Bewertungen" data-es="Reseñas" data-fr="Avis">Recensioni</a></li> 
-  <li><a href="#gallery"     data-it="Galleria"    data-en="Gallery" data-de="Galerie" data-es="Galería" data-fr="Galerie">Galleria</a></li> 
-  <li><a href="#contact"     data-it="Contatti"    data-en="Contact" data-de="Kontakt" data-es="Contacto" data-fr="Contact">Contatti</a></li> 
-</ul>
-      <button class="lang-selected" onclick="toggleLangMenu(event)" id="langSelectedBtn">
-  <span id="langFlag" style="font-size:1.4rem;">🇮🇹</span>
-  <span id="langCode" style="font-size:0.7rem; margin-left:5px;">IT</span>
-  <span class="lang-arrow" style="font-size:0.55rem;opacity:0.7; margin-left:5px;">▾</span>
-</button>
+    </button> </div> <ul class="nav-links" id="navLinks"> <button class="menu-close" onclick="toggleMenu()">✕</button> <div class="nav-gold-line"></div> <li><a href="#about"       data-it="Chi Siamo"  data-en="About" data-de="Über Uns">Chi Siamo</a></li> <li><a href="#menu"        data-it="Menù"        data-en="Menu" data-de="Speisekarte">Menù</a></li> <li><a href="#hours"       data-it="Orari"       data-en="Hours" data-de="Öffnungszeiten">Orari</a></li> <li><a href="#reservation" data-it="Prenota"     data-en="Reserve" data-de="Reservieren">Prenota</a></li> <li><a href="#events"      data-it="Eventi"      data-en="Events" data-de="Veranstaltungen">Eventi</a></li> <li><a href="#reviews"     data-it="Recensioni"  data-en="Reviews" data-de="Bewertungen">Recensioni</a></li> <li><a href="#gallery"     data-it="Galleria"    data-en="Gallery" data-de="Galerie">Galleria</a></li> <li><a href="#contact"     data-it="Contatti"    data-en="Contact" data-de="Kontakt">Contatti</a></li> </ul> <div style="display:flex;align-items:center;gap:1rem;"> <div class="lang-dropdown" id="langDropdown">
+        <button class="lang-selected" onclick="toggleLangMenu(event)" id="langSelectedBtn">
+          <span id="langFlag" style="font-size:1.4rem;">🇮🇹</span>
+          <span class="lang-arrow" style="font-size:0.55rem;opacity:0.7;">▾</span>
+        </button>
         <div class="lang-menu" id="langMenu">
           <button onclick="setLang('it');document.getElementById('langMenu').classList.remove('open');document.getElementById('langDropdown').classList.remove('open');" class="lang-option" data-lang="it"><span>🇮🇹</span> Italiano</button>
           <button onclick="setLang('en');document.getElementById('langMenu').classList.remove('open');document.getElementById('langDropdown').classList.remove('open');" class="lang-option" data-lang="en"><span>🇬🇧</span> English</button>
@@ -312,12 +300,7 @@
           <button onclick="setLang('fr');document.getElementById('langMenu').classList.remove('open');document.getElementById('langDropdown').classList.remove('open');" class="lang-option" data-lang="fr"><span>🇫🇷</span> Français</button>
         </div>
       </div> <div class="nav-burger" id="burger" onclick="toggleMenu()"><span></span><span></span><span></span></div> </div>
-</nav> <section id="hero" class="page-section active"> <div class="hero-bg-img" id="heroBg"></div> <div class="hero-overlay"></div> <div class="hero-content"> <p class="hero-eyebrow" data-it="Napoli, Italia" data-en="Naples, Italy" data-de="Neapel, Italien" data-es="Nápoles, Italia" data-fr="Naples, Italie">Napoli, Italia</p> <h1 class="hero-title">HUSHNOW<br><em>CAFÉ °5</em></h1> <div class="hero-sep"></div> <p class="hero-sub" data-it="Breakfast · Lunch · Aperitivo" data-en="Breakfast · Lunch · Aperitif" data-de="Frühstück · Mittagessen · Aperitif" data-es="Desayuno · Almuerzo · Aperitivo" data-fr="Petit-déjeuner · Déjeuner · Apéritif">Breakfast · Lunch · Aperitivo</p> 
-<div class="hero-ctas"> 
-  <button onclick="showSection('menu')" class="btn btn-gold" data-it="Sfoglia il Menù" data-en="View Menu" data-de="Speisekarte" data-es="Ver Menú" data-fr="Voir le Menu">Sfoglia il Menù</button> 
-  <button onclick="showSection('reservation')" class="btn btn-outline" data-it="Prenota un Tavolo" data-en="Book a Table" data-de="Tisch Reservieren" data-es="Reservar una Mesa" data-fr="Réserver une Table">Prenota un Tavolo</button> 
-</div>
-</div </div> <div class="scroll-hint"><span></span></div>
+</nav> <section id="hero" class="page-section active"> <div class="hero-bg-img" id="heroBg"></div> <div class="hero-overlay"></div> <div class="hero-content"> <p class="hero-eyebrow" data-it="Napoli, Italia" data-en="Naples, Italy" data-de="Neapel, Italien" data-es="Nápoles, Italia" data-fr="Naples, Italie">Napoli, Italia</p> <h1 class="hero-title">HUSHNOW<br><em>CAFÉ °5</em></h1> <div class="hero-sep"></div> <p class="hero-sub" data-it="Breakfast · Lunch · Aperitivo" data-en="Breakfast · Lunch · Aperitif" data-de="Frühstück · Mittagessen · Aperitif" data-es="Desayuno · Almuerzo · Aperitivo" data-fr="Petit-déjeuner · Déjeuner · Apéritif" data-de="Frühstück · Mittagessen · Aperitif">Breakfast · Lunch · Aperitivo</p> <div class="hero-ctas"> <button onclick="showSection('menu')" class="btn btn-gold" data-it="Sfoglia il Menù" data-en="View Menu" data-de="Speisekarte">Sfoglia il Menù</button> <button onclick="showSection('reservation')" class="btn btn-outline" data-it="Prenota un Tavolo" data-en="Book a Table" data-de="Tisch Reservieren">Prenota un Tavolo</button> </div> </div> <div class="scroll-hint"><span></span></div>
 </section> <section id="about" class="page-section"> <div class="section-inner"> <div class="grid-2"> <div> <p class="section-label" data-it="La Nostra Storia" data-en="Our Story">La Nostra Storia</p> <h2 class="section-title" data-it="Un luogo dove il<br>silenzio ha <em>sapore</em>" data-en="A place where<br>silence has <em>flavour</em>">Un luogo dove il<br>silenzio ha <em>sapore</em></h2> <div class="gold-line"></div> <p class="about-main-text"
            data-en="Hush Now is more than a café: it is an experience. A space where elegance and pleasure blend from the first morning coffee to a refined lunch, to a cocktail experience that turns every moment into something unique."
            data-it="Hush Now è più di una caffetteria: è un&#39;esperienza. Uno spazio dove eleganza e piacere si fondono, dal primo caffè del mattino a un pranzo ricercato, fino a una cocktail experience che trasforma ogni momento in qualcosa di unico."
@@ -519,22 +502,22 @@ document.querySelectorAll('.nav-links a').forEach(a => {
 
 const menuData = {
   caffetteria: [
-    {it:'Espresso', en:'Espresso', de:'Espresso', es:'Espresso', fr:'Expresso', dit:'', den:'', dde:'', des:'', dfr:'', price:'€1.20'},
-    {it:'Decaffeinato', en:'Decaffeinated', de:'Entkoffeiniert', es:'Descafeinado', fr:'Décaféiné', dit:'', den:'', dde:'', des:'', dfr:'', price:'€1.40'},
-    {it:'Cappuccino Classico', en:'Classic Cappuccino', de:'Klassischer Cappuccino', es:'Capuchino Clásico', fr:'Cappuccino Classique', dit:'', den:'', dde:'', des:'', dfr:'', price:'€2.20'},
-    {it:'Cappuccino Special', en:'Special Cappuccino', de:'Special Cappuccino', es:'Capuchino Especial', fr:'Cappuccino Spécial', dit:'Deca / Latte di mandorla / Soia / Senza lattosio', den:'Decaf / Almond milk / Soy / Lactose free', dde:'Deka / Mandelmilch / Soja / Laktosefrei', des:'Descafeinado / Leche de almendras / Soja / Sin lactosa', dfr:'Déca / Lait d\'amande / Soja / Sans lactose', price:'€2.50'},
-    {it:'Latte Macchiato Classico', en:'Classic Latte Macchiato', de:'Klassischer Latte Macchiato', es:'Latte Macchiato Clásico', fr:'Latte Macchiato Classique', dit:'', den:'', dde:'', des:'', dfr:'', price:'€2.00'},
-    {it:'Latte Macchiato Special', en:'Special Latte Macchiato', de:'Special Latte Macchiato', es:'Latte Macchiato Especial', fr:'Latte Macchiato Spécial', dit:'Deca / Latte di mandorla / Soia / Senza lattosio', den:'Decaf / Almond milk / Soy / Lactose free', dde:'Deka / Mandelmilch / Soja / Laktosefrei', des:'Descafeinado / Leche de almendras / Soja / Sin lactosa', dfr:'Déca / Lait d\'amande / Soja / Sans lactose', price:'€2.30'},
-    {it:'Americano', en:'Americano', de:'Americano', es:'Americano', fr:'Café Américain', dit:'', den:'', dde:'', des:'', dfr:'', price:'€2.50'},
-    {it:'Ginseng Small / Large', en:'Ginseng Small / Large', de:'Ginseng Klein / Groß', es:'Ginseng Pequeño / Grande', fr:'Ginseng Petit / Grand', dit:'', den:'', dde:'', des:'', dfr:'', price:'€1.80 / 2.50'},
-    {it:'Orzo Small / Large', en:'Barley coffee Small / Large', de:'Gerstenkaffee Klein / Groß', es:'Café de Cebada Pequeño / Grande', fr:'Café d\'Orge Petit / Grand', dit:'', den:'', dde:'', des:'', dfr:'', price:'€1.80 / 2.50'},
-    {it:'Tè / Infuso Classico / Special', en:'Tea / Infusion Classic / Special', de:'Tee / Aufguss Klassisch / Special', es:'Té / Infusión Clásica / Especial', fr:'Thé / Infusion Classique / Spécial', dit:'Servito con biscotti', den:'Served with cookies', dde:'Mit Keksen serviert', des:'Servido con galletas', dfr:'Servi avec des biscuits', price:'€2.50 / 3.00'},
-    {it:'Crema di Caffè', en:'Coffee Cream', de:'Kaffeecreme', es:'Crema de Café', fr:'Crème de Café', dit:'', den:'', dde:'', des:'', dfr:'', price:'€2.00'},
-    {it:'Caffè Freddo', en:'Iced Coffee', de:'Eiskaffee', es:'Café Helado', fr:'Café Glacé', dit:'Da giugno a ottobre', den:'June to October', dde:'Juni bis Oktober', des:'De junio a octubre', dfr:'De juin à octobre', price:'€1.60'},
-    {it:'Cioccolata Calda', en:'Hot Chocolate', de:'Heiße Schokolade', es:'Chocolate Caliente', fr:'Chocolat Chaud', dit:'Bianca, Gianduia, Fondente — con panna +0.50', den:'White, Gianduia, Dark — with cream +0.50', dde:'Weiß, Gianduia, Dunkel — mit Sahne +0.50', des:'Blanco, Gianduia, Oscuro — con crema +0.50', dfr:'Blanc, Gianduia, Noir — avec crème +0.50', price:'€4.00'},
-    {it:'Cioccolata Calda Senza Lattosio', en:'Lactose-Free Hot Chocolate', de:'Laktosefreie heiße Schokolade', es:'Chocolate Caliente Sin Lactosa', fr:'Chocolat Chaud Sans Lactose', dit:'Da ottobre a marzo', den:'October to March', dde:'Oktober bis März', des:'De octubre a marzo', dfr:'D\'octobre à mars', price:'€5.00'},
-    {it:'Diletta', en:'Diletta', de:'Diletta', es:'Diletta', fr:'Diletta', dit:'Tè Matcha, latte di mandorla schiumato caldo, senza zuccheri aggiunti', den:'Matcha tea, hot steamed almond milk, no added sugar', dde:'Matcha-Tee, heiße aufgeschäumte Mandelmilch, ohne Zuckerzusatz', des:'Té Matcha, leche de almendras caliente espumada, sin azúcar añadido', dfr:'Thé Matcha, lait d\'amande chaud moussé, sans sucre ajouté', price:'€6.00'},
-    {it:'Hush Cream', en:'Hush Cream', de:'Hush Cream', es:'Hush Cream', fr:'Hush Cream', dit:'Espresso, latte condensato, latte montato', den:'Espresso, condensed milk, whipped milk', dde:'Espresso, Kondensmilch, aufgeschäumte Milch', des:'Espresso, leche condensada, leche batida', dfr:'Expresso, lait concentré, lait fouetté', price:'€5.00'},
+    {it:'Espresso',en:'Espresso',de:'Espresso',dit:'',den:'',dde:'',price:'€1.20'},
+    {it:'Decaffeinato',en:'Decaffeinated',de:'Entkoffeiniert',dit:'',den:'',dde:'',price:'€1.40'},
+    {it:'Cappuccino Classico',en:'Classic Cappuccino',de:'Klassischer Cappuccino',dit:'',den:'',dde:'',price:'€2.20'},
+    {it:'Cappuccino Special',en:'Special Cappuccino',de:'Special Cappuccino',dit:'Deca / Latte di mandorla / Soia / Senza lattosio',den:'Decaf / Almond milk / Soy / Lactose free',dde:'Deka / Mandelmilch / Soja / Laktosefrei',price:'€2.50'},
+    {it:'Latte Macchiato Classico',en:'Classic Latte Macchiato',de:'Klassischer Latte Macchiato',dit:'',den:'',dde:'',price:'€2.00'},
+    {it:'Latte Macchiato Special',en:'Special Latte Macchiato',de:'Special Latte Macchiato',dit:'Deca / Latte di mandorla / Soia / Senza lattosio',den:'Decaf / Almond milk / Soy / Lactose free',dde:'Deka / Mandelmilch / Soja / Laktosefrei',price:'€2.30'},
+    {it:'Americano',en:'Americano',de:'Americano',dit:'',den:'',dde:'',price:'€2.50'},
+    {it:'Ginseng Small / Large',en:'Ginseng Small / Large',de:'Ginseng Klein / Groß',dit:'',den:'',dde:'',price:'€1.80 / 2.50'},
+    {it:'Orzo Small / Large',en:'Barley coffee Small / Large',de:'Gerstenkaffee Klein / Groß',dit:'',den:'',dde:'',price:'€1.80 / 2.50'},
+    {it:'Tè / Infuso Classico / Special',en:'Tea / Infusion Classic / Special',de:'Tee / Aufguss Klassisch / Special',dit:'Servito con biscotti',den:'Served with cookies',dde:'Mit Keksen serviert',price:'€2.50 / 3.00'},
+    {it:'Crema di Caffè',en:'Coffee Cream',de:'Kaffeecreme',dit:'',den:'',dde:'',price:'€2.00'},
+    {it:'Caffè Freddo',en:'Iced Coffee',de:'Eiskaffee',dit:'Da giugno a ottobre',den:'June to October',dde:'Juni bis Oktober',price:'€1.60'},
+    {it:'Cioccolata Calda',en:'Hot Chocolate',de:'Heiße Schokolade',dit:'Bianca, Gianduia, Fondente — con panna +0.50',den:'White, Gianduia, Dark — with cream +0.50',dde:'Weiß, Gianduia, Dunkel — mit Sahne +0.50',price:'€4.00'},
+    {it:'Cioccolata Calda Senza Lattosio',en:'Lactose-Free Hot Chocolate',de:'Laktosefreie heiße Schokolade',dit:'Da ottobre a marzo',den:'October to March',dde:'Oktober bis März',price:'€5.00'},
+    {it:'Diletta',en:'Diletta',de:'Diletta',dit:'Tè Matcha, latte di mandorla schiumato caldo, senza zuccheri aggiunti',den:'Matcha tea, hot steamed almond milk, no added sugar',dde:'Matcha-Tee, heiße aufgeschäumte Mandelmilch, ohne Zuckerzusatz',price:'€6.00'},
+    {it:'Hush Cream',en:'Hush Cream',de:'Hush Cream',dit:'Espresso, latte condensato, latte montato',den:'Espresso, condensed milk, whipped milk',dde:'Espresso, Kondensmilch, aufgeschäumte Milch',price:'€5.00'},
   ],
   dolce: [
     {it:'Brioche Vuota / Ripiena',en:'Brioche Plain / Filled',de:'Brioche Leer / Gefüllt',dit:'',den:'',dde:'',price:'€1.80 / 2.00'},
@@ -859,7 +842,7 @@ const lb=document.getElementById('lightbox');
 if(lb) lb.addEventListener('click',()=>{lb.style.display='none';document.body.style.overflow='';});
 
 document.getElementById('heroBg').style.backgroundImage = 'url(' + LOGO_SRC + ')';
-document.getElementById('heroBg').style.backgroundSize = 'cover';
+document.getElementById('heroBg').style.backgroundSize = 'contain';
 document.getElementById('heroBg').style.backgroundRepeat = 'no-repeat';
 document.getElementById('heroBg').style.backgroundPosition = 'center center';
 const reviews = [
