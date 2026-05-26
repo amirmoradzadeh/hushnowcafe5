@@ -299,10 +299,11 @@
   <li><a href="#gallery"     data-it="Galleria"    data-en="Gallery" data-de="Galerie" data-es="Galería" data-fr="Galerie">Galleria</a></li> 
   <li><a href="#contact"     data-it="Contatti"    data-en="Contact" data-de="Kontakt" data-es="Contacto" data-fr="Contact">Contatti</a></li> 
 </ul>
-        <button class="lang-selected" onclick="toggleLangMenu(event)" id="langSelectedBtn">
-          <span id="langFlag" style="font-size:1.4rem;">🇮🇹</span>
-          <span class="lang-arrow" style="font-size:0.55rem;opacity:0.7;">▾</span>
-        </button>
+      <button class="lang-selected" onclick="toggleLangMenu(event)" id="langSelectedBtn">
+  <span id="langFlag" style="font-size:1.4rem;">🇮🇹</span>
+  <span id="langCode" style="font-size:0.7rem; margin-left:5px;">IT</span>
+  <span class="lang-arrow" style="font-size:0.55rem;opacity:0.7; margin-left:5px;">▾</span>
+</button>
         <div class="lang-menu" id="langMenu">
           <button onclick="setLang('it');document.getElementById('langMenu').classList.remove('open');document.getElementById('langDropdown').classList.remove('open');" class="lang-option" data-lang="it"><span>🇮🇹</span> Italiano</button>
           <button onclick="setLang('en');document.getElementById('langMenu').classList.remove('open');document.getElementById('langDropdown').classList.remove('open');" class="lang-option" data-lang="en"><span>🇬🇧</span> English</button>
