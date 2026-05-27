@@ -541,7 +541,7 @@ const menuData = {
     {it:'Aperitivo Gourmet',en:'Gourmet Aperitif',de:'Gourmet-Aperitif',es:'Aperitivo Gourmet',fr:'Apéritif Gourmet',dit:'Min. 2 persone',den:'Min. 2 people',dde:'Mind. 2 Personen',des:'Mín. 2 personas',dfr:'Min. 2 personnes',price:'€12.00'},
     {it:'Piatto o Zuppa Del Giorno',en:'Plate or Soup of the Day',de:'Tagesgericht oder Suppe',es:'Plato o Sopa del día',fr:'Plat ou Soupe du jour',dit:'',den:'',dde:'',des:'',dfr:'',price:'€8.00 / 10 / 12'},
   ],
-  cocktails: [
+  spritz: [
     // ── SPRITZ ──
     {it:'Aperol Spritz',en:'Aperol Spritz',de:'Aperol Spritz',es:'Aperol Spritz',fr:'Aperol Spritz',dit:'Prosecco Extra Dry, Aperol, Soda',den:'Prosecco Extra Dry, Aperol, Soda',dde:'Prosecco Extra Dry, Aperol, Soda',des:'Prosecco Extra Dry, Aperol, Soda',dfr:'Prosecco Extra Dry, Aperol, Soda',price:'€8.00'},
     {it:'Campari Spritz',en:'Campari Spritz',de:'Campari Spritz',es:'Campari Spritz',fr:'Campari Spritz',dit:'Prosecco Extra Dry, Campari, Soda',den:'Prosecco Extra Dry, Campari, Soda',dde:'Prosecco Extra Dry, Campari, Soda',des:'Prosecco Extra Dry, Campari, Soda',dfr:'Prosecco Extra Dry, Campari, Soda',price:'€8.00'},
@@ -582,22 +582,24 @@ const menuData = {
     {it:'Laurent Perrier Champagne 🍾',en:'Laurent Perrier Champagne 🍾',de:'Laurent Perrier Champagne 🍾',es:'Laurent Perrier Champagne 🍾',fr:'Laurent Perrier Champagne 🍾',dit:'Champagne, Francia',den:'Champagne, France',dde:'Champagne, Frankreich',des:'Champagne, Francia',dfr:'Champagne, France',price:'€80'},
     {it:'Louis Roederer 🍾',en:'Louis Roederer 🍾',de:'Louis Roederer 🍾',es:'Louis Roederer 🍾',fr:'Louis Roederer 🍾',dit:'Champagne (Collection / Vintage / Rosè / Blanc De Blancs), Francia',den:'Champagne (Collection / Vintage / Rosé / Blanc De Blancs), France',dde:'Champagne (Collection / Vintage / Rosé / Blanc De Blancs), Frankreich',des:'Champagne (Collection / Vintage / Rosé / Blanc De Blancs), Francia',dfr:'Champagne (Collection / Vintage / Rosé / Blanc De Blancs), France',price:'€115 / 170 / 180 / 185 / 470'},
   ],
-  spirits: [
-    // ── WHISKEY ──
+ cocktails: [
+ WHISKEY: [
     {it:'Macallan 🥃',en:'Macallan 🥃',de:'Macallan 🥃',es:'Macallan 🥃',fr:'Macallan 🥃',dit:'Whisky — Ispeyside, Scozia',den:'Whisky — Speyside, Scotland',dde:'Whisky — Speyside, Schottland',des:'Whisky — Speyside, Escocia',dfr:'Whisky — Speyside, Écosse',price:'€14.00'},
     {it:'Lagavulin 16 🥃',en:'Lagavulin 16 🥃',de:'Lagavulin 16 🥃',es:'Lagavulin 16 🥃',fr:'Lagavulin 16 🥃',dit:'Whisky — Islay, Scozia',den:'Whisky — Islay, Scotland',dde:'Whisky — Islay, Schottland',des:'Whisky — Islay, Escocia',dfr:'Whisky — Islay, Écosse',price:'€14.00'},
     {it:'Oban 14 🥃',en:'Oban 14 🥃',de:'Oban 14 🥃',es:'Oban 14 🥃',fr:'Oban 14 🥃',dit:'Whisky — Highland, Scozia',den:'Whisky — Highland, Scotland',dde:'Whisky — Highland, Schottland',des:'Whisky — Highland, Escocia',dfr:'Whisky — Highland, Écosse',price:'€12.00'},
     {it:'Nikka From The Barrel 🥃',en:'Nikka From The Barrel 🥃',de:'Nikka From The Barrel 🥃',es:'Nikka From The Barrel 🥃',fr:'Nikka From The Barrel 🥃',dit:'Whisky — Giappone',den:'Whisky — Japan',dde:'Whisky — Japan',des:'Whisky — Japón',dfr:'Whisky — Japon',price:'€12.00'},
     {it:'Bulleit Rye 🥃',en:'Bulleit Rye 🥃',de:'Bulleit Rye 🥃',es:'Bulleit Rye 🥃',fr:'Bulleit Rye 🥃',dit:'Whisky — Kentucky, Stati Uniti',den:'Whisky — Kentucky, USA',dde:'Whisky — Kentucky, USA',des:'Whisky — Kentucky, EE.UU.',dfr:'Whisky — Kentucky, États-Unis',price:'€8.00'},
     {it:'Johnnie Walker Black Label 🥃',en:'Johnnie Walker Black Label 🥃',de:'Johnnie Walker Black Label 🥃',es:'Johnnie Walker Black Label 🥃',fr:'Johnnie Walker Black Label 🥃',dit:'Whisky — Scozia',den:'Whisky — Scotland',dde:'Whisky — Schottland',des:'Whisky — Escocia',dfr:'Whisky — Écosse',price:'€8.00'},
-    // ── RUM ──
+    ],
+ RUM: [
     {it:'Zacapa 23 🥃',en:'Zacapa 23 🥃',de:'Zacapa 23 🥃',es:'Zacapa 23 🥃',fr:'Zacapa 23 🥃',dit:'Rum — Cuba',den:'Rum — Cuba',dde:'Rum — Kuba',des:'Ron — Cuba',dfr:'Rhum — Cuba',price:'€12.00'},
     {it:'Havana Club 3 🥃',en:'Havana Club 3 🥃',de:'Havana Club 3 🥃',es:'Havana Club 3 🥃',fr:'Havana Club 3 🥃',dit:'Rum — Cuba',den:'Rum — Cuba',dde:'Rum — Kuba',des:'Ron — Cuba',dfr:'Rhum — Cuba',price:'€8.00'},
     {it:'Havana Club 7 🥃',en:'Havana Club 7 🥃',de:'Havana Club 7 🥃',es:'Havana Club 7 🥃',fr:'Havana Club 7 🥃',dit:'Rum — Cuba',den:'Rum — Cuba',dde:'Rum — Kuba',des:'Ron — Cuba',dfr:'Rhum — Cuba',price:'€8.00'},
     {it:'Diplomatico 🥃',en:'Diplomatico 🥃',de:'Diplomatico 🥃',es:'Diplomatico 🥃',fr:'Diplomatico 🥃',dit:'Rum — Lara, Venezuela',den:'Rum — Lara, Venezuela',dde:'Rum — Lara, Venezuela',des:'Ron — Lara, Venezuela',dfr:'Rhum — Lara, Venezuela',price:'€10.00'},
     {it:'Agricol J.M. Fumée Volcanique 🥃',en:'Agricol J.M. Fumée Volcanique 🥃',de:'Agricol J.M. Fumée Volcanique 🥃',es:'Agricol J.M. Fumée Volcanique 🥃',fr:'Agricol J.M. Fumée Volcanique 🥃',dit:'Rum — Martinica, Caraibi',den:'Rum — Martinique, Caribbean',dde:'Rum — Martinique, Karibik',des:'Ron — Martinica, Caribe',dfr:'Rhum — Martinique, Caraïbes',price:'€10.00'},
     {it:'Don Papa Baroko 🥃',en:'Don Papa Baroko 🥃',de:'Don Papa Baroko 🥃',es:'Don Papa Baroko 🥃',fr:'Don Papa Baroko 🥃',dit:'Rum — Isola di Negros, Philippine',den:'Rum — Negros Island, Philippines',dde:'Rum — Insel Negros, Philippinen',des:'Ron — Isla de Negros, Filipinas',dfr:'Rhum — Île de Negros, Philippines',price:'€10.00'},
-    // ── COGNAC E BRANDY ──
+   ],
+ COGNAC E BRANDY: [
     {it:"Hors d'Age Dartigalongue 🥃",en:"Hors d'Age Dartigalongue 🥃",de:"Hors d'Age Dartigalongue 🥃",es:"Hors d'Age Dartigalongue 🥃",fr:"Hors d'Age Dartigalongue 🥃",dit:'Armagnac — Francia',den:'Armagnac — France',dde:'Armagnac — Frankreich',des:'Armagnac — Francia',dfr:'Armagnac — France',price:'€10.00'},
     {it:'Nistru XO 🥃',en:'Nistru XO 🥃',de:'Nistru XO 🥃',es:'Nistru XO 🥃',fr:'Nistru XO 🥃',dit:'Cognac — Moldova',den:'Cognac — Moldova',dde:'Cognac — Moldawien',des:'Coñac — Moldavia',dfr:'Cognac — Moldavie',price:'€8.00'},
     // ── GRAPPE ──
@@ -612,10 +614,6 @@ const menuData = {
     {it:'Zubrowka Black 🥃',en:'Zubrowka Black 🥃',de:'Zubrowka Black 🥃',es:'Zubrowka Black 🥃',fr:'Zubrowka Black 🥃',dit:'Vodka — Polonia',den:'Vodka — Poland',dde:'Vodka — Polen',des:'Vodka — Polonia',dfr:'Vodka — Pologne',price:'€8.00'},
   ],
   bevande: [
-    {it:'Nastro Azzurro 🍺',en:'Nastro Azzurro 🍺',de:'Nastro Azzurro 🍺',es:'Nastro Azzurro 🍺',fr:'Nastro Azzurro 🍺',dit:'Birra — Italia',den:'Beer — Italy',dde:'Bier — Italien',des:'Cerveza — Italia',dfr:'Bière — Italie',price:'€5.00'},
-    {it:'Ichnusa Non Filtrata 🍺',en:'Ichnusa Non Filtrata 🍺',de:'Ichnusa Non Filtrata 🍺',es:'Ichnusa Non Filtrata 🍺',fr:'Ichnusa Non Filtrata 🍺',dit:'Birra — Sardegna, Italia',den:'Beer — Sardinia, Italy',dde:'Bier — Sardinien, Italien',des:'Cerveza — Cerdeña, Italia',dfr:'Bière — Sardaigne, Italie',price:'€5.00'},
-    {it:'Artigianale 🍺',en:'Craft Beer 🍺',de:'Handwerksbier 🍺',es:'Cerveza Artesanal 🍺',fr:'Bière Artisanale 🍺',dit:'Birra artigianale del giorno',den:'Craft beer of the day',dde:'Handwerksbier des Tages',des:'Cerveza artesanal del día',dfr:'Bière artisanale du jour',price:'€6.00'},
-    {it:'Corona 🍺',en:'Corona 🍺',de:'Corona 🍺',es:'Corona 🍺',fr:'Corona 🍺',dit:'Birra — Messico',den:'Beer — Mexico',dde:'Bier — Mexiko',des:'Cerveza — México',dfr:'Bière — Mexique',price:'€6.00'},
     {it:"Spremuta d'Arancia",en:'Fresh Orange Juice',de:'Frisch gepresster Orangensaft',es:'Zumo de naranja natural',fr:"Jus d'orange frais",dit:'',den:'',dde:'',des:'',dfr:'',price:'€5.00'},
     {it:'Succhi di Frutta',en:'Fruit Juices',de:'Fruchtsäfte',es:'Zumos de frutas',fr:'Jus de fruits',dit:'',den:'',dde:'',des:'',dfr:'',price:'€3.00'},
     {it:'Succo di Pomodoro Condito',en:'Seasoned Tomato Juice',de:'Gewürzter Tomatensaft',es:'Zumo de tomate condimentado',fr:'Jus de tomate assaisonné',dit:'',den:'',dde:'',des:'',dfr:'',price:'€4.00'},
