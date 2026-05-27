@@ -324,7 +324,7 @@
 </section> <section id="gallery" class="page-section" style="background:var(--bg);"> <div class="section-inner"> <p class="section-label" data-it="Le Nostre Creazioni" data-en="Our Creations">Le Nostre Creazioni</p> <h2 class="section-title" data-it="Ogni tazza, <em>un'opera</em>" data-en="Every cup, <em>a work of art</em>">Ogni tazza, <em>un'opera</em></h2> <div class="gold-line"></div> <div id="galleryGrid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1rem;"></div> </div>
 </section> <section id="contact" class="page-section"> <div class="section-inner"> <p class="section-label" data-it="Dove Siamo" data-en="Find Us" data-de="Wo Wir Sind" data-es="Dónde Estamos" data-fr="Où Nous Trouver">Dove Siamo</p> <h2 class="section-title" data-it="Contatti & <em>Posizione</em>" data-en="Contact & <em>Location</em>" data-de="Kontakt & <em>Standort</em>">Contatti & <em>Posizione</em></h2> <div class="gold-line"></div> <div class="contact-grid"> <div> <div class="contact-item"><p class="contact-label" data-it="Indirizzo" data-en="Address" data-de="Adresse" data-es="Dirección" data-fr="Adresse">Indirizzo</p><p class="contact-val">Via Carlo Poerio 20-21<br>Napoli, Italia 80121</p></div> <div class="contact-item"><p class="contact-label">Email</p><p class="contact-val"><a href="mailto:hushnowcafe.5@gmail.com">hushnowcafe.5@gmail.com</a></p></div> <div class="contact-item"><p class="contact-label">Instagram</p><p class="contact-val"><a href="https://www.instagram.com/hushnowcafe/" target="_blank">@hushnowcafe</a></p></div> <div class="contact-item"><p class="contact-label">Facebook</p><p class="contact-val"><a href="https://www.facebook.com/profile.php?id=61572115232384" target="_blank">HUSHNOW CAFÉ °5</a></p></div> <div style="display:flex;gap:0.8rem;flex-wrap:wrap;margin-top:1rem;"> <a href="https://www.instagram.com/hushnowcafe/" target="_blank" class="ig-link"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg> Instagram</a> <a href="https://www.facebook.com/profile.php?id=61572115232384" target="_blank" class="ig-link"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg> Facebook</a> </div> </div> <div class="map-wrap"> <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3020.8!2d14.2463!3d40.8375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133b084b44d7bdef%3A0x1e08d8e2e6c70420!2sVia%20Carlo%20Poerio%2C%2020%2C%2080121%20Napoli%20NA!5e0!3m2!1sit!2sit!4v1" allowfullscreen loading="lazy" title="Map"></iframe> </div> </div> </div> <div class="qr-wrap" style="margin-top:2.5rem;"> <canvas id="qrCanvas" width="160" height="160"></canvas> <div class="qr-info"> <h3 data-it="Scansiona & Scopri" data-en="Scan & Discover" data-de="Scannen & Entdecken">Scansiona & Scopri</h3> <p data-it="Inquadra il QR code con la fotocamera per accedere al menù, prenotare un tavolo e scoprire le ultime novità di HUSHNOW CAFÉ °5." data-en="Point your camera at the QR code to access the menu, book a table and discover the latest news from HUSHNOW CAFÉ °5." data-de="Scannen Sie den QR-Code mit Ihrer Kamera, um die Speisekarte aufzurufen und einen Tisch zu reservieren.">
               Inquadra il QR code con la fotocamera per accedere al menù e prenotare un tavolo.
-            </p> <button onclick="downloadQR()" class="btn btn-gold" data-it="Scarica QR Code" data-en="Download QR Code" data-de="QR-Code herunterladen" data-es="Descargar Código QR" data-fr="Télécharger QR Code" data-de="QR-Code herunterladen">Scarica QR Code</button> </div> </div> </section> <button id="adminBtn" onclick="openAdmin()" title="Admin Panel" aria-label="Admin Panel">&#9881;</button> <div id="adminPanel" style="display:none!important;"> <div id="loginBox" style="max-width:380px;margin:8rem auto;text-align:center;background:var(--bg2);border:1px solid var(--gold-line);border-radius:28px;padding:3rem 2.5rem;"> <h3>Admin Access</h3> <p style="color:var(--white-dim);font-size:0.75rem;margin-bottom:1.5rem;letter-spacing:0.1em;">HUSHNOW CAFÉ °5</p> <input type="password" id="adminPwd" placeholder="· · · · · ·" onkeydown="if(event.key==='Enter')checkPwd()"/> <br/> <button class="admin-save" onclick="checkPwd()">Accedi</button> <p id="loginErr">Password errata</p> </div> <div id="adminDash" style="display:none;max-width:900px;margin:0 auto;padding-bottom:4rem;"> <div class="admin-header"> <h2>Dashboard Admin</h2> <button onclick="closeAdmin()" style="background:none;border:none;color:var(--gold);font-size:1.5rem;cursor:pointer;">✕</button> </div> <div class="admin-tabs"> <button class="admin-tab active" onclick="switchAdminTab('menu-it')">Menù IT</button> <button class="admin-tab" onclick="switchAdminTab('menu-en')">Menù EN</button> <button class="admin-tab" onclick="switchAdminTab('menu-de')">Menù DE</button> <button class="admin-tab" onclick="switchAdminTab('hours-admin')">Orari</button> <button class="admin-tab" onclick="switchAdminTab('info-admin')">Info Caffè</button> </div> <div class="admin-section active" id="admin-menu-it"> <p style="color:var(--white-dim);font-size:0.75rem;margin-bottom:1.2rem;">Modifica nomi e descrizioni in italiano</p> <div style="display:flex;gap:0.6rem;flex-wrap:wrap;margin-bottom:1.2rem;" id="menuCatTabs"> <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:1.2rem;">
+            </p> <button onclick="downloadQR()" class="btn btn-gold" data-it="Scarica QR Code" data-en="Download QR Code" data-de="QR-Code herunterladen" data-es="Descargar Código QR" data-fr="Télécharger QR Code" data-de="QR-Code herunterladen">Scarica QR Code</button> </div> </div> </section> <button id="adminBtn" onclick="openAdmin()" title="Admin Panel" aria-label="Admin Panel">&#9881;</button> <div id="adminPanel" style="display:none!important;"> <div id="loginBox" style="max-width:380px;margin:8rem auto;text-align:center;background:var(--bg2);border:1px solid var(--gold-line);border-radius:28px;padding:3rem 2.5rem;"> <h3>Admin Access</h3> <p style="color:var(--white-dim);font-size:0.75rem;margin-bottom:1.5rem;letter-spacing:0.1em;">HUSHNOW CAFÉ °5</p> <input type="password" id="adminPwd" placeholder="· · · · · ·" onkeydown="if(event.key==='Enter')checkPwd()"/> <br/> <button class="admin-save" onclick="checkPwd()">Accedi</button> <p id="loginErr">Password errata</p> </div> <div id="adminDash" style="display:none;max-width:900px;margin:0 auto;padding-bottom:4rem;"> <div class="admin-header"> <h2>Dashboard Admin</h2> <div style="display:flex;align-items:center;gap:1rem;"> <span id="cloudSyncStatus" style="font-size:0.68rem;opacity:0;transition:opacity 0.4s;letter-spacing:0.05em;"></span> <button onclick="closeAdmin()" style="background:none;border:none;color:var(--gold);font-size:1.5rem;cursor:pointer;">✕</button> </div> </div> <div class="admin-tabs"> <button class="admin-tab active" onclick="switchAdminTab('menu-it')">Menù IT</button> <button class="admin-tab" onclick="switchAdminTab('menu-en')">Menù EN</button> <button class="admin-tab" onclick="switchAdminTab('menu-de')">Menù DE</button> <button class="admin-tab" onclick="switchAdminTab('hours-admin')">Orari</button> <button class="admin-tab" onclick="switchAdminTab('info-admin')">Info Caffè</button> </div> <div class="admin-section active" id="admin-menu-it"> <p style="color:var(--white-dim);font-size:0.75rem;margin-bottom:1.2rem;">Modifica nomi e descrizioni in italiano</p> <div style="display:flex;gap:0.6rem;flex-wrap:wrap;margin-bottom:1.2rem;" id="menuCatTabs"> <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:1.2rem;">
           <button class="admin-tab active" onclick="loadMenuAdmin('caffetteria','it',this)">Caffetteria</button>
           <button class="admin-tab" onclick="loadMenuAdmin('dolce','it',this)">Dolce</button>
           <button class="admin-tab" onclick="loadMenuAdmin('cucina','it',this)">Cucina</button>
@@ -614,30 +614,124 @@ function renderMenu(cat, btn) {
 }
 // Menu tab listeners are handled via inline onclick in HTML
 // ─── LOCALSTORAGE PERSISTENCE ─────────────────────────────────────────────
-function saveToStorage() {
+// ═══════════════════════════════════════════════════════════════
+// ☁️  JSONBIN CLOUD STORAGE — دیتابیس ابری رایگان
+// ═══════════════════════════════════════════════════════════════
+// راهنما: برای راه‌اندازی یک بار:
+//   1. به https://jsonbin.io بروید و ثبت نام کنید (رایگان)
+//   2. یک Bin جدید بسازید با محتوای: {}
+//   3. API Key و Bin ID را اینجا وارد کنید
+const JSONBIN_API_KEY = '$2a$10$xMX34k4eS3exUT3ELJxisOr8yqUe80BNCXwGegdrOj1haq.cQOima';
+const JSONBIN_BIN_ID  = '6a16b001f47d5c455c3c3880';
+const JSONBIN_URL     = 'https://api.jsonbin.io/v3/b/' + JSONBIN_BIN_ID;
+
+let _cloudSynced = false; // آیا داده از ابر بارگذاری شد؟
+
+// ── نمایش وضعیت سینک در پنل ادمین ────────────────────────────
+function showSyncStatus(msg, color) {
+  var el = document.getElementById('cloudSyncStatus');
+  if (!el) return;
+  el.textContent = msg;
+  el.style.color = color || 'var(--gold)';
+  el.style.opacity = '1';
+  setTimeout(function(){ el.style.opacity = '0'; }, 4000);
+}
+
+// ── ذخیره روی JSONBin + localStorage backup ────────────────────
+async function saveToStorage() {
+  // همیشه localStorage رو آپدیت کن (backup فوری)
   try {
     localStorage.setItem('hn_menu', JSON.stringify(menuData));
     localStorage.setItem('hn_hours', JSON.stringify(hoursData));
-  } catch(e) { console.log('Storage error:', e); }
+  } catch(e) {}
+
+  // اگه API Key تنظیم نشده، فقط localStorage کافیه
+  if (JSONBIN_API_KEY.includes('REPLACE') || JSONBIN_BIN_ID.includes('REPLACE')) {
+    showSyncStatus('⚠️ JSONBin تنظیم نشده — فقط روی این مرورگر ذخیره شد', '#f0a500');
+    return;
+  }
+
+  showSyncStatus('⏳ در حال ذخیره روی سرور...', 'var(--gold)');
+  try {
+    const payload = { menu: menuData, hours: hoursData, updated: new Date().toISOString() };
+    const res = await fetch(JSONBIN_URL, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-Master-Key': JSONBIN_API_KEY,
+        'X-Bin-Versioning': 'false',
+        'X-Bin-Private': 'false'
+      },
+      body: JSON.stringify(payload)
+    });
+    if (res.ok) {
+      showSyncStatus('✅ ذخیره شد — همه کاربران آپدیت را می‌بینند', '#4caf50');
+    } else {
+      throw new Error('HTTP ' + res.status);
+    }
+  } catch(err) {
+    showSyncStatus('⚠️ خطا در ذخیره ابری — فقط روی این مرورگر ذخیره شد', '#f44336');
+    console.warn('JSONBin save error:', err);
+  }
 }
 
-function loadFromStorage() {
+// ── بارگذاری از JSONBin با fallback به localStorage ────────────
+async function loadFromStorage() {
+  // اول از localStorage بخون تا صفحه سریع لود بشه
+  _applyLocalStorage();
+
+  if (JSONBIN_API_KEY.includes('REPLACE') || JSONBIN_BIN_ID.includes('REPLACE')) return;
+
+  try {
+    const res = await fetch(JSONBIN_URL + '/latest', {
+      headers: {
+        'X-Master-Key': JSONBIN_API_KEY,
+        'X-Bin-Meta': 'false'
+      }
+    });
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    const data = await res.json();
+    const record = data.record;
+
+    if (record && record.menu) {
+      Object.keys(record.menu).forEach(function(cat) {
+        if (menuData[cat]) menuData[cat] = record.menu[cat];
+      });
+    }
+    if (record && record.hours) {
+      record.hours.forEach(function(h, i) {
+        if (hoursData[i]) hoursData[i].time = h.time;
+      });
+    }
+    _cloudSynced = true;
+    // re-render با داده‌های جدید ابر
+    renderMenu(currentCat || 'caffetteria');
+    renderHours();
+    // ذخیره به localStorage برای دفعه بعد
+    localStorage.setItem('hn_menu', JSON.stringify(menuData));
+    localStorage.setItem('hn_hours', JSON.stringify(hoursData));
+  } catch(err) {
+    console.warn('JSONBin load failed, using localStorage:', err);
+  }
+}
+
+function _applyLocalStorage() {
   try {
     var savedMenu = localStorage.getItem('hn_menu');
     var savedHours = localStorage.getItem('hn_hours');
-    if(savedMenu) {
+    if (savedMenu) {
       var parsed = JSON.parse(savedMenu);
       Object.keys(parsed).forEach(function(cat) {
-        if(menuData[cat]) menuData[cat] = parsed[cat];
+        if (menuData[cat]) menuData[cat] = parsed[cat];
       });
     }
-    if(savedHours) {
+    if (savedHours) {
       var parsedH = JSON.parse(savedHours);
       parsedH.forEach(function(h, i) {
-        if(hoursData[i]) hoursData[i].time = h.time;
+        if (hoursData[i]) hoursData[i].time = h.time;
       });
     }
-  } catch(e) { console.log('Load error:', e); }
+  } catch(e) {}
 }
 // INIT MOVED TO END
 
@@ -1071,14 +1165,17 @@ window.addEventListener('scroll',()=>{
 });
 
 // ─── INIT ────────────────────────────────────────────────────────────────
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', async function() {
   var savedLang = localStorage.getItem('hn_lang') || 'it';
-  loadFromStorage();
+  // بارگذاری اولیه از localStorage (سریع)
+  _applyLocalStorage();
   renderMenu('caffetteria');
   renderHours();
   renderGallery();
   renderReviews();
   setLang(savedLang);
+  // سپس از ابر آپدیت کن (در پس‌زمینه)
+  await loadFromStorage();
 });
 </script>
 </body>
