@@ -933,7 +933,7 @@ const lb=document.getElementById('lightbox');
 if(lb) lb.addEventListener('click',()=>{lb.style.display='none';document.body.style.overflow='';});
 
 document.getElementById('heroBg').style.backgroundImage = 'url(' + LOGO_SRC + ')';
-document.getElementById('heroBg').style.backgroundSize = 'conver';
+document.getElementById('heroBg').style.backgroundSize = 'cover';
 document.getElementById('heroBg').style.backgroundRepeat = 'no-repeat';
 document.getElementById('heroBg').style.backgroundPosition = 'center center';
 const reviews = [
@@ -968,7 +968,7 @@ function drawQR() {
     div.style.cssText = 'border-radius:12px;overflow:hidden;border:1px solid rgba(201,169,110,0.35);width:160px;height:160px;flex-shrink:0;';
     parent.replaceChild(div, canvas);
     new QRCode(div, {
-      text: 'https://hushnowcafe.com',
+      text: 'https://amirmoradzadeh.github.io/hushnowcafe5/',
       width: 160, height: 160,
       colorDark: '#080808', colorLight: '#F2EDE6',
       correctLevel: QRCode.CorrectLevel.H
@@ -982,7 +982,7 @@ function drawQR() {
     ctx.fillStyle = '#080808';
     ctx.font = '10px Montserrat';
     ctx.textAlign = 'center';
-    ctx.fillText('hushnowcafe.com', 80, 85);
+    ctx.fillText('amirmoradzadeh.github.io/hushnowcafe5', 80, 85);
   };
   document.head.appendChild(script);
 }
