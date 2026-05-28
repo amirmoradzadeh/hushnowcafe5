@@ -564,8 +564,8 @@ function setLang(l) {
   if(langOpts) langOpts.forEach(function(btn){
     btn.classList.toggle('active', btn.dataset.lang === l);
   });
-  // Translate all elements with data-it attribute
-  var dataItEls = document.querySelectorAll('[data-it]');
+  // Translate ALL elements with any data-lang attribute
+  var dataItEls = document.querySelectorAll('[data-it],[data-en],[data-de],[data-es],[data-fr]');
   if(dataItEls) dataItEls.forEach(function(el) {
     var txt = el.getAttribute('data-'+l) || el.getAttribute('data-en') || el.getAttribute('data-it');
     if(!txt) return;
@@ -573,6 +573,8 @@ function setLang(l) {
       el.placeholder = txt;
     } else if(el.tagName==='OPTION') {
       el.textContent = txt;
+    } else if(el.tagName==='SELECT') {
+      // skip — handled by options
     } else {
       el.innerHTML = txt;
     }
