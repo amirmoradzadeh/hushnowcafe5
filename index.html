@@ -241,6 +241,9 @@
 /* ── Admin Panel ─────────────────────────────────────────────── */
 #adminBtn{position:fixed;bottom:1.8rem;right:1.8rem;z-index:8000;width:48px;height:48px;border-radius:50%;background:rgba(8,8,8,0.85);border:1px solid rgba(201,169,110,0.3);color:var(--gold);cursor:pointer;font-size:1.2rem;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(0,0,0,0.5);transition:all 0.3s;backdrop-filter:blur(10px);opacity:0.7;}
 #adminBtn:hover{opacity:1;border-color:var(--gold);transform:rotate(30deg);}
+#waBtn{position:fixed;bottom:5.6rem;right:1.8rem;z-index:8000;width:48px;height:48px;border-radius:50%;background:#25D366;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,0.4);transition:all 0.3s;opacity:0.92;}
+#waBtn:hover{opacity:1;transform:scale(1.1);box-shadow:0 6px 24px rgba(37,211,102,0.6);}
+#waBtn svg{width:26px;height:26px;fill:#fff;}
 #adminPanel{display:none!important;position:fixed!important;top:0!important;left:0!important;right:0!important;bottom:0!important;z-index:99999!important;background:#050505!important;overflow-y:auto!important;-webkit-overflow-scrolling:touch!important;}
 #adminPanel.open{display:block!important;}
 .admin-tab{background:rgba(201,169,110,0.08);border:1px solid rgba(201,169,110,0.2);color:var(--white-d);border-radius:50px;padding:0.4rem 1rem;cursor:pointer;font-family:'Montserrat',sans-serif;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;transition:all 0.2s;}
@@ -284,7 +287,7 @@
 #adminPanel h3{font-family:'Josefin Sans',sans-serif;font-size:1.4rem;font-weight:300;color:var(--white);margin-bottom:0.5rem;}
 </style>
 </head>
-<body> <div id="splash"> <div class="splash-content"> <div class="splash-line"></div> <p class="splash-eyebrow">Napoli, Italia</p> <h1 class="splash-title">HUSHNOW<br><em>CAFÉ °5</em></h1> <p class="splash-welcome">Benvenuti &nbsp;·&nbsp; Welcome</p> <div class="splash-line"></div> </div>
+<body> <div id="splash"> <div class="splash-content"> <div class="splash-line"></div> <p class="splash-eyebrow">Napoli, Italia</p> <h1 class="splash-title" style="color:var(--white);">HUSHNOW CAFÉ °5</h1> <p class="splash-welcome">Benvenuti &nbsp;·&nbsp; Welcome</p> <div class="splash-line"></div> </div>
 </div> <nav id="navbar"> <div style="display:flex;align-items:center;gap:1rem;"> <button id="backBtn" onclick="showSection('hero')"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
       Home
     </button> </div> <ul class="nav-links" id="navLinks"> <button class="menu-close" onclick="toggleMenu()">✕</button> <div class="nav-gold-line"></div> <li><a href="#about"       data-it="Chi Siamo"  data-en="About" data-de="Über Uns">Chi Siamo</a></li> <li><a href="#menu"        data-it="Menù"        data-en="Menu" data-de="Speisekarte">Menù</a></li> <li><a href="#hours"       data-it="Orari"       data-en="Hours" data-de="Öffnungszeiten">Orari</a></li> <li><a href="#reservation" data-it="Prenota"     data-en="Reserve" data-de="Reservieren">Prenota</a></li> <li><a href="#events"      data-it="Eventi"      data-en="Events" data-de="Veranstaltungen">Eventi</a></li> <li><a href="#reviews"     data-it="Recensioni"  data-en="Reviews" data-de="Bewertungen">Recensioni</a></li> <li><a href="#gallery"     data-it="Galleria"    data-en="Gallery" data-de="Galerie">Galleria</a></li> <li><a href="#contact"     data-it="Contatti"    data-en="Contact" data-de="Kontakt">Contatti</a></li> </ul> <div style="display:flex;align-items:center;gap:1rem;"> <div class="lang-dropdown" id="langDropdown">
@@ -300,7 +303,7 @@
           <button onclick="setLang('fr');document.getElementById('langMenu').classList.remove('open');document.getElementById('langDropdown').classList.remove('open');" class="lang-option" data-lang="fr"><span>🇫🇷</span> Français</button>
         </div>
       </div> <div class="nav-burger" id="burger" onclick="toggleMenu()"><span></span><span></span><span></span></div> </div>
-</nav> <section id="hero" class="page-section active"> <div class="hero-bg-img" id="heroBg"></div> <div class="hero-overlay"></div> <div class="hero-content"> <p class="hero-eyebrow" data-it="Napoli, Italia" data-en="Naples, Italy" data-de="Neapel, Italien" data-es="Nápoles, Italia" data-fr="Naples, Italie">Napoli, Italia</p> <h1 class="hero-title">HUSHNOW<br><em>CAFÉ °5</em></h1> <div class="hero-sep"></div> <p class="hero-sub" data-it="Breakfast · Lunch · Aperitivo" data-en="Breakfast · Lunch · Aperitif" data-de="Frühstück · Mittagessen · Aperitif" data-es="Desayuno · Almuerzo · Aperitivo" data-fr="Petit-déjeuner · Déjeuner · Apéritif" data-de="Frühstück · Mittagessen · Aperitif">Breakfast · Lunch · Aperitivo</p> <div class="hero-ctas"> <button onclick="showSection('menu')" class="btn btn-gold" data-it="Sfoglia il Menù" data-en="View Menu" data-de="Speisekarte">Sfoglia il Menù</button> <button onclick="showSection('reservation')" class="btn btn-outline" data-it="Prenota un Tavolo" data-en="Book a Table" data-de="Tisch Reservieren">Prenota un Tavolo</button> </div> </div> <div class="scroll-hint"><span></span></div>
+</nav> <section id="hero" class="page-section active"> <div class="hero-bg-img" id="heroBg"></div> <div class="hero-overlay"></div> <div class="hero-content"> <p class="hero-eyebrow" data-it="Napoli, Italia" data-en="Naples, Italy" data-de="Neapel, Italien" data-es="Nápoles, Italia" data-fr="Naples, Italie">Napoli, Italia</p> <h1 class="hero-title" style="color:var(--white);">HUSHNOW CAFÉ °5</h1> <div class="hero-sep"></div> <p class="hero-sub" data-it="Breakfast · Lunch · Aperitivo" data-en="Breakfast · Lunch · Aperitif" data-de="Frühstück · Mittagessen · Aperitif" data-es="Desayuno · Almuerzo · Aperitivo" data-fr="Petit-déjeuner · Déjeuner · Apéritif" data-de="Frühstück · Mittagessen · Aperitif">Breakfast · Lunch · Aperitivo</p> <div class="hero-ctas"> <button onclick="showSection('menu')" class="btn btn-gold" data-it="Sfoglia il Menù" data-en="View Menu" data-de="Speisekarte">Sfoglia il Menù</button> <button onclick="showSection('reservation')" class="btn btn-outline" data-it="Prenota un Tavolo" data-en="Book a Table" data-de="Tisch Reservieren">Prenota un Tavolo</button> </div> </div> <div class="scroll-hint"><span></span></div>
 </section> <section id="about" class="page-section"> <div class="section-inner"> <div class="grid-2"> <div> <p class="section-label" data-it="La Nostra Storia" data-en="Our Story">La Nostra Storia</p> <h2 class="section-title" data-it="Un luogo dove il<br>silenzio ha <em>sapore</em>" data-en="A place where<br>silence has <em>flavour</em>">Un luogo dove il<br>silenzio ha <em>sapore</em></h2> <div class="gold-line"></div> <p class="about-main-text"
            data-en="Hush Now is more than a café: it is an experience. A space where elegance and pleasure blend from the first morning coffee to a refined lunch, to a cocktail experience that turns every moment into something unique."
            data-it="Hush Now è più di una caffetteria: è un&#39;esperienza. Uno spazio dove eleganza e piacere si fondono, dal primo caffè del mattino a un pranzo ricercato, fino a una cocktail experience che trasforma ogni momento in qualcosa di unico."
@@ -310,7 +313,7 @@
 </section> <section id="menu" class="page-section" style="background:var(--bg2);"> <div class="section-inner"> <p class="section-label" data-it="Il Menù" data-en="Our Menu">Il Menù</p> <h2 class="section-title" data-it="Sapori che <em>ispirano</em>" data-en="Flavours that <em>inspire</em>">Sapori che <em>ispirano</em></h2> <div class="gold-line"></div> <div class="menu-tabs">
         <button class="menu-tab active" onclick="renderMenu('caffetteria',this)" data-it="Caffetteria" data-en="Coffee Bar" data-de="Kaffeebar" data-es="Cafetería" data-fr="Café">Caffetteria</button>
         <button class="menu-tab" onclick="renderMenu('dolce',this)" data-it="Dolce" data-en="Sweet" data-de="Süßes" data-es="Dulce" data-fr="Sucré">Dolce</button>
-        <button class="menu-tab" onclick="renderMenu('cucina',this)" data-it="Cucina" data-en="Kitchen" data-de="Küche" data-es="Cocina" data-fr="Cuisine">Cucina</button>
+        <button class="menu-tab" onclick="renderMenu('cucina',this)" data-it="Food" data-en="Food" data-de="Food" data-es="Food" data-fr="Food">Food</button>
         <button class="menu-tab" onclick="renderMenu('spritz',this)" data-it="Spritz" data-en="Spritz" data-de="Spritz" data-es="Spritz" data-fr="Spritz">Spritz</button>
         <button class="menu-tab" onclick="renderMenu('our_cocktails',this)" data-it="Our Cocktails" data-en="Our Cocktails" data-de="Unsere Cocktails" data-es="Nuestros Cócteles" data-fr="Nos Cocktails">Our Cocktails</button>
         <button class="menu-tab" onclick="renderMenu('iconic',this)" data-it="Iconic" data-en="Iconic" data-de="Iconic" data-es="Iconic" data-fr="Iconic">Iconic</button>
@@ -328,14 +331,17 @@
 </section> <section id="hours" class="page-section"> <div class="section-inner"> <p class="section-label" data-it="Orari di Apertura" data-en="Opening Hours">Orari di Apertura</p> <h2 class="section-title" data-it="Quando <em>siamo</em> aperti" data-en="When we <em>are</em> open">Quando <em>siamo</em> aperti</h2> <div class="gold-line"></div> <div class="hours-grid" id="hoursGrid"></div> </div>
 </section> <section id="reservation" class="page-section" style="position:relative;overflow:hidden;"> <img id="resBgImg" src="" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;filter:grayscale(1) brightness(0.12);z-index:0;"/> <div class="section-inner" style="position:relative;z-index:1;"> <p class="section-label" data-it="Prenotazione Online" data-en="Online Reservation">Prenotazione Online</p> <h2 class="section-title" data-it="Riserva il tuo <em>tavolo</em>" data-en="Reserve your <em>table</em>">Riserva il tuo <em>tavolo</em></h2> <div class="gold-line"></div> <div class="res-form"> <form id="resForm" onsubmit="submitReservation(event)"> <div class="form-row"> <div><label data-it="Nome e Cognome" data-en="Full Name">Nome e Cognome</label><input type="text" id="resName" placeholder="Mario Rossi" required/></div> <div><label data-it="Email o Telefono" data-en="Email or Phone">Email o Telefono</label><input type="text" id="resContact" placeholder="+39 333 000 0000" required/></div> </div> <div class="form-row"> <div><label data-it="Data" data-en="Date">Data</label><input type="date" id="resDate" required/></div> <div><label data-it="Orario" data-en="Time">Orario</label> <select id="resTime" required><option value="" disabled selected>—</option> <option>08:00</option><option>08:30</option><option>09:00</option><option>10:00</option> <option>12:00</option><option>12:30</option><option>13:00</option><option>14:00</option> <option>17:00</option><option>18:00</option><option>19:00</option><option>20:00</option></select> </div> </div> <div class="form-row"> <div><label data-it="Persone" data-en="Guests">Persone</label> <select id="resGuests" required><option value="" disabled selected>—</option> <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option> <option value="7+">7+</option></select> </div> <div><label data-it="Occasione" data-en="Occasion">Occasione</label> <select id="resOccasion"> <option value="">—</option> <option data-it="Compleanno"   data-en="Birthday"  data-de="Geburtstag">Compleanno</option> <option data-it="Anniversario" data-en="Anniversary" data-de="Jubiläum">Anniversario</option> <option data-it="Business"     data-en="Business"  data-de="Geschäftlich">Business</option> <option data-it="Romantica"    data-en="Romantic"  data-de="Romantisch">Romantica</option> </select> </div> </div> <div class="form-row single"><div><label data-it="Note" data-en="Notes">Note</label><textarea id="resNotes" placeholder="Allergie, richieste..."></textarea></div></div> <button type="submit" class="btn btn-filled" style="margin-top:0.8rem;width:100%;" data-it="Invia Prenotazione" data-en="Send Reservation">Invia Prenotazione</button> </form> <div class="form-confirm" id="formConfirm"> <div class="check-icon">✓</div> <h3 data-it="Prenotazione Inviata!" data-en="Reservation Sent!">Prenotazione Inviata!</h3> <p data-it="Ti contatteremo presto." data-en="We will contact you shortly.">Ti contatteremo presto.</p> <br/><button class="btn btn-outline" onclick="resetForm()" style="margin-top:0.6rem" data-it="Nuova Prenotazione" data-en="New">Nuova Prenotazione</button> </div> </div> </div>
 </section> <section id="events" class="page-section" style="position:relative;overflow:hidden;"> <img id="eventsBgImg" src="" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;filter:grayscale(1) brightness(0.1);z-index:0;"/> <div class="section-inner" style="position:relative;z-index:1;"> <p class="section-label" data-it="Organizza il tuo Evento" data-en="Organise your Event">Organizza il tuo Evento</p> <h2 class="section-title" data-it="Rendi speciale <em>ogni momento</em>" data-en="Make every <em>moment</em> special">Rendi speciale <em>ogni momento</em></h2> <div class="gold-line"></div> <p class="section-desc" style="margin-bottom:2rem;" data-it="Organizza il tuo evento privato da HUSHNOW CAFÉ °5. Feste, aperitivi aziendali, serate con DJ e finger food — tutto su misura per te." data-en="Host your private event at HUSHNOW CAFÉ °5. Parties, corporate aperitifs, DJ nights and finger food — all tailored for you.">Organizza il tuo evento privato da HUSHNOW CAFÉ °5.</p> <div class="events-pills"> <span class="epill">DJ Set</span><span class="epill">Finger Food</span><span class="epill">Open Bar</span> <span class="epill">Compleanno</span><span class="epill">Corporate</span><span class="epill">Anniversario</span> </div> <div class="res-form" style="margin-top:2rem;max-width:760px;"> <form id="eventForm" onsubmit="submitEvent(event)"> <div class="form-row"> <div><label data-it="Data dell'Evento" data-en="Event Date">Data dell'Evento</label><input type="date" id="evDate" required/></div> <div><label data-it="Orario Inizio" data-en="Start Time">Orario Inizio</label> <select id="evTime" required><option value="" disabled selected>—</option> <option>17:00</option><option>17:30</option><option>18:00</option><option>18:30</option> <option>19:00</option><option>19:30</option><option>20:00</option><option>20:30</option> <option>21:00</option><option>21:30</option><option>22:00</option></select> </div> </div> <div class="form-row"> <div><label data-it="Numero di Ospiti" data-en="Guests">Numero di Ospiti</label> <select id="evGuests" required><option value="" disabled selected>—</option> <option value="10-20">10 – 20</option><option value="20-30">20 – 30</option> <option value="30-50">30 – 50</option><option value="50-80">50 – 80</option> <option value="80+">Più di 80</option></select> </div> <div><label data-it="Tipo di Evento" data-en="Event Type">Tipo di Evento</label> <select id="evType" required> <option value="" disabled selected>—</option> <option value="Compleanno"       data-it="Compleanno"       data-en="Birthday"       data-de="Geburtstag">Compleanno</option> <option value="Anniversario"     data-it="Anniversario"     data-en="Anniversary"    data-de="Jubiläum">Anniversario</option> <option value="Evento Aziendale" data-it="Evento Aziendale" data-en="Corporate Event" data-de="Firmenveranstaltung">Evento Aziendale</option> <option value="Festa Privata"    data-it="Festa Privata"    data-en="Private Party"  data-de="Privatfeier">Festa Privata</option> <option value="Altro"            data-it="Altro"            data-en="Other"           data-de="Sonstiges">Altro</option> </select> </div> </div> <div class="form-row"> <div><label>Finger Food</label> <div class="toggle-group" id="ffGroup"> <button type="button" class="toggle-btn active" data-val="si" onclick="selectToggle('ffGroup',this)" data-it="Si, lo voglio" data-en="Yes please">Si, lo voglio</button> <button type="button" class="toggle-btn" data-val="no" onclick="selectToggle('ffGroup',this)" data-it="No grazie" data-en="No thanks">No grazie</button> </div> </div> <div><label>DJ Set</label> <div class="toggle-group" id="djGroup"> <button type="button" class="toggle-btn active" data-val="si" onclick="selectToggle('djGroup',this)" data-it="Si, lo voglio" data-en="Yes please">Si, lo voglio</button> <button type="button" class="toggle-btn" data-val="no" onclick="selectToggle('djGroup',this)" data-it="No grazie" data-en="No thanks">No grazie</button> </div> </div> </div> <div class="form-row"> <div><label data-it="Nome e Cognome" data-en="Full Name">Nome e Cognome</label><input type="text" id="evName" placeholder="Mario Rossi" required/></div> <div><label data-it="Email o Telefono" data-en="Email or Phone">Email o Telefono</label><input type="text" id="evContact" placeholder="+39 333 000 0000" required/></div> </div> <div class="form-row single"><div><label data-it="Descrizione / Richieste" data-en="Description / Requests">Descrizione / Richieste</label><textarea id="evNotes" placeholder="Raccontaci il tuo evento..." style="min-height:100px;"></textarea></div></div> <button type="submit" class="btn btn-filled" style="margin-top:0.8rem;width:100%;" data-it="Invia Richiesta Evento" data-en="Send Event Request">Invia Richiesta Evento</button> </form> <div class="form-confirm" id="eventConfirm"> <div class="check-icon">✓</div> <h3 data-it="Richiesta Inviata!" data-en="Request Sent!">Richiesta Inviata!</h3> <p data-it="Ti contatteremo presto per organizzare il tuo evento." data-en="We will contact you soon to plan your perfect event.">Ti contatteremo presto per organizzare il tuo evento.</p> <br/><button class="btn btn-outline" onclick="resetEvent()" style="margin-top:0.6rem" data-it="Nuova Richiesta" data-en="New Request">Nuova Richiesta</button> </div> </div> </div>
-</section> <section id="reviews" class="page-section"> <div class="section-inner"> <p class="section-label" data-it="Cosa Dicono di Noi" data-en="What They Say" data-de="Was Sie Sagen">Cosa Dicono di Noi</p> <h2 class="section-title" data-it="Le loro <em>parole</em>" data-en="Their <em>words</em>" data-de="Ihre <em>Worte</em>">Le loro <em>parole</em></h2> <div class="gold-line"></div> <div id="reviewsGrid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.4rem;margin-top:1rem;"></div> <div style="text-align:center;margin-top:2.5rem;"> <a href="https://www.google.com/maps/search/HUSHNOW+CAFÉ+5+Napoli" target="_blank" class="btn btn-gold" data-it="Lascia una Recensione" data-en="Leave a Review" data-de="Bewertung schreiben">Lascia una Recensione</a> </div> </div>
+</section> <section id="reviews" class="page-section"> <div class="section-inner"> <p class="section-label" data-it="Cosa Dicono di Noi" data-en="What They Say" data-de="Was Sie Sagen">Cosa Dicono di Noi</p> <h2 class="section-title" data-it="Le loro <em>parole</em>" data-en="Their <em>words</em>" data-de="Ihre <em>Worte</em>">Le loro <em>parole</em></h2> <div class="gold-line"></div> <div id="reviewsGrid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.4rem;margin-top:1rem;"></div> <div style="text-align:center;margin-top:2.5rem;"> <a href="https://search.google.com/local/writereview?placeid=ChIJiSR5QAkJs0IRkGxq97lbu8U" target="_blank" class="btn btn-gold" data-it="Lascia una Recensione" data-en="Leave a Review" data-de="Bewertung schreiben">Lascia una Recensione</a> </div> </div>
 </section> <section id="gallery" class="page-section" style="background:var(--bg);"> <div class="section-inner"> <p class="section-label" data-it="Le Nostre Creazioni" data-en="Our Creations">Le Nostre Creazioni</p> <h2 class="section-title" data-it="Ogni tazza, <em>un'opera</em>" data-en="Every cup, <em>a work of art</em>">Ogni tazza, <em>un'opera</em></h2> <div class="gold-line"></div> <div id="galleryGrid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1rem;"></div> </div>
-</section> <section id="contact" class="page-section"> <div class="section-inner"> <p class="section-label" data-it="Dove Siamo" data-en="Find Us" data-de="Wo Wir Sind" data-es="Dónde Estamos" data-fr="Où Nous Trouver">Dove Siamo</p> <h2 class="section-title" data-it="Contatti & <em>Posizione</em>" data-en="Contact & <em>Location</em>" data-de="Kontakt & <em>Standort</em>">Contatti & <em>Posizione</em></h2> <div class="gold-line"></div> <div class="contact-grid"> <div> <div class="contact-item"><p class="contact-label" data-it="Indirizzo" data-en="Address" data-de="Adresse" data-es="Dirección" data-fr="Adresse">Indirizzo</p><p class="contact-val">Via Carlo Poerio 20-21<br>Napoli, Italia 80121</p></div> <div class="contact-item"><p class="contact-label">Email</p><p class="contact-val"><a href="mailto:hushnowcafe.5@gmail.com">hushnowcafe.5@gmail.com</a></p></div> <div class="contact-item"><p class="contact-label">Instagram</p><p class="contact-val"><a href="https://www.instagram.com/hushnowcafe/" target="_blank">@hushnowcafe</a></p></div> <div class="contact-item"><p class="contact-label">Facebook</p><p class="contact-val"><a href="https://www.facebook.com/profile.php?id=61572115232384" target="_blank">HUSHNOW CAFÉ °5</a></p></div> <div style="display:flex;gap:0.8rem;flex-wrap:wrap;margin-top:1rem;"> <a href="https://www.instagram.com/hushnowcafe/" target="_blank" class="ig-link"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg> Instagram</a> <a href="https://www.facebook.com/profile.php?id=61572115232384" target="_blank" class="ig-link"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg> Facebook</a> </div> </div> <div class="map-wrap"> <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3020.8!2d14.2463!3d40.8375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133b084b44d7bdef%3A0x1e08d8e2e6c70420!2sVia%20Carlo%20Poerio%2C%2020%2C%2080121%20Napoli%20NA!5e0!3m2!1sit!2sit!4v1" allowfullscreen loading="lazy" title="Map"></iframe> </div> </div> </div> <div class="qr-wrap" style="margin-top:2.5rem;"> <canvas id="qrCanvas" width="160" height="160"></canvas> <div class="qr-info"> <h3 data-it="Scansiona & Scopri" data-en="Scan & Discover" data-de="Scannen & Entdecken">Scansiona & Scopri</h3> <p data-it="Inquadra il QR code con la fotocamera per accedere al menù, prenotare un tavolo e scoprire le ultime novità di HUSHNOW CAFÉ °5." data-en="Point your camera at the QR code to access the menu, book a table and discover the latest news from HUSHNOW CAFÉ °5." data-de="Scannen Sie den QR-Code mit Ihrer Kamera, um die Speisekarte aufzurufen und einen Tisch zu reservieren.">
+</section> <section id="contact" class="page-section"> <div class="section-inner"> <p class="section-label" data-it="Dove Siamo" data-en="Find Us" data-de="Wo Wir Sind" data-es="Dónde Estamos" data-fr="Où Nous Trouver">Dove Siamo</p> <h2 class="section-title" data-it="Contatti & <em>Posizione</em>" data-en="Contact & <em>Location</em>" data-de="Kontakt & <em>Standort</em>">Contatti & <em>Posizione</em></h2> <div class="gold-line"></div> <div class="contact-grid"> <div> <div class="contact-item"><p class="contact-label" data-it="Indirizzo" data-en="Address" data-de="Adresse" data-es="Dirección" data-fr="Adresse">Indirizzo</p><p class="contact-val">Via Carlo Poerio 20-21<br>Napoli, Italia 80121</p></div> <div class="contact-item"><p class="contact-label">Email</p><p class="contact-val"><a href="mailto:hushnowcafe.5@gmail.com">hushnowcafe.5@gmail.com</a></p></div> <div class="contact-item"><p class="contact-label">Instagram</p><p class="contact-val"><a href="https://www.instagram.com/hushnowcafe/" target="_blank">@hushnowcafe</a></p></div> <div class="contact-item"><p class="contact-label">Facebook</p><p class="contact-val"><a href="https://www.facebook.com/profile.php?id=61572115232384" target="_blank">HUSHNOW CAFÉ °5</a></p></div> <div style="display:flex;gap:0.8rem;flex-wrap:wrap;margin-top:1rem;"> <a href="https://www.instagram.com/hushnowcafe/" target="_blank" class="ig-link"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg> Instagram</a> <a href="https://www.facebook.com/profile.php?id=61572115232384" target="_blank" class="ig-link"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg> Facebook</a> </div> </div> <div class="map-wrap"> <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3020.8!2d14.2397353!3d40.8338547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133b090040792489%3A0xc5babb59f76a6c90!2sHushnow+Cafe+5!5e0!3m2!1sit!2sit!4v1" allowfullscreen loading="lazy" title="Hushnow Café °5 — Via Carlo Poerio 20-21, Napoli"></iframe> </div> </div> </div> <div class="qr-wrap" style="margin-top:2.5rem;"> <canvas id="qrCanvas" width="160" height="160"></canvas> <div class="qr-info"> <h3 data-it="Scansiona & Scopri" data-en="Scan & Discover" data-de="Scannen & Entdecken">Scansiona & Scopri</h3> <p data-it="Inquadra il QR code con la fotocamera per accedere al menù, prenotare un tavolo e scoprire le ultime novità di HUSHNOW CAFÉ °5." data-en="Point your camera at the QR code to access the menu, book a table and discover the latest news from HUSHNOW CAFÉ °5." data-de="Scannen Sie den QR-Code mit Ihrer Kamera, um die Speisekarte aufzurufen und einen Tisch zu reservieren.">
               Inquadra il QR code con la fotocamera per accedere al menù e prenotare un tavolo.
-            </p> <button onclick="downloadQR()" class="btn btn-gold" data-it="Scarica QR Code" data-en="Download QR Code" data-de="QR-Code herunterladen" data-es="Descargar Código QR" data-fr="Télécharger QR Code" data-de="QR-Code herunterladen">Scarica QR Code</button> </div> </div> </section> <button id="adminBtn" onclick="openAdmin()" title="Admin Panel" aria-label="Admin Panel">&#9881;</button> <div id="adminPanel" style="display:none!important;"> <div id="loginBox" style="max-width:380px;margin:8rem auto;text-align:center;background:var(--bg2);border:1px solid var(--gold-line);border-radius:28px;padding:3rem 2.5rem;"> <h3>Admin Access</h3> <p style="color:var(--white-dim);font-size:0.75rem;margin-bottom:1.5rem;letter-spacing:0.1em;">HUSHNOW CAFÉ °5</p> <input type="password" id="adminPwd" placeholder="· · · · · ·" onkeydown="if(event.key==='Enter')checkPwd()"/> <br/> <button class="admin-save" onclick="checkPwd()">Accedi</button> <p id="loginErr">Password errata</p> </div> <div id="adminDash" style="display:none;max-width:900px;margin:0 auto;padding-bottom:4rem;"> <div class="admin-header"> <h2>Dashboard Admin</h2> <div style="display:flex;align-items:center;gap:1rem;"> <span id="cloudSyncStatus" style="font-size:0.68rem;opacity:0;transition:opacity 0.4s;letter-spacing:0.05em;"></span> <button onclick="closeAdmin()" style="background:none;border:none;color:var(--gold);font-size:1.5rem;cursor:pointer;">✕</button> </div> </div> <div class="admin-tabs"> <button class="admin-tab active" onclick="switchAdminTab('menu-it')">Menù IT</button> <button class="admin-tab" onclick="switchAdminTab('menu-en')">Menù EN</button> <button class="admin-tab" onclick="switchAdminTab('menu-de')">Menù DE</button> <button class="admin-tab" onclick="switchAdminTab('hours-admin')">Orari</button> <button class="admin-tab" onclick="switchAdminTab('info-admin')">Info Caffè</button> </div> <div class="admin-section active" id="admin-menu-it"> <p style="color:var(--white-dim);font-size:0.75rem;margin-bottom:1.2rem;">Modifica nomi e descrizioni in italiano</p> <div style="display:flex;gap:0.6rem;flex-wrap:wrap;margin-bottom:1.2rem;" id="menuCatTabs"> <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:1.2rem;">
+            </p> <button onclick="downloadQR()" class="btn btn-gold" data-it="Scarica QR Code" data-en="Download QR Code" data-de="QR-Code herunterladen" data-es="Descargar Código QR" data-fr="Télécharger QR Code" data-de="QR-Code herunterladen">Scarica QR Code</button> </div> </div> </section> <button id="adminBtn" onclick="openAdmin()" title="Admin Panel" aria-label="Admin Panel">&#9881;</button>
+<a id="waBtn" href="javascript:void(0)" target="_blank" title="WhatsApp" aria-label="WhatsApp" onclick="openWhatsApp()">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a> <div id="adminPanel" style="display:none!important;"> <div id="loginBox" style="max-width:380px;margin:8rem auto;text-align:center;background:var(--bg2);border:1px solid var(--gold-line);border-radius:28px;padding:3rem 2.5rem;"> <h3>Admin Access</h3> <p style="color:var(--white-dim);font-size:0.75rem;margin-bottom:1.5rem;letter-spacing:0.1em;">HUSHNOW CAFÉ °5</p> <input type="password" id="adminPwd" placeholder="· · · · · ·" onkeydown="if(event.key==='Enter')checkPwd()"/> <br/> <button class="admin-save" onclick="checkPwd()">Accedi</button> <p id="loginErr">Password errata</p> </div> <div id="adminDash" style="display:none;max-width:900px;margin:0 auto;padding-bottom:4rem;"> <div class="admin-header"> <h2>Dashboard Admin</h2> <div style="display:flex;align-items:center;gap:1rem;"> <span id="cloudSyncStatus" style="font-size:0.68rem;opacity:0;transition:opacity 0.4s;letter-spacing:0.05em;"></span> <button onclick="closeAdmin()" style="background:none;border:none;color:var(--gold);font-size:1.5rem;cursor:pointer;">✕</button> </div> </div> <div class="admin-tabs"> <button class="admin-tab active" onclick="switchAdminTab('menu-it')">Menù IT</button> <button class="admin-tab" onclick="switchAdminTab('menu-en')">Menù EN</button> <button class="admin-tab" onclick="switchAdminTab('menu-de')">Menù DE</button> <button class="admin-tab" onclick="switchAdminTab('hours-admin')">Orari</button> <button class="admin-tab" onclick="switchAdminTab('info-admin')">Info Caffè</button> </div> <div class="admin-section active" id="admin-menu-it"> <p style="color:var(--white-dim);font-size:0.75rem;margin-bottom:1.2rem;">Modifica nomi e descrizioni in italiano</p> <div style="display:flex;gap:0.6rem;flex-wrap:wrap;margin-bottom:1.2rem;" id="menuCatTabs"> <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:1.2rem;">
           <button class="admin-tab active" onclick="loadMenuAdmin('caffetteria','it',this)">Caffetteria</button>
           <button class="admin-tab" onclick="loadMenuAdmin('dolce','it',this)">Dolce</button>
-          <button class="admin-tab" onclick="loadMenuAdmin('cucina','it',this)">Cucina</button>
+          <button class="admin-tab" onclick="loadMenuAdmin('cucina','it',this)">Food</button>
           <button class="admin-tab" onclick="loadMenuAdmin('spritz','it',this)">Spritz</button>
           <button class="admin-tab" onclick="loadMenuAdmin('our_cocktails','it',this)">Our Cocktails</button>
           <button class="admin-tab" onclick="loadMenuAdmin('iconic','it',this)">Iconic</button>
@@ -352,7 +358,7 @@
         </div> <div id="menuAdminList-it"></div> <button class="admin-add" onclick="addMenuItem(currentAdminCat,'it')">+ Aggiungi voce</button> <br/> <button class="admin-save" onclick="saveMenuAdmin('it')">Salva Modifiche</button> <span class="admin-saved" id="saved-menu-it">✓ Salvato!</span> </div> <div class="admin-section" id="admin-menu-en"> <p style="color:var(--white-dim);font-size:0.75rem;margin-bottom:1.2rem;">Edit names and descriptions in English</p> <div style="display:flex;gap:0.6rem;flex-wrap:wrap;margin-bottom:1.2rem;"> <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:1.2rem;">
           <button class="admin-tab active" onclick="loadMenuAdmin('caffetteria','en',this)">Caffetteria</button>
           <button class="admin-tab" onclick="loadMenuAdmin('dolce','en',this)">Dolce</button>
-          <button class="admin-tab" onclick="loadMenuAdmin('cucina','en',this)">Cucina</button>
+          <button class="admin-tab" onclick="loadMenuAdmin('cucina','en',this)">Food</button>
           <button class="admin-tab" onclick="loadMenuAdmin('spritz','en',this)">Spritz</button>
           <button class="admin-tab" onclick="loadMenuAdmin('our_cocktails','en',this)">Our Cocktails</button>
           <button class="admin-tab" onclick="loadMenuAdmin('iconic','en',this)">Iconic</button>
@@ -369,7 +375,7 @@
         </div> <div id="menuAdminList-en"></div> <button class="admin-add" onclick="addMenuItem(currentAdminCat,'en')">+ Add item</button> <br/> <button class="admin-save" onclick="saveMenuAdmin('en')">Save Changes</button> <span class="admin-saved" id="saved-menu-en">✓ Saved!</span> </div> <div class="admin-section" id="admin-menu-de"> <p style="color:var(--white-dim);font-size:0.75rem;margin-bottom:1.2rem;">Namen und Beschreibungen auf Deutsch bearbeiten</p> <div style="display:flex;gap:0.6rem;flex-wrap:wrap;margin-bottom:1.2rem;"> <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:1.2rem;">
           <button class="admin-tab active" onclick="loadMenuAdmin('caffetteria','de',this)">Caffetteria</button>
           <button class="admin-tab" onclick="loadMenuAdmin('dolce','de',this)">Dolce</button>
-          <button class="admin-tab" onclick="loadMenuAdmin('cucina','de',this)">Cucina</button>
+          <button class="admin-tab" onclick="loadMenuAdmin('cucina','de',this)">Food</button>
           <button class="admin-tab" onclick="loadMenuAdmin('spritz','de',this)">Spritz</button>
           <button class="admin-tab" onclick="loadMenuAdmin('our_cocktails','de',this)">Our Cocktails</button>
           <button class="admin-tab" onclick="loadMenuAdmin('iconic','de',this)">Iconic</button>
@@ -385,15 +391,113 @@
           <button class="admin-tab" onclick="loadMenuAdmin('bevande','de',this)">Bevande</button>
         </div> <div id="menuAdminList-de"></div> <button class="admin-add" onclick="addMenuItem(currentAdminCat,'de')">+ Element hinzufügen</button> <br/> <button class="admin-save" onclick="saveMenuAdmin('de')">Änderungen speichern</button> <span class="admin-saved" id="saved-menu-de">✓ Gespeichert!</span> </div> <div class="admin-section" id="admin-hours-admin"> <p style="color:var(--white-dim);font-size:0.75rem;margin-bottom:1.2rem;">Modifica gli orari. Lascia vuoto per segnare come chiuso.</p> <div id="hoursAdminList"></div> <button class="admin-save" onclick="saveHoursAdmin()">Salva Orari</button> <span class="admin-saved" id="saved-hours">✓ Salvato!</span> </div> <div class="admin-section" id="admin-info-admin"> <p style="color:var(--white-dim);font-size:0.75rem;margin-bottom:1.5rem;">Informazioni generali del caffè</p> <div style="display:grid;gap:1rem;"> <div><div class="admin-label">Indirizzo</div><input type="text" id="ai-address" value="Via Carlo Poerio 20-21, Napoli, Italia 80121"/></div> <div><div class="admin-label">Email</div><input type="text" id="ai-email" value="hushnowcafe.5@gmail.com"/></div> <div><div class="admin-label">Instagram</div><input type="text" id="ai-instagram" value="https://www.instagram.com/hushnowcafe/"/></div> <div><div class="admin-label">Facebook</div><input type="text" id="ai-facebook" value="https://www.facebook.com/profile.php?id=61572115232384"/></div> </div> <button class="admin-save" onclick="saveInfoAdmin()">Salva Info</button> <span class="admin-saved" id="saved-info">✓ Salvato!</span> </div> </div>
 </div> <footer> <span class="footer-logo">HUSHNOW CAFÉ <sup>°5</sup></span> <div class="footer-links"> <a href="#" onclick="showSection('menu');return false;" data-it="Menù" data-en="Menu">Menù</a> <a href="#" onclick="showSection('reservation');return false;" data-it="Prenota" data-en="Book">Prenota</a> <a href="#" onclick="showSection('contact');return false;" data-it="Contatti" data-en="Contact">Contatti</a> <a href="https://www.facebook.com/profile.php?id=61572115232384" target="_blank">Facebook</a> </div> <span style="font-size:0.62rem;color:var(--white-faint);">© 2025 HUSHNOW CAFÉ °5 — Napoli</span>
-</footer> <div id="cookieBanner" style="
-  display:none !important;position:fixed;bottom:0;left:0;right:0;z-index:9997;
-  background:rgba(10,10,10,0.97);backdrop-filter:blur(20px);
-  border-top:1px solid var(--gold-line);
-  padding:1.4rem 5rem;
-  display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap;
-"> <p style="font-size:0.75rem;color:var(--white-dim);line-height:1.7;max-width:680px;" id="cookieText">
-    Utilizziamo i cookie per migliorare la tua esperienza. Continuando la navigazione accetti la nostra <a href="#" style="color:var(--gold2);">Privacy Policy</a>. 🇪🇺 GDPR
-  </p> <div style="display:flex;gap:0.8rem;flex-shrink:0;"> <button onclick="acceptCookies()" class="btn btn-filled" style="padding:0.6rem 1.6rem;" id="cookieAccept">Accetta</button> <button onclick="declineCookies()" class="btn btn-outline" style="padding:0.6rem 1.2rem;" id="cookieDecline">Solo necessari</button> </div>
+</footer>
+
+<!-- ── COOKIE BANNER GDPR ──────────────────────────────────── -->
+<div id="cookieBanner" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:9997;background:rgba(10,10,10,0.98);backdrop-filter:blur(20px);border-top:1px solid var(--gold-line);padding:1.6rem 2.5rem;">
+  <div style="max-width:900px;margin:0 auto;">
+    <div style="display:flex;align-items:flex-start;gap:1rem;margin-bottom:1rem;">
+      <span style="font-size:1.4rem;">🍪</span>
+      <div>
+        <p style="font-family:'Josefin Sans',sans-serif;font-size:0.85rem;color:var(--gold2);letter-spacing:0.1em;margin-bottom:0.4rem;" id="cookieTitle">Informativa sui Cookie</p>
+        <p style="font-size:0.72rem;color:var(--white-dim);line-height:1.75;margin:0;" id="cookieText">
+          Utilizziamo cookie tecnici necessari per il funzionamento del sito e, con il tuo consenso, cookie analitici per migliorare la tua esperienza. 
+          Puoi accettare tutti i cookie, solo quelli necessari o personalizzare le tue preferenze. 
+          Per maggiori informazioni consulta la nostra <a href="#" onclick="showPrivacyPolicy()" style="color:var(--gold2);text-decoration:underline;">Privacy Policy</a>. 
+          <span style="font-size:0.65rem;opacity:0.6;">🇪🇺 Conforme al Regolamento UE 2016/679 (GDPR) e al D.Lgs. 196/2003</span>
+        </p>
+      </div>
+    </div>
+    <div style="display:flex;gap:0.8rem;flex-wrap:wrap;align-items:center;justify-content:flex-end;">
+      <button onclick="showCookiePrefs()" style="background:none;border:1px solid rgba(201,169,110,0.3);color:var(--white-dim);border-radius:50px;padding:0.5rem 1.2rem;cursor:pointer;font-size:0.65rem;letter-spacing:0.12em;font-family:'Montserrat',sans-serif;" id="cookieManage">Gestisci Preferenze</button>
+      <button onclick="declineCookies()" class="btn btn-outline" style="padding:0.5rem 1.2rem;font-size:0.65rem;" id="cookieDecline">Solo Necessari</button>
+      <button onclick="acceptCookies()" class="btn btn-filled" style="padding:0.5rem 1.6rem;font-size:0.65rem;" id="cookieAccept">Accetta Tutto</button>
+    </div>
+  </div>
+</div>
+
+<!-- ── COOKIE PREFERENCES MODAL ───────────────────────────── -->
+<div id="cookieModal" style="display:none;position:fixed;inset:0;z-index:9998;background:rgba(0,0,0,0.8);backdrop-filter:blur(8px);align-items:center;justify-content:center;">
+  <div style="background:var(--bg2);border:1px solid var(--gold-line);border-radius:20px;padding:2.5rem;max-width:520px;width:90%;max-height:85vh;overflow-y:auto;">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1.5rem;">
+      <h3 style="font-family:'Josefin Sans',sans-serif;font-size:1.1rem;font-weight:300;color:var(--gold2);">Preferenze Cookie</h3>
+      <button onclick="closeCookieModal()" style="background:none;border:none;color:var(--white-dim);font-size:1.3rem;cursor:pointer;">✕</button>
+    </div>
+
+    <!-- Necessari -->
+    <div style="background:var(--bg3);border:1px solid var(--gold-line);border-radius:12px;padding:1.2rem;margin-bottom:0.8rem;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.5rem;">
+        <span style="font-family:'Josefin Sans',sans-serif;font-size:0.8rem;color:var(--white);letter-spacing:0.1em;">Cookie Necessari</span>
+        <span style="font-size:0.65rem;color:var(--gold);border:1px solid rgba(201,169,110,0.4);border-radius:20px;padding:0.2rem 0.7rem;">Sempre Attivi</span>
+      </div>
+      <p style="font-size:0.68rem;color:var(--white-dim);line-height:1.6;margin:0;">Essenziali per il funzionamento del sito: lingua selezionata, preferenze di navigazione. Non possono essere disabilitati.</p>
+    </div>
+
+    <!-- Analitici -->
+    <div style="background:var(--bg3);border:1px solid var(--gold-line);border-radius:12px;padding:1.2rem;margin-bottom:0.8rem;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.5rem;">
+        <span style="font-family:'Josefin Sans',sans-serif;font-size:0.8rem;color:var(--white);letter-spacing:0.1em;">Cookie Analitici</span>
+        <label style="position:relative;display:inline-block;width:42px;height:22px;cursor:pointer;">
+          <input type="checkbox" id="analyticsCk" style="opacity:0;width:0;height:0;" checked>
+          <span onclick="toggleCookieSwitch('analyticsCk',this)" style="position:absolute;inset:0;background:#333;border-radius:22px;transition:0.3s;" id="analyticsSw">
+            <span style="position:absolute;width:16px;height:16px;background:#fff;border-radius:50%;top:3px;left:3px;transition:0.3s;"></span>
+          </span>
+        </label>
+      </div>
+      <p style="font-size:0.68rem;color:var(--white-dim);line-height:1.6;margin:0;">Ci aiutano a capire come i visitatori interagiscono con il sito (pagine visitate, tempo di permanenza). Dati anonimi e aggregati.</p>
+    </div>
+
+    <!-- Marketing -->
+    <div style="background:var(--bg3);border:1px solid var(--gold-line);border-radius:12px;padding:1.2rem;margin-bottom:1.5rem;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.5rem;">
+        <span style="font-family:'Josefin Sans',sans-serif;font-size:0.8rem;color:var(--white);letter-spacing:0.1em;">Cookie Marketing</span>
+        <label style="position:relative;display:inline-block;width:42px;height:22px;cursor:pointer;">
+          <input type="checkbox" id="marketingCk" style="opacity:0;width:0;height:0;">
+          <span onclick="toggleCookieSwitch('marketingCk',this)" style="position:absolute;inset:0;background:#333;border-radius:22px;transition:0.3s;" id="marketingSw">
+            <span style="position:absolute;width:16px;height:16px;background:#fff;border-radius:50%;top:3px;left:3px;transition:0.3s;"></span>
+          </span>
+        </label>
+      </div>
+      <p style="font-size:0.68rem;color:var(--white-dim);line-height:1.6;margin:0;">Utilizzati per mostrare contenuti personalizzati sui social media. Attualmente non in uso su questo sito.</p>
+    </div>
+
+    <div style="display:flex;gap:0.8rem;justify-content:flex-end;">
+      <button onclick="saveCustomCookies()" class="btn btn-filled" style="padding:0.6rem 1.6rem;font-size:0.7rem;">Salva Preferenze</button>
+    </div>
+
+    <p style="font-size:0.6rem;color:var(--white-faint);text-align:center;margin-top:1.2rem;">
+      Puoi modificare le tue preferenze in qualsiasi momento. 
+      <a href="#" onclick="showPrivacyPolicy()" style="color:var(--gold2);">Privacy Policy</a> · 
+      Titolare: HUSHNOW CAFÉ °5, Via Carlo Poerio 20-21, Napoli
+    </p>
+  </div>
+</div>
+
+<!-- ── PRIVACY POLICY MODAL ────────────────────────────────── -->
+<div id="privacyModal" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,0.9);backdrop-filter:blur(8px);align-items:flex-start;justify-content:center;padding:2rem;overflow-y:auto;">
+  <div style="background:var(--bg2);border:1px solid var(--gold-line);border-radius:20px;padding:2.5rem;max-width:680px;width:100%;margin:auto;">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1.5rem;">
+      <h3 style="font-family:'Josefin Sans',sans-serif;font-size:1.2rem;font-weight:300;color:var(--gold2);">Privacy Policy</h3>
+      <button onclick="closePrivacyPolicy()" style="background:none;border:none;color:var(--white-dim);font-size:1.3rem;cursor:pointer;">✕</button>
+    </div>
+    <div style="font-size:0.72rem;color:var(--white-dim);line-height:1.8;">
+      <p style="color:var(--gold2);font-size:0.75rem;margin-bottom:1rem;">Ultimo aggiornamento: Maggio 2025</p>
+      <p><strong style="color:var(--white);">Titolare del Trattamento</strong><br>HUSHNOW CAFÉ °5 — Via Carlo Poerio 20-21, 80121 Napoli (NA)<br>Email: hushnowcafe.5@gmail.com</p>
+      <br>
+      <p><strong style="color:var(--white);">Dati Raccolti</strong><br>Il sito raccoglie solo i dati forniti volontariamente tramite il modulo di prenotazione (nome, contatto, data, numero di persone). Non vengono raccolti dati sensibili.</p>
+      <br>
+      <p><strong style="color:var(--white);">Finalità del Trattamento</strong><br>I dati vengono utilizzati esclusivamente per gestire le prenotazioni e rispondere alle richieste degli utenti.</p>
+      <br>
+      <p><strong style="color:var(--white);">Cookie Utilizzati</strong><br>• <em>Cookie tecnici:</em> necessari per il funzionamento (lingua, preferenze). Non richiedono consenso.<br>• <em>Cookie analitici:</em> solo con consenso esplicito. Dati anonimi e aggregati.<br>• <em>Cookie di marketing:</em> non utilizzati.</p>
+      <br>
+      <p><strong style="color:var(--white);">Diritti dell'Utente (Art. 15-22 GDPR)</strong><br>Hai il diritto di accedere, rettificare, cancellare i tuoi dati e revocare il consenso in qualsiasi momento scrivendo a hushnowcafe.5@gmail.com</p>
+      <br>
+      <p><strong style="color:var(--white);">Base Giuridica</strong><br>Il trattamento è basato sul consenso dell'utente (Art. 6(1)(a) GDPR) per i cookie analitici e sull'interesse legittimo per i cookie tecnici.</p>
+      <br>
+      <p style="font-size:0.65rem;opacity:0.6;">Conforme al Regolamento UE 2016/679 (GDPR) e al D.Lgs. 196/2003 (Codice Privacy italiano) come modificato dal D.Lgs. 101/2018.</p>
+    </div>
+    <button onclick="closePrivacyPolicy()" class="btn btn-outline" style="margin-top:1.5rem;width:100%;">Chiudi</button>
+  </div>
 </div> <div id="lightbox"><img id="lbImg" src="" alt=""/></div> <script>const IMGS = {
   branded: 'images/branded.webp',
   matcha: 'images/matcha.webp',
@@ -602,57 +706,60 @@ const menuData = {
     {it:'Virgin Paloma',en:'Virgin Paloma',de:'Virgin Paloma',es:'Virgin Paloma',fr:'Virgin Paloma',dit:"Succo di Lime, Soda al Pompelmo Rosa, Sciroppo d'Agave, Sale",den:'Lime Juice, Pink Grapefruit Soda, Agave Syrup, Salt',dde:'Limettensaft, Rosa Grapefruit-Soda, Agavensirup, Salz',des:'Zumo de lima, Soda de pomelo rosa, Sirope de agave, Sal',dfr:"Jus de citron vert, Soda pamplemousse rose, Sirop d'agave, Sel",price:'€8.00'},
   ],
   gin_tonics: [
-    {it:'Tanqueray 🥃',en:'Tanqueray 🥃',de:'Tanqueray 🥃',es:'Tanqueray 🥃',fr:'Tanqueray 🥃',dit:'London Dry',den:'London Dry',dde:'London Dry',des:'London Dry',dfr:'London Dry',price:'€8.00'},
-    {it:'Gin Mare 🥃',en:'Gin Mare 🥃',de:'Gin Mare 🥃',es:'Gin Mare 🥃',fr:'Gin Mare 🥃',dit:'Spagna',den:'Spain',dde:'Spanien',des:'España',dfr:'Espagne',price:'€9.00'},
-    {it:"Hendrick's 🥃",en:"Hendrick's 🥃",de:"Hendrick's 🥃",es:"Hendrick's 🥃",fr:"Hendrick's 🥃",dit:'Scozia',den:'Scotland',dde:'Schottland',des:'Escocia',dfr:'Écosse',price:'€10.00'},
-    {it:'Vesuvius 🥃',en:'Vesuvius 🥃',de:'Vesuvius 🥃',es:'Vesuvius 🥃',fr:'Vesuvius 🥃',dit:'Campania',den:'Campania',dde:'Kampanien',des:'Campania',dfr:'Campanie',price:'€12.00'},
+    {it:'Tanqueray',en:'Tanqueray',de:'Tanqueray',es:'Tanqueray',fr:'Tanqueray',dit:'London Dry',den:'London Dry',dde:'London Dry',des:'London Dry',dfr:'London Dry',price:'€8.00'},
+    {it:'Plymouth',en:'Plymouth',de:'Plymouth',es:'Plymouth',fr:'Plymouth',dit:'Inghilterra, Plymouth Gin',den:'England, Plymouth Gin',dde:'England, Plymouth Gin',des:'Inglaterra, Plymouth Gin',dfr:'Angleterre, Plymouth Gin',price:'€8.00'},
+    {it:'Gin Mare',en:'Gin Mare',de:'Gin Mare',es:'Gin Mare',fr:'Gin Mare',dit:'Spagna',den:'Spain',dde:'Spanien',des:'España',dfr:'Espagne',price:'€9.00'},
+    {it:'Bombay',en:'Bombay',de:'Bombay',es:'Bombay',fr:'Bombay',dit:'Inghilterra',den:'England',dde:'England',des:'Inglaterra',dfr:'Angleterre',price:'€9.00'},
+    {it:"Hendrick's",en:"Hendrick's",de:"Hendrick's",es:"Hendrick's",fr:"Hendrick's",dit:'Scozia',den:'Scotland',dde:'Schottland',des:'Escocia',dfr:'Écosse',price:'€10.00'},
+    {it:'Roku',en:'Roku',de:'Roku',es:'Roku',fr:'Roku',dit:'Giappone',den:'Japan',dde:'Japan',des:'Japón',dfr:'Japon',price:'€10.00'},
+    {it:'Vesuvius',en:'Vesuvius',de:'Vesuvius',es:'Vesuvius',fr:'Vesuvius',dit:'Campania',den:'Campania',dde:'Kampanien',des:'Campania',dfr:'Campanie',price:'€12.00'},
   ],
   whiskey: [
-    {it:'Macallan 🥃',en:'Macallan 🥃',de:'Macallan 🥃',es:'Macallan 🥃',fr:'Macallan 🥃',dit:'Ispeyside, Scozia',den:'Speyside, Scotland',dde:'Speyside, Schottland',des:'Speyside, Escocia',dfr:'Speyside, Écosse',price:'€14.00'},
-    {it:'Lagavulin 16 🥃',en:'Lagavulin 16 🥃',de:'Lagavulin 16 🥃',es:'Lagavulin 16 🥃',fr:'Lagavulin 16 🥃',dit:'Islay, Scozia',den:'Islay, Scotland',dde:'Islay, Schottland',des:'Islay, Escocia',dfr:'Islay, Écosse',price:'€14.00'},
-    {it:'Oban 14 🥃',en:'Oban 14 🥃',de:'Oban 14 🥃',es:'Oban 14 🥃',fr:'Oban 14 🥃',dit:'Highland, Scozia',den:'Highland, Scotland',dde:'Highland, Schottland',des:'Highland, Escocia',dfr:'Highland, Écosse',price:'€12.00'},
-    {it:'Nikka From The Barrel 🥃',en:'Nikka From The Barrel 🥃',de:'Nikka From The Barrel 🥃',es:'Nikka From The Barrel 🥃',fr:'Nikka From The Barrel 🥃',dit:'Giappone',den:'Japan',dde:'Japan',des:'Japón',dfr:'Japon',price:'€12.00'},
-    {it:'Bulleit Rye 🥃',en:'Bulleit Rye 🥃',de:'Bulleit Rye 🥃',es:'Bulleit Rye 🥃',fr:'Bulleit Rye 🥃',dit:'Kentucky, Stati Uniti',den:'Kentucky, USA',dde:'Kentucky, USA',des:'Kentucky, EE.UU.',dfr:'Kentucky, États-Unis',price:'€8.00'},
-    {it:'Johnnie Walker Black Label 🥃',en:'Johnnie Walker Black Label 🥃',de:'Johnnie Walker Black Label 🥃',es:'Johnnie Walker Black Label 🥃',fr:'Johnnie Walker Black Label 🥃',dit:'Scozia',den:'Scotland',dde:'Schottland',des:'Escocia',dfr:'Écosse',price:'€8.00'},
+    {it:'Macallan',en:'Macallan',de:'Macallan',es:'Macallan',fr:'Macallan',dit:'Ispeyside, Scozia',den:'Speyside, Scotland',dde:'Speyside, Schottland',des:'Speyside, Escocia',dfr:'Speyside, Écosse',price:'€14.00'},
+    {it:'Lagavulin 16',en:'Lagavulin 16',de:'Lagavulin 16',es:'Lagavulin 16',fr:'Lagavulin 16',dit:'Islay, Scozia',den:'Islay, Scotland',dde:'Islay, Schottland',des:'Islay, Escocia',dfr:'Islay, Écosse',price:'€14.00'},
+    {it:'Oban 14',en:'Oban 14',de:'Oban 14',es:'Oban 14',fr:'Oban 14',dit:'Highland, Scozia',den:'Highland, Scotland',dde:'Highland, Schottland',des:'Highland, Escocia',dfr:'Highland, Écosse',price:'€12.00'},
+    {it:'Nikka From The Barrel',en:'Nikka From The Barrel',de:'Nikka From The Barrel',es:'Nikka From The Barrel',fr:'Nikka From The Barrel',dit:'Giappone',den:'Japan',dde:'Japan',des:'Japón',dfr:'Japon',price:'€12.00'},
+    {it:'Bulleit Rye',en:'Bulleit Rye',de:'Bulleit Rye',es:'Bulleit Rye',fr:'Bulleit Rye',dit:'Kentucky, Stati Uniti',den:'Kentucky, USA',dde:'Kentucky, USA',des:'Kentucky, EE.UU.',dfr:'Kentucky, États-Unis',price:'€8.00'},
+    {it:'Johnnie Walker Black Label',en:'Johnnie Walker Black Label',de:'Johnnie Walker Black Label',es:'Johnnie Walker Black Label',fr:'Johnnie Walker Black Label',dit:'Scozia',den:'Scotland',dde:'Schottland',des:'Escocia',dfr:'Écosse',price:'€8.00'},
   ],
   rum: [
-    {it:'Zacapa 23 🥃',en:'Zacapa 23 🥃',de:'Zacapa 23 🥃',es:'Zacapa 23 🥃',fr:'Zacapa 23 🥃',dit:'Cuba',den:'Cuba',dde:'Kuba',des:'Cuba',dfr:'Cuba',price:'€12.00'},
-    {it:'Havana Club 3 🥃',en:'Havana Club 3 🥃',de:'Havana Club 3 🥃',es:'Havana Club 3 🥃',fr:'Havana Club 3 🥃',dit:'Cuba',den:'Cuba',dde:'Kuba',des:'Cuba',dfr:'Cuba',price:'€8.00'},
-    {it:'Havana Club 7 🥃',en:'Havana Club 7 🥃',de:'Havana Club 7 🥃',es:'Havana Club 7 🥃',fr:'Havana Club 7 🥃',dit:'Cuba',den:'Cuba',dde:'Kuba',des:'Cuba',dfr:'Cuba',price:'€8.00'},
-    {it:'Diplomatico 🥃',en:'Diplomatico 🥃',de:'Diplomatico 🥃',es:'Diplomatico 🥃',fr:'Diplomatico 🥃',dit:'Lara, Venezuela',den:'Lara, Venezuela',dde:'Lara, Venezuela',des:'Lara, Venezuela',dfr:'Lara, Venezuela',price:'€10.00'},
-    {it:'Agricol J.M. Fumée Volcanique 🥃',en:'Agricol J.M. Fumée Volcanique 🥃',de:'Agricol J.M. Fumée Volcanique 🥃',es:'Agricol J.M. Fumée Volcanique 🥃',fr:'Agricol J.M. Fumée Volcanique 🥃',dit:'Martinica, Caraibi',den:'Martinique, Caribbean',dde:'Martinique, Karibik',des:'Martinica, Caribe',dfr:'Martinique, Caraïbes',price:'€10.00'},
-    {it:'Don Papa Baroko 🥃',en:'Don Papa Baroko 🥃',de:'Don Papa Baroko 🥃',es:'Don Papa Baroko 🥃',fr:'Don Papa Baroko 🥃',dit:'Isola di Negros, Philippine',den:'Negros Island, Philippines',dde:'Insel Negros, Philippinen',des:'Isla de Negros, Filipinas',dfr:'Île de Negros, Philippines',price:'€10.00'},
+    {it:'Zacapa 23',en:'Zacapa 23',de:'Zacapa 23',es:'Zacapa 23',fr:'Zacapa 23',dit:'Cuba',den:'Cuba',dde:'Kuba',des:'Cuba',dfr:'Cuba',price:'€12.00'},
+    {it:'Havana Club 3',en:'Havana Club 3',de:'Havana Club 3',es:'Havana Club 3',fr:'Havana Club 3',dit:'Cuba',den:'Cuba',dde:'Kuba',des:'Cuba',dfr:'Cuba',price:'€8.00'},
+    {it:'Havana Club 7',en:'Havana Club 7',de:'Havana Club 7',es:'Havana Club 7',fr:'Havana Club 7',dit:'Cuba',den:'Cuba',dde:'Kuba',des:'Cuba',dfr:'Cuba',price:'€8.00'},
+    {it:'Diplomatico',en:'Diplomatico',de:'Diplomatico',es:'Diplomatico',fr:'Diplomatico',dit:'Lara, Venezuela',den:'Lara, Venezuela',dde:'Lara, Venezuela',des:'Lara, Venezuela',dfr:'Lara, Venezuela',price:'€10.00'},
+    {it:'Agricol J.M. Fumée Volcanique',en:'Agricol J.M. Fumée Volcanique',de:'Agricol J.M. Fumée Volcanique',es:'Agricol J.M. Fumée Volcanique',fr:'Agricol J.M. Fumée Volcanique',dit:'Martinica, Caraibi',den:'Martinique, Caribbean',dde:'Martinique, Karibik',des:'Martinica, Caribe',dfr:'Martinique, Caraïbes',price:'€10.00'},
+    {it:'Don Papa Baroko',en:'Don Papa Baroko',de:'Don Papa Baroko',es:'Don Papa Baroko',fr:'Don Papa Baroko',dit:'Isola di Negros, Philippine',den:'Negros Island, Philippines',dde:'Insel Negros, Philippinen',des:'Isla de Negros, Filipinas',dfr:'Île de Negros, Philippines',price:'€10.00'},
   ],
   cognac: [
-    {it:"Hors d'Age Dartigalongue 🥃",en:"Hors d'Age Dartigalongue 🥃",de:"Hors d'Age Dartigalongue 🥃",es:"Hors d'Age Dartigalongue 🥃",fr:"Hors d'Age Dartigalongue 🥃",dit:'Armagnac — Francia',den:'Armagnac — France',dde:'Armagnac — Frankreich',des:'Armagnac — Francia',dfr:'Armagnac — France',price:'€10.00'},
-    {it:'Nistru XO 🥃',en:'Nistru XO 🥃',de:'Nistru XO 🥃',es:'Nistru XO 🥃',fr:'Nistru XO 🥃',dit:'Moldova',den:'Moldova',dde:'Moldawien',des:'Moldavia',dfr:'Moldavie',price:'€8.00'},
+    {it:"Hors d'Age Dartigalongue",en:"Hors d'Age Dartigalongue",de:"Hors d'Age Dartigalongue",es:"Hors d'Age Dartigalongue",fr:"Hors d'Age Dartigalongue",dit:'Armagnac — Francia',den:'Armagnac — France',dde:'Armagnac — Frankreich',des:'Armagnac — Francia',dfr:'Armagnac — France',price:'€10.00'},
+    {it:'Nistru XO',en:'Nistru XO',de:'Nistru XO',es:'Nistru XO',fr:'Nistru XO',dit:'Moldova',den:'Moldova',dde:'Moldawien',des:'Moldavia',dfr:'Moldavie',price:'€8.00'},
   ],
   grappe: [
-    {it:'Poli Bassano Bianca 🥃',en:'Poli Bassano Bianca 🥃',de:'Poli Bassano Bianca 🥃',es:'Poli Bassano Bianca 🥃',fr:'Poli Bassano Bianca 🥃',dit:'Veneto',den:'Veneto',dde:'Venetien',des:'Veneto',dfr:'Vénétie',price:'€6.00'},
-    {it:'Poli Bassano Barrique 🥃',en:'Poli Bassano Barrique 🥃',de:'Poli Bassano Barrique 🥃',es:'Poli Bassano Barrique 🥃',fr:'Poli Bassano Barrique 🥃',dit:'Veneto',den:'Veneto',dde:'Venetien',des:'Veneto',dfr:'Vénétie',price:'€6.00'},
+    {it:'Poli Bassano Bianca',en:'Poli Bassano Bianca',de:'Poli Bassano Bianca',es:'Poli Bassano Bianca',fr:'Poli Bassano Bianca',dit:'Veneto',den:'Veneto',dde:'Venetien',des:'Veneto',dfr:'Vénétie',price:'€6.00'},
+    {it:'Poli Bassano Barrique',en:'Poli Bassano Barrique',de:'Poli Bassano Barrique',es:'Poli Bassano Barrique',fr:'Poli Bassano Barrique',dit:'Veneto',den:'Veneto',dde:'Venetien',des:'Veneto',dfr:'Vénétie',price:'€6.00'},
   ],
   tequila_vodka: [
-    {it:'Espolon Blanco 🥃',en:'Espolon Blanco 🥃',de:'Espolon Blanco 🥃',es:'Espolon Blanco 🥃',fr:'Espolon Blanco 🥃',dit:'Tequila — Jalisco, Messico',den:'Tequila — Jalisco, Mexico',dde:'Tequila — Jalisco, Mexiko',des:'Tequila — Jalisco, México',dfr:'Tequila — Jalisco, Mexique',price:'€8.00'},
-    {it:'Espolon Reposado 🥃',en:'Espolon Reposado 🥃',de:'Espolon Reposado 🥃',es:'Espolon Reposado 🥃',fr:'Espolon Reposado 🥃',dit:'Tequila — Jalisco, Messico',den:'Tequila — Jalisco, Mexico',dde:'Tequila — Jalisco, Mexiko',des:'Tequila — Jalisco, México',dfr:'Tequila — Jalisco, Mexique',price:'€8.00'},
-    {it:'Montelobos Oaxaca 🥃',en:'Montelobos Oaxaca 🥃',de:'Montelobos Oaxaca 🥃',es:'Montelobos Oaxaca 🥃',fr:'Montelobos Oaxaca 🥃',dit:'Mezcal — Oaxaca, Messico',den:'Mezcal — Oaxaca, Mexico',dde:'Mezcal — Oaxaca, Mexiko',des:'Mezcal — Oaxaca, México',dfr:'Mezcal — Oaxaca, Mexique',price:'€10.00'},
-    {it:'Stolichnaya Elit 🥃',en:'Stolichnaya Elit 🥃',de:'Stolichnaya Elit 🥃',es:'Stolichnaya Elit 🥃',fr:'Stolichnaya Elit 🥃',dit:'Vodka — Tambov, Russia',den:'Vodka — Tambov, Russia',dde:'Vodka — Tambow, Russland',des:'Vodka — Tambov, Rusia',dfr:'Vodka — Tambov, Russie',price:'€10.00'},
-    {it:'Hetman 🥃',en:'Hetman 🥃',de:'Hetman 🥃',es:'Hetman 🥃',fr:'Hetman 🥃',dit:'Vodka — Ucraina',den:'Vodka — Ukraine',dde:'Vodka — Ukraine',des:'Vodka — Ucrania',dfr:'Vodka — Ukraine',price:'€8.00'},
-    {it:'Zubrowka Black 🥃',en:'Zubrowka Black 🥃',de:'Zubrowka Black 🥃',es:'Zubrowka Black 🥃',fr:'Zubrowka Black 🥃',dit:'Vodka — Polonia',den:'Vodka — Poland',dde:'Vodka — Polen',des:'Vodka — Polonia',dfr:'Vodka — Pologne',price:'€8.00'},
+    {it:'Espolon Blanco',en:'Espolon Blanco',de:'Espolon Blanco',es:'Espolon Blanco',fr:'Espolon Blanco',dit:'Tequila — Jalisco, Messico',den:'Tequila — Jalisco, Mexico',dde:'Tequila — Jalisco, Mexiko',des:'Tequila — Jalisco, México',dfr:'Tequila — Jalisco, Mexique',price:'€8.00'},
+    {it:'Espolon Reposado',en:'Espolon Reposado',de:'Espolon Reposado',es:'Espolon Reposado',fr:'Espolon Reposado',dit:'Tequila — Jalisco, Messico',den:'Tequila — Jalisco, Mexico',dde:'Tequila — Jalisco, Mexiko',des:'Tequila — Jalisco, México',dfr:'Tequila — Jalisco, Mexique',price:'€8.00'},
+    {it:'Montelobos Oaxaca',en:'Montelobos Oaxaca',de:'Montelobos Oaxaca',es:'Montelobos Oaxaca',fr:'Montelobos Oaxaca',dit:'Mezcal — Oaxaca, Messico',den:'Mezcal — Oaxaca, Mexico',dde:'Mezcal — Oaxaca, Mexiko',des:'Mezcal — Oaxaca, México',dfr:'Mezcal — Oaxaca, Mexique',price:'€10.00'},
+    {it:'Stolichnaya Elit',en:'Stolichnaya Elit',de:'Stolichnaya Elit',es:'Stolichnaya Elit',fr:'Stolichnaya Elit',dit:'Vodka — Tambov, Russia',den:'Vodka — Tambov, Russia',dde:'Vodka — Tambow, Russland',des:'Vodka — Tambov, Rusia',dfr:'Vodka — Tambov, Russie',price:'€10.00'},
+    {it:'Hetman',en:'Hetman',de:'Hetman',es:'Hetman',fr:'Hetman',dit:'Vodka — Ucraina',den:'Vodka — Ukraine',dde:'Vodka — Ukraine',des:'Vodka — Ucrania',dfr:'Vodka — Ukraine',price:'€8.00'},
+    {it:'Zubrowka Black',en:'Zubrowka Black',de:'Zubrowka Black',es:'Zubrowka Black',fr:'Zubrowka Black',dit:'Vodka — Polonia',den:'Vodka — Poland',dde:'Vodka — Polen',des:'Vodka — Polonia',dfr:'Vodka — Pologne',price:'€8.00'},
   ],
   vini: [
-    {it:'El Sior Prosecco 🍾',en:'El Sior Prosecco 🍾',de:'El Sior Prosecco 🍾',es:'El Sior Prosecco 🍾',fr:'El Sior Prosecco 🍾',dit:'Veneto',den:'Veneto',dde:'Venetien',des:'Veneto',dfr:'Vénétie',price:'€7 / 28'},
-    {it:'Berlucchi Satèn 🍾',en:'Berlucchi Satèn 🍾',de:'Berlucchi Satèn 🍾',es:'Berlucchi Satèn 🍾',fr:'Berlucchi Satèn 🍾',dit:'Saten / Rosè',den:'Saten / Rosé',dde:'Saten / Rosé',des:'Saten / Rosé',dfr:'Saten / Rosé',price:'€10 / 40'},
+    {it:'El Sior Prosecco',en:'El Sior Prosecco',de:'El Sior Prosecco',es:'El Sior Prosecco',fr:'El Sior Prosecco',dit:'Veneto',den:'Veneto',dde:'Venetien',des:'Veneto',dfr:'Vénétie',price:'€7 / 28'},
+    {it:'Berlucchi Satèn',en:'Berlucchi Satèn',de:'Berlucchi Satèn',es:'Berlucchi Satèn',fr:'Berlucchi Satèn',dit:'Saten / Rosè',den:'Saten / Rosé',dde:'Saten / Rosé',des:'Saten / Rosé',dfr:'Saten / Rosé',price:'€10 / 40'},
     {it:'Vino Bianco',en:'White Wine',de:'Weißwein',es:'Vino blanco',fr:'Vin blanc',dit:'Falanghina / Fiano / Greco / Chardonnay / Gewürztraminer / Sauvignon / Ribolla',den:'Falanghina / Fiano / Greco / Chardonnay / Gewürztraminer / Sauvignon / Ribolla',dde:'Falanghina / Fiano / Greco / Chardonnay / Gewürztraminer / Sauvignon / Ribolla',des:'Falanghina / Fiano / Greco / Chardonnay / Gewürztraminer / Sauvignon / Ribolla',dfr:'Falanghina / Fiano / Greco / Chardonnay / Gewürztraminer / Sauvignon / Ribolla',price:'€6.00 – 30.00'},
     {it:'Vino Rosè',en:'Rosé Wine',de:'Roséwein',es:'Vino rosado',fr:'Vin rosé',dit:'Vita Nuova / Pinot Ramato',den:'Vita Nuova / Pinot Ramato',dde:'Vita Nuova / Pinot Ramato',des:'Vita Nuova / Pinot Ramato',dfr:'Vita Nuova / Pinot Ramato',price:'€7.00 / 28.00'},
     {it:'Vino Rosso',en:'Red Wine',de:'Rotwein',es:'Vino tinto',fr:'Vin rouge',dit:'Aglianico / Taurasi / Piedirosso / Pinot Nero / Morellino / Valpolicella / Chianti',den:'Aglianico / Taurasi / Piedirosso / Pinot Nero / Morellino / Valpolicella / Chianti',dde:'Aglianico / Taurasi / Piedirosso / Pinot Nero / Morellino / Valpolicella / Chianti',des:'Aglianico / Taurasi / Piedirosso / Pinot Nero / Morellino / Valpolicella / Chianti',dfr:'Aglianico / Taurasi / Piedirosso / Pinot Nero / Morellino / Valpolicella / Chianti',price:'€6.00 – 35.00'},
-    {it:'Laurent Perrier Champagne 🍾',en:'Laurent Perrier Champagne 🍾',de:'Laurent Perrier Champagne 🍾',es:'Laurent Perrier Champagne 🍾',fr:'Laurent Perrier Champagne 🍾',dit:'Champagne, Francia',den:'Champagne, France',dde:'Champagne, Frankreich',des:'Champagne, Francia',dfr:'Champagne, France',price:'€80'},
-    {it:'Louis Roederer 🍾',en:'Louis Roederer 🍾',de:'Louis Roederer 🍾',es:'Louis Roederer 🍾',fr:'Louis Roederer 🍾',dit:'Champagne (Collection / Vintage / Rosè / Blanc De Blancs), Francia',den:'Champagne (Collection / Vintage / Rosé / Blanc De Blancs), France',dde:'Champagne (Collection / Vintage / Rosé / Blanc De Blancs), Frankreich',des:'Champagne (Collection / Vintage / Rosé / Blanc De Blancs), Francia',dfr:'Champagne (Collection / Vintage / Rosé / Blanc De Blancs), France',price:'€115 / 170 / 180 / 185 / 470'},
+    {it:'Laurent Perrier Champagne',en:'Laurent Perrier Champagne',de:'Laurent Perrier Champagne',es:'Laurent Perrier Champagne',fr:'Laurent Perrier Champagne',dit:'Champagne, Francia',den:'Champagne, France',dde:'Champagne, Frankreich',des:'Champagne, Francia',dfr:'Champagne, France',price:'€80'},
+    {it:'Louis Roederer',en:'Louis Roederer',de:'Louis Roederer',es:'Louis Roederer',fr:'Louis Roederer',dit:'Champagne (Collection / Vintage / Rosè / Blanc De Blancs), Francia',den:'Champagne (Collection / Vintage / Rosé / Blanc De Blancs), France',dde:'Champagne (Collection / Vintage / Rosé / Blanc De Blancs), Frankreich',des:'Champagne (Collection / Vintage / Rosé / Blanc De Blancs), Francia',dfr:'Champagne (Collection / Vintage / Rosé / Blanc De Blancs), France',price:'€115 / 170 / 180 / 185 / 470'},
   ],
   birre: [
-    {it:'Nastro Azzurro 🍺',en:'Nastro Azzurro 🍺',de:'Nastro Azzurro 🍺',es:'Nastro Azzurro 🍺',fr:'Nastro Azzurro 🍺',dit:'Italia',den:'Italy',dde:'Italien',des:'Italia',dfr:'Italie',price:'€5.00'},
-    {it:'Ichnusa Non Filtrata 🍺',en:'Ichnusa Non Filtrata 🍺',de:'Ichnusa Non Filtrata 🍺',es:'Ichnusa Non Filtrata 🍺',fr:'Ichnusa Non Filtrata 🍺',dit:'Sardegna, Italia',den:'Sardinia, Italy',dde:'Sardinien, Italien',des:'Cerdeña, Italia',dfr:'Sardaigne, Italie',price:'€5.00'},
-    {it:'Artigianale 🍺',en:'Craft Beer 🍺',de:'Handwerksbier 🍺',es:'Cerveza Artesanal 🍺',fr:'Bière Artisanale 🍺',dit:'Del giorno',den:'Of the day',dde:'Des Tages',des:'Del día',dfr:'Du jour',price:'€6.00'},
-    {it:'Corona 🍺',en:'Corona 🍺',de:'Corona 🍺',es:'Corona 🍺',fr:'Corona 🍺',dit:'Messico',den:'Mexico',dde:'Mexiko',des:'México',dfr:'Mexique',price:'€6.00'},
+    {it:'Nastro Azzurro',en:'Nastro Azzurro',de:'Nastro Azzurro',es:'Nastro Azzurro',fr:'Nastro Azzurro',dit:'Italia',den:'Italy',dde:'Italien',des:'Italia',dfr:'Italie',price:'€5.00'},
+    {it:'Ichnusa Non Filtrata',en:'Ichnusa Non Filtrata',de:'Ichnusa Non Filtrata',es:'Ichnusa Non Filtrata',fr:'Ichnusa Non Filtrata',dit:'Sardegna, Italia',den:'Sardinia, Italy',dde:'Sardinien, Italien',des:'Cerdeña, Italia',dfr:'Sardaigne, Italie',price:'€5.00'},
+    {it:'Artigianale',en:'Craft Beer',de:'Handwerksbier',es:'Cerveza Artesanal',fr:'Bière Artisanale',dit:'Del giorno',den:'Of the day',dde:'Des Tages',des:'Del día',dfr:'Du jour',price:'€6.00'},
+    {it:'Corona',en:'Corona',de:'Corona',es:'Corona',fr:'Corona',dit:'Messico',den:'Mexico',dde:'Mexiko',des:'México',dfr:'Mexique',price:'€6.00'},
   ],
   bevande: [
     {it:"Spremuta d'Arancia",en:'Fresh Orange Juice',de:'Frisch gepresster Orangensaft',es:'Zumo de naranja natural',fr:"Jus d'orange frais",dit:'',den:'',dde:'',des:'',dfr:'',price:'€5.00'},
@@ -661,7 +768,10 @@ const menuData = {
     {it:'Acqua Filette',en:'Filette Water',de:'Filette Wasser',es:'Agua Filette',fr:'Eau Filette',dit:'Piccola / Grande',den:'Small / Large',dde:'Klein / Groß',des:'Pequeña / Grande',dfr:'Petite / Grande',price:'€2.50 / 3.00'},
     {it:'Tè Freddo / Special',en:'Iced Tea / Special',de:'Eistee / Special',es:'Té frío / Especial',fr:'Thé glacé / Spécial',dit:'',den:'',dde:'',des:'',dfr:'',price:'€3.00'},
     {it:'Coca Cola / Chinotto / Bitter',en:'Soft Drinks',de:'Softdrinks',es:'Refrescos',fr:'Boissons gazeuses',dit:'Coca Cola Original/Zero, Tassoni, Chinotto, Bitter Bianco/Rosso, Campari Soda',den:'Coca Cola Original/Zero, Tassoni, Chinotto, White/Red Bitter, Campari Soda',dde:'Coca Cola Original/Zero, Tassoni, Chinotto, Weißer/Roter Bitter, Campari Soda',des:'Coca Cola Original/Zero, Tassoni, Chinotto, Bitter Blanco/Rojo, Campari Soda',dfr:'Coca Cola Original/Zero, Tassoni, Chinotto, Bitter Blanc/Rouge, Campari Soda',price:'€2.50 / 3.00'},
-    {it:'Fever Tree Selection',en:'Fever Tree Selection',de:'Fever Tree Auswahl',es:'Selección Fever Tree',fr:'Sélection Fever Tree',dit:'Tonica Indian / Mediterranea / Elderflower — Ginger Beer — Ginger Ale',den:'Indian / Mediterranean / Elderflower Tonic — Ginger Beer — Ginger Ale',dde:'Indian / Mediterran / Holunderblüten Tonic — Ginger Beer — Ginger Ale',des:'Tónica Indian / Mediterránea / Flor de saúco — Ginger Beer — Ginger Ale',dfr:'Tonique Indian / Méditerranéen / Fleur de sureau — Ginger Beer — Ginger Ale',price:'€3.00'},
+    {it:'Fever Tree Premium Indian',en:'Fever Tree Premium Indian',de:'Fever Tree Premium Indian',es:'Fever Tree Premium Indian',fr:'Fever Tree Premium Indian',dit:'Oli vegetali con acqua di fonte e chinino dall\'Africa Centrale',den:'Vegetable oils with spring water and quinine from Central Africa',dde:'Pflanzenöle mit Quellwasser und Chinin aus Zentralafrika',des:'Aceites vegetales con agua de manantial y quinina de África Central',dfr:'Huiles végétales avec eau de source et quinine d\'Afrique Centrale',price:'€3.00'},
+    {it:'Fever Tree Mediterranean',en:'Fever Tree Mediterranean',de:'Fever Tree Mediterranean',es:'Fever Tree Mediterranean',fr:'Fever Tree Mediterranean',dit:'Erbe botaniche dalle coste del Mediterraneo, delicata e floreale',den:'Botanical herbs from Mediterranean coasts, delicate and floral',dde:'Botanische Kräuter von der Mittelmeerküste, delikat und blumig',des:'Hierbas botánicas de las costas mediterráneas, delicada y floral',dfr:'Herbes botaniques des côtes méditerranéennes, délicate et florale',price:'€3.00'},
+    {it:'Fever Tree Elderflower',en:'Fever Tree Elderflower',de:'Fever Tree Elderflower',es:'Fever Tree Elderflower',fr:'Fever Tree Elderflower',dit:'Oli essenziali di fiori di sambuco inglesi, variante floreale del Premium Indian',den:'Essential oils of English elderflowers, floral variant of Premium Indian',dde:'Ätherische Öle englischer Holunderblüten, florale Variante des Premium Indian',des:'Aceites esenciales de flores de saúco inglesas, variante floral del Premium Indian',dfr:'Huiles essentielles de fleurs de sureau anglaises, variante florale du Premium Indian',price:'€3.00'},
+    {it:'Fever Tree Pink Soda',en:'Fever Tree Pink Soda',de:'Fever Tree Pink Soda',es:'Fever Tree Pink Soda',fr:'Fever Tree Pink Soda',dit:'Amaro ma dolce allo stesso tempo, note del pompelmo rosa della Florida',den:'Bitter yet sweet, notes of Florida pink grapefruit',dde:'Bitter und gleichzeitig süß, Noten der rosa Grapefruit aus Florida',des:'Amargo pero dulce a la vez, notas de pomelo rosa de Florida',dfr:'Amer mais doux à la fois, notes de pamplemousse rose de Floride',price:'€3.00'},
   ],
 };
 
@@ -698,7 +808,7 @@ function renderMenu(cat, btn) {
 // ═══════════════════════════════════════════════════════════════
 // ☁️  JSONBIN CLOUD STORAGE — دیتابیس ابری رایگان
 // ═══════════════════════════════════════════════════════════════
-const MENU_VERSION = '3.0'; // هر بار منو عوض شد این رو بالا ببر
+const MENU_VERSION = '3.1'; // هر بار منو عوض شد این رو بالا ببر
 // راهنما: برای راه‌اندازی یک بار:
 //   1. به https://jsonbin.io بروید و ثبت نام کنید (رایگان)
 //   2. یک Bin جدید بسازید با محتوای: {}
@@ -938,7 +1048,6 @@ const galleryItems = [
   {key:'matcha',      cap_it:'Matcha Latte',         cap_en:'Matcha Latte'},
   {key:'cocktail_red',cap_it:'Signature Cocktail',   cap_en:'Signature Cocktail'},
   {key:'dryice',      cap_it:'Cocktail con Dry Ice', cap_en:'Dry Ice Cocktail'},
-  {key:'hn_mug',      cap_it:'Colazione Hushnow',    cap_en:'Hushnow Breakfast'},
   {key:'tea',         cap_it:'Servizio Tè',          cap_en:'Tea Service'},
   {key:'croissants',  cap_it:'Cornetto Artigianale', cap_en:'Artisan Croissant'},
 ];
@@ -960,7 +1069,7 @@ const lb=document.getElementById('lightbox');
 if(lb) lb.addEventListener('click',()=>{lb.style.display='none';document.body.style.overflow='';});
 
 document.getElementById('heroBg').style.backgroundImage = 'url(' + LOGO_SRC + ')';
-document.getElementById('heroBg').style.backgroundSize = 'cover';
+document.getElementById('heroBg').style.backgroundSize = 'conver';
 document.getElementById('heroBg').style.backgroundRepeat = 'no-repeat';
 document.getElementById('heroBg').style.backgroundPosition = 'center center';
 const reviews = [
@@ -1029,35 +1138,68 @@ function downloadQR() {
 
 function initCookies() {
   if(!localStorage.getItem('hn_cookies')) {
-    setTimeout(() => {
-      document.getElementById('cookieBanner').style.display = 'flex';
-    }, 3500);
+    setTimeout(function(){
+      var b = document.getElementById('cookieBanner');
+      if(b){ b.style.display='block'; }
+    }, 1500);
   }
 }
 function acceptCookies() {
-  localStorage.setItem('hn_cookies', 'accepted');
+  localStorage.setItem('hn_cookies', JSON.stringify({necessary:true,analytics:true,marketing:false,date:new Date().toISOString()}));
   hideCookie();
 }
 function declineCookies() {
-  localStorage.setItem('hn_cookies', 'declined');
+  localStorage.setItem('hn_cookies', JSON.stringify({necessary:true,analytics:false,marketing:false,date:new Date().toISOString()}));
   hideCookie();
 }
 function hideCookie() {
-  const b = document.getElementById('cookieBanner');
-  b.style.transition = 'opacity 0.5s, transform 0.5s';
-  b.style.opacity = '0';
-  b.style.transform = 'translateY(20px)';
-  setTimeout(() => b.style.display='none', 500);
+  var b = document.getElementById('cookieBanner');
+  if(b){ b.style.transition='opacity 0.4s,transform 0.4s'; b.style.opacity='0'; b.style.transform='translateY(20px)'; setTimeout(function(){ b.style.display='none'; },400); }
+}
+function showCookiePrefs() {
+  var m = document.getElementById('cookieModal');
+  if(m){ m.style.display='flex'; }
+}
+function closeCookieModal() {
+  var m = document.getElementById('cookieModal');
+  if(m){ m.style.display='none'; }
+}
+function saveCustomCookies() {
+  var analytics = document.getElementById('analyticsCk') ? document.getElementById('analyticsCk').checked : false;
+  var marketing = document.getElementById('marketingCk') ? document.getElementById('marketingCk').checked : false;
+  localStorage.setItem('hn_cookies', JSON.stringify({necessary:true,analytics:analytics,marketing:marketing,date:new Date().toISOString()}));
+  closeCookieModal();
+  hideCookie();
+}
+function toggleCookieSwitch(ckId, swEl) {
+  var ck = document.getElementById(ckId);
+  if(!ck) return;
+  ck.checked = !ck.checked;
+  var dot = swEl.querySelector('span');
+  if(ck.checked){ swEl.style.background='var(--gold)'; if(dot) dot.style.transform='translateX(20px)'; }
+  else { swEl.style.background='#333'; if(dot) dot.style.transform='translateX(0)'; }
+}
+function showPrivacyPolicy() {
+  var m = document.getElementById('privacyModal');
+  if(m){ m.style.display='flex'; }
+}
+function closePrivacyPolicy() {
+  var m = document.getElementById('privacyModal');
+  if(m){ m.style.display='none'; }
 }
 initCookies();
 
 const cookieTexts = {
-  it: 'Utilizziamo i cookie per migliorare la tua esperienza. Continuando accetti la nostra <a href="#" style="color:var(--gold2)">Privacy Policy</a>. 🇪🇺 GDPR',
-  en: 'We use cookies to improve your experience. By continuing you accept our <a href="#" style="color:var(--gold2)">Privacy Policy</a>. 🇪🇺 GDPR',
-  de: 'Wir verwenden Cookies, um Ihr Erlebnis zu verbessern. Durch die weitere Nutzung akzeptieren Sie unsere <a href="#" style="color:var(--gold2)">Datenschutzrichtlinie</a>. 🇪🇺 DSGVO',
+  it: 'Utilizziamo cookie tecnici necessari e, con il tuo consenso, cookie analitici per migliorare la tua esperienza. <a href="#" onclick="showPrivacyPolicy()" style="color:var(--gold2)">Privacy Policy</a> 🇪🇺 GDPR',
+  en: 'We use necessary cookies and, with your consent, analytics cookies to improve your experience. <a href="#" onclick="showPrivacyPolicy()" style="color:var(--gold2)">Privacy Policy</a> 🇪🇺 GDPR',
+  de: 'Wir verwenden notwendige Cookies und mit Ihrer Zustimmung Analyse-Cookies. <a href="#" onclick="showPrivacyPolicy()" style="color:var(--gold2)">Datenschutz</a> 🇪🇺 DSGVO',
+  es: 'Usamos cookies necesarias y, con su consentimiento, cookies analíticas. <a href="#" onclick="showPrivacyPolicy()" style="color:var(--gold2)">Privacidad</a> 🇪🇺 RGPD',
+  fr: 'Nous utilisons des cookies nécessaires et, avec votre consentement, des cookies analytiques. <a href="#" onclick="showPrivacyPolicy()" style="color:var(--gold2)">Confidentialité</a> 🇪🇺 RGPD',
 };
 const cookieBtnTexts = {
-  it: ['Accetta', 'Solo necessari'], en: ['Accept', 'Necessary only'], de: ['Akzeptieren', 'Nur notwendige']
+  it: ['Accetta Tutto','Solo Necessari'], en: ['Accept All','Necessary Only'],
+  de: ['Alles Akzeptieren','Nur Notwendige'], es: ['Aceptar Todo','Solo Necesarias'],
+  fr: ['Tout Accepter','Seulement Nécessaires']
 };
 
 const _setLang = setLang;
@@ -1073,7 +1215,11 @@ window.setLang = function(l) {
 
 ;
 
-const ADMIN_PWD = 'hushnow5';
+const WHATSAPP_NUMBER = '393313920491'; // formato internazionale senza +
+function openWhatsApp() {
+  var msg = encodeURIComponent('Ciao HUSHNOW CAFÉ °5! Vorrei alcune informazioni.');
+  window.open('https://wa.me/' + WHATSAPP_NUMBER + '?text=' + msg, '_blank');
+}
 let currentAdminCat = 'caffetteria';
 let currentAdminLang = 'it';
 
