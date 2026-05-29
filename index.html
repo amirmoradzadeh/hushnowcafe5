@@ -677,7 +677,7 @@ const menuData = {
     {it:'Croque Hush',en:'Croque Hush',de:'Croque Hush',es:'Croque Hush',fr:'Croque Hush',dit:'Gratinato con béchamelle al formaggio',den:'Gratinated with cheese béchamel',dde:'Überbacken mit Käse-Béchamel',des:'Gratinado con bechamel de queso',dfr:'Gratiné à la béchamel au fromage',price:'€8.00 / 10.00'},
     {it:'Insalata del Giorno',en:'Salad of the Day',de:'Tagessalat',es:'Ensalada del día',fr:'Salade du jour',dit:'Tonno / Uovo Sodo / Feta / Salmone / Patate / Pollo',den:'Tuna / Hard Boiled Egg / Feta / Salmon / Potatoes / Chicken',dde:'Thunfisch / Hartgekochtes Ei / Feta / Lachs / Kartoffeln / Hähnchen',des:'Atún / Huevo duro / Feta / Salmón / Patatas / Pollo',dfr:'Thon / Œuf dur / Feta / Saumon / Pommes de terre / Poulet',price:'€8.00 / 10.00 / 12.00'},
     {it:'Aperitivo Gourmet',en:'Gourmet Aperitif',de:'Gourmet-Aperitif',es:'Aperitivo Gourmet',fr:'Apéritif Gourmet',dit:'Min. 2 persone',den:'Min. 2 people',dde:'Mind. 2 Personen',des:'Mín. 2 personas',dfr:'Min. 2 personnes',price:'€12.00'},
-    {it:'Piatto o Zuppa Del Giorno',en:'Plate or Soup of the Day',de:'Tagesgericht oder Suppe',es:'Plato o Sopa del día',fr:'Plat ou Soupe du jour',dit:'',den:'',dde:'',des:'',dfr:'',price:'€8.00 / 10.00 / 12.00'},
+    {it:'Piatto o Zuppa Del Giorno',en:'Plate or Soup of the Day',de:'Tagesgericht oder Suppe',es:'Plato o Sopa del día',fr:'Plat ou Soupe du jour',dit:'',den:'',dde:'',des:'',dfr:'',price:'€8.00 / 10 / 12'},
   ],
   spritz: [
     {it:'Aperol Spritz',en:'Aperol Spritz',de:'Aperol Spritz',es:'Aperol Spritz',fr:'Aperol Spritz',dit:'Prosecco Extra Dry, Aperol, Soda',den:'Prosecco Extra Dry, Aperol, Soda',dde:'Prosecco Extra Dry, Aperol, Soda',des:'Prosecco Extra Dry, Aperol, Soda',dfr:'Prosecco Extra Dry, Aperol, Soda',price:'€8.00'},
@@ -973,6 +973,18 @@ function submitReservation(e) {
   btn.textContent = '...';
   btn.disabled = true;
   const message = '🍽 <b>NUOVA PRENOTAZIONE</b>\n<b>HUSHNOW CAFÉ °5</b>\n\n👤 <b>Nome:</b> '+name+'\n📞 <b>Contatto:</b> '+contact+'\n📅 <b>Data:</b> '+date+'\n🕐 <b>Orario:</b> '+time+'\n👥 <b>Persone:</b> '+guests+'\n🎉 <b>Occasione:</b> '+occasion+'\n📝 <b>Note:</b> '+notes;
+  // WhatsApp notification
+  var waTxt = '🍽 *NUOVA PRENOTAZIONE*\n*HUSHNOW CAFÉ °5*\n\n'
+    + '👤 Nome: ' + name + '\n'
+    + '📞 Contatto: ' + contact + '\n'
+    + '📅 Data: ' + date + '\n'
+    + '🕐 Orario: ' + time + '\n'
+    + '👥 Persone: ' + guests + '\n'
+    + '🎉 Occasione: ' + occasion + '\n'
+    + '📝 Note: ' + notes;
+  setTimeout(function(){
+    window.open('https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(waTxt), '_blank');
+  }, 800);
   Promise.all([
     fetch('https://formspree.io/f/mgoqoyyd', {
       method:'POST',
@@ -1022,6 +1034,20 @@ function submitEvent(e) {
   btn.textContent = '...';
   btn.disabled = true;
   const message = '🎉 <b>NUOVO EVENTO</b>\n<b>HUSHNOW CAFÉ °5</b>\n\n👤 <b>Nome:</b> '+name+'\n📞 <b>Contatto:</b> '+contact+'\n📅 <b>Data:</b> '+date+'\n🕐 <b>Orario:</b> '+time+'\n👥 <b>Ospiti:</b> '+guests+'\n🎭 <b>Tipo:</b> '+type+'\n🍢 <b>Finger Food:</b> '+ff+'\n🎵 <b>DJ Set:</b> '+dj+'\n📝 <b>Note:</b> '+notes;
+  // WhatsApp notification
+  var waTxt = '🎉 *NUOVO EVENTO*\n*HUSHNOW CAFÉ °5*\n\n'
+    + '👤 Nome: ' + name + '\n'
+    + '📞 Contatto: ' + contact + '\n'
+    + '📅 Data: ' + date + '\n'
+    + '🕐 Orario: ' + time + '\n'
+    + '👥 Ospiti: ' + guests + '\n'
+    + '🎭 Tipo: ' + type + '\n'
+    + '🍢 Finger Food: ' + ff + '\n'
+    + '🎵 DJ Set: ' + dj + '\n'
+    + '📝 Note: ' + notes;
+  setTimeout(function(){
+    window.open('https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(waTxt), '_blank');
+  }, 800);
   Promise.all([
     fetch('https://formspree.io/f/mnjrjvzn', {
       method:'POST',
@@ -1409,12 +1435,14 @@ window.addEventListener('scroll',()=>{
 // ─── INIT ────────────────────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', async function() {
   var savedLang = localStorage.getItem('hn_lang') || 'it';
+  // بارگذاری اولیه از localStorage (سریع)
   _applyLocalStorage();
   renderMenu('caffetteria');
   renderHours();
   renderGallery();
   renderReviews();
   setLang(savedLang);
+  // سپس از ابر آپدیت کن (در پس‌زمینه)
   await loadFromStorage();
 });
 </script>
