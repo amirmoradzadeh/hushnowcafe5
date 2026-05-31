@@ -244,8 +244,8 @@
 #waBtn{position:fixed;bottom:5.6rem;right:1.8rem;z-index:8000;width:48px;height:48px;border-radius:50%;background:#25D366;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,0.4);transition:all 0.3s;opacity:0.92;}
 #waBtn:hover{opacity:1;transform:scale(1.1);box-shadow:0 6px 24px rgba(37,211,102,0.6);}
 #waBtn svg{width:26px;height:26px;fill:#fff;}
-#adminPanel{display:none!important;position:fixed!important;top:0!important;left:0!important;right:0!important;bottom:0!important;z-index:99999!important;background:#050505!important;overflow-y:auto!important;-webkit-overflow-scrolling:touch!important;}
-#adminPanel.open{display:block!important;}
+#adminPanel{display:none;position:fixed;top:0;left:0;right:0;bottom:0;z-index:99999;background:#050505;overflow-y:auto;-webkit-overflow-scrolling:touch;}
+#adminPanel.open{display:block;}
 .admin-tab{background:rgba(201,169,110,0.08);border:1px solid rgba(201,169,110,0.2);color:var(--white-d);border-radius:50px;padding:0.4rem 1rem;cursor:pointer;font-family:'Montserrat',sans-serif;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;transition:all 0.2s;}
 .admin-tab.active,.admin-tab:hover{background:var(--gold);color:#000;}
 .admin-section{display:none;}
@@ -345,8 +345,8 @@
       </div>
 
 <!-- ── ALLERGEN MODAL ──────────────────────────────────────── -->
-<div id="allergenModal" style="display:none;position:fixed;inset:0;z-index:9998;background:rgba(0,0,0,0.85);backdrop-filter:blur(8px);align-items:center;justify-content:center;padding:1.5rem;overflow-y:auto;">
-  <div style="background:var(--bg2);border:1px solid var(--gold-line);border-radius:20px;padding:2.5rem;max-width:580px;width:100%;margin:auto;">
+<div id="allergenModal" style="display:none;position:fixed;inset:0;z-index:9998;background:rgba(0,0,0,0.85);backdrop-filter:blur(8px);align-items:flex-start;justify-content:center;padding:1rem;overflow-y:auto;-webkit-overflow-scrolling:touch;">
+  <div style="background:var(--bg2);border:1px solid var(--gold-line);border-radius:20px;padding:2rem 1.5rem;max-width:580px;width:100%;margin:auto;margin-top:1rem;margin-bottom:1rem;">
     <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.5rem;">
       <h3 id="allergenTitle" style="font-family:'Josefin Sans',sans-serif;font-size:1.1rem;font-weight:300;color:var(--gold2);letter-spacing:0.12em;">ALLERGENI &amp; INFORMAZIONI</h3>
       <button onclick="closeAllergens()" style="background:none;border:none;color:var(--white-dim);font-size:1.3rem;cursor:pointer;">✕</button>
@@ -1352,7 +1352,14 @@ function showAllergens() {
       + '<span style="color:var(--gold);font-size:0.6rem;">◆</span>' + a + '</div>';
   }).join('');
   var m = document.getElementById('allergenModal');
-  if(m) m.style.display = 'flex';
+  if(m) {
+    m.style.display = 'flex';
+    // Scroll modal inner content to top
+    var inner = m.querySelector('div');
+    if(inner) inner.scrollTop = 0;
+    // Scroll page to top so modal is fully visible on mobile
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  }
 }
 function closeAllergens() {
   var m = document.getElementById('allergenModal');
@@ -1368,7 +1375,7 @@ let currentAdminLang = 'it';
 function openAdmin() {
   var panel = document.getElementById('adminPanel');
   if(!panel) return;
-  panel.style.cssText = 'display:block!important;position:fixed!important;top:0!important;left:0!important;right:0!important;bottom:0!important;z-index:99999!important;background:#050505!important;overflow-y:auto!important;';
+  panel.style.cssText = '';
   panel.classList.add('open');
   var lb = document.getElementById('loginBox');
   var ad = document.getElementById('adminDash');
@@ -1386,9 +1393,10 @@ document.addEventListener('keydown', e => {
 });
 
 function closeAdmin() {
-  const panel = document.getElementById('adminPanel');
+  var panel = document.getElementById('adminPanel');
+  if(!panel) return;
   panel.classList.remove('open');
-  panel.style.cssText = 'display:none!important;';
+  panel.style.cssText = '';
 }
 
 function checkPwd() {
