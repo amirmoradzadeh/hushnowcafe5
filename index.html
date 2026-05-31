@@ -1011,7 +1011,7 @@ const hoursData = [
   {day_it:'Domenica',day_en:'Sunday',day_de:'Sonntag',day_es:'Domingo',day_fr:'Dimanche',time:'09:00 – 16:00'},
 ];
 function renderHours() {
-  document.getElementById('hoursGrid').innerHTML = hoursData.map(h => {
+  document.getElementById('hoursGrid').innerHTML = hoursData.map(function(h) {
     var dayName = lang==='de'?h.day_de:lang==='en'?h.day_en:lang==='es'?h.day_es:lang==='fr'?h.day_fr:h.day_it;
     var timeStr = h.time || (lang==='de'?'Geschlossen':lang==='en'?'Closed':lang==='es'?'Cerrado':lang==='fr'?'Fermé':'Chiuso');
     return '<div class="hours-card"><div class="hours-day">'+dayName+'</div><div class="hours-time '+(h.time?'':'hours-closed')+'">'+timeStr+'</div></div>';
@@ -1150,18 +1150,18 @@ function renderGallery() {
 renderGallery();
 
 function openLightbox(key) {
-  const lb=document.getElementById('lightbox');
-  const img=document.getElementById('lbImg');
-  if(!lb||!img) return;
+  var lbEl=document.getElementById('lightbox');
+  var img=document.getElementById('lbImg');
+  if(!lbEl||!img) return;
   img.src=IMGS[key];
-  lb.style.display='flex';
+  lbEl.style.display='flex';
   document.body.style.overflow='hidden';
 }
-const lb=document.getElementById('lightbox');
-if(lb) lb.addEventListener('click',()=>{lb.style.display='none';document.body.style.overflow='';});
+var lbEl2=document.getElementById('lightbox');
+if(lbEl2) lbEl2.addEventListener('click',function(){lbEl2.style.display='none';document.body.style.overflow='';});
 
 document.getElementById('heroBg').style.backgroundImage = 'url(' + LOGO_SRC + ')';
-document.getElementById('heroBg').style.backgroundSize = 'conver';
+document.getElementById('heroBg').style.backgroundSize = 'cover';
 document.getElementById('heroBg').style.backgroundRepeat = 'no-repeat';
 document.getElementById('heroBg').style.backgroundPosition = 'center center';
 const reviews = [
