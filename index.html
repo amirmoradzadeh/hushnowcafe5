@@ -255,8 +255,7 @@
 
 /* ── Menu Tabs ───────────────────────────────────────────────── */
 .menu-welcome{background:rgba(201,169,110,0.07);border:1px solid rgba(201,169,110,0.25);border-radius:12px;padding:1rem 1.4rem;margin-bottom:1.8rem;text-align:center;}
-.menu-welcome p{font-size:0.72rem;color:var(--white-dim);line-height:1.8;letter-spacing:0.04em;font-style:italic;margin:0;}border-radius:50px;padding:0.55rem 1.3rem;cursor:pointer;font-family:'Montserrat',sans-serif;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;transition:all 0.3s;white-space:nowrap;}
-.menu-tab.active,.menu-tab:hover{background:var(--gold);color:#000;border-color:var(--gold);}
+.menu-welcome p{font-size:0.72rem;color:var(--white-dim);line-height:1.8;letter-spacing:0.04em;font-style:italic;margin:0;}.menu-tab:hover{background:var(--gold);color:#000;border-color:var(--gold);}
 .menu-tabs{display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:2rem;}
 
 /* ── Review Cards ───────────────────────────────────────────── */
@@ -336,6 +335,8 @@
         <button class="menu-tab" onclick="renderMenu('grappe',this)" data-it="Grappe" data-en="Grappa" data-de="Grappa" data-es="Grappa" data-fr="Grappa">Grappe</button>
         <button class="menu-tab" onclick="renderMenu('tequila_vodka',this)" data-it="Tequila & Vodka" data-en="Tequila & Vodka" data-de="Tequila & Vodka" data-es="Tequila & Vodka" data-fr="Tequila & Vodka">Tequila & Vodka</button>
         <button class="menu-tab" onclick="renderMenu('vini',this)" data-it="Vini" data-en="Wines" data-de="Weine" data-es="Vinos" data-fr="Vins">Vini</button>
+        <button class="menu-tab" onclick="renderMenu('spumanti',this)" data-it="Spumanti" data-en="Sparkling" data-de="Schaumweine" data-es="Espumosos" data-fr="Pétillants">Spumanti</button>
+        <button class="menu-tab" onclick="renderMenu('champagne',this)" data-it="Champagne" data-en="Champagne" data-de="Champagne" data-es="Champagne" data-fr="Champagne">Champagne</button>
         <button class="menu-tab" onclick="renderMenu('birre',this)" data-it="Birre" data-en="Beers" data-de="Biere" data-es="Cervezas" data-fr="Bières">Birre</button>
         <button class="menu-tab" onclick="renderMenu('bevande',this)" data-it="Bevande" data-en="Drinks" data-de="Getränke" data-es="Bebidas" data-fr="Boissons">Bevande</button>
       </div> <div class="menu-grid" id="menuGrid"></div>
@@ -371,7 +372,7 @@
 </section> <section id="contact" class="page-section"> <div class="section-inner"> <p class="section-label" data-it="Dove Siamo" data-en="Find Us" data-de="Wo Wir Sind" data-es="Dónde Estamos" data-fr="Où Nous Trouver">Dove Siamo</p> <h2 class="section-title" data-it="Contatti & <em>Posizione</em>" data-en="Contact & <em>Location</em>" data-de="Kontakt & <em>Standort</em>" data-es="Contacto & <em>Ubicación</em>" data-fr="Contact & <em>Localisation</em>">Contatti & <em>Posizione</em></h2> <div class="gold-line"></div> <div class="contact-grid"> <div> <div class="contact-item"><p class="contact-label" data-it="Indirizzo" data-en="Address" data-de="Adresse" data-es="Dirección" data-fr="Adresse">Indirizzo</p><p class="contact-val">Via Carlo Poerio 20-21<br>Napoli, Italia 80121</p></div> <div class="contact-item"><p class="contact-label">Email</p><p class="contact-val"><a href="mailto:hushnowcafe.5@gmail.com">hushnowcafe.5@gmail.com</a></p></div> <div class="contact-item"><p class="contact-label">Instagram</p><p class="contact-val"><a href="https://www.instagram.com/hushnowcafe/" target="_blank">@hushnowcafe</a></p></div> <div class="contact-item"><p class="contact-label">Facebook</p><p class="contact-val"><a href="https://www.facebook.com/profile.php?id=61572115232384" target="_blank">HUSHNOW CAFÉ °5</a></p></div> <div style="display:flex;gap:0.8rem;flex-wrap:wrap;margin-top:1rem;"> <a href="https://www.instagram.com/hushnowcafe/" target="_blank" class="ig-link"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg> Instagram</a> <a href="https://www.facebook.com/profile.php?id=61572115232384" target="_blank" class="ig-link"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg> Facebook</a> </div> </div> <div class="map-wrap"> <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3020.8!2d14.2397353!3d40.8338547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133b090040792489%3A0xc5babb59f76a6c90!2sHushnow+Cafe+5!5e0!3m2!1sit!2sit!4v1" allowfullscreen loading="lazy" title="Hushnow Café °5 — Via Carlo Poerio 20-21, Napoli"></iframe> </div> </div> </div> <div class="qr-wrap" style="margin-top:2.5rem;"> <canvas id="qrCanvas" width="160" height="160"></canvas> <div class="qr-info"> <h3 data-it="Scansiona & Scopri" data-en="Scan & Discover" data-de="Scannen & Entdecken" data-es="Escanea & Descubre" data-fr="Scanner & Découvrir">Scansiona & Scopri</h3> <p data-it="Inquadra il QR code con la fotocamera per accedere al menù, prenotare un tavolo e scoprire le ultime novità di HUSHNOW CAFÉ °5." data-en="Point your camera at the QR code to access the menu, book a table and discover the latest news from HUSHNOW CAFÉ °5." data-de="Scannen Sie den QR-Code mit Ihrer Kamera, um die Speisekarte aufzurufen und einen Tisch zu reservieren.">
               Inquadra il QR code con la fotocamera per accedere al menù e prenotare un tavolo.
             </p> <button onclick="downloadQR()" class="btn btn-gold" data-it="Scarica QR Code" data-en="Download QR Code" data-de="QR-Code herunterladen" data-es="Descargar Código QR" data-fr="Télécharger QR Code" data-de="QR-Code herunterladen">Scarica QR Code</button> </div> </div> </section> <button id="adminBtn" onclick="openAdmin()" title="Admin Panel" aria-label="Admin Panel">&#9881;</button>
-<a id="waBtn" href="#" target="_blank" title="WhatsApp" aria-label="WhatsApp" onclick="openWhatsApp()">
+<a id="waBtn" href="https://wa.me/393313920491" target="_blank" rel="noopener" title="WhatsApp" aria-label="WhatsApp">
   <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 </a> <div id="adminPanel"> <div id="loginBox" style="max-width:380px;margin:8rem auto;text-align:center;background:var(--bg2);border:1px solid var(--gold-line);border-radius:28px;padding:3rem 2.5rem;"> <h3>Admin Access</h3> <p style="color:var(--white-dim);font-size:0.75rem;margin-bottom:1.5rem;letter-spacing:0.1em;">HUSHNOW CAFÉ °5</p> <input type="password" id="adminPwd" placeholder="· · · · · ·" onkeydown="if(event.key==='Enter')checkPwd()"/> <br/> <button class="admin-save" onclick="checkPwd()">Accedi</button> <p id="loginErr">Password errata</p> </div> <div id="adminDash" style="display:none;max-width:900px;margin:0 auto;padding-bottom:4rem;"> <div class="admin-header"> <h2>Dashboard Admin</h2> <div style="display:flex;align-items:center;gap:1rem;"> <span id="cloudSyncStatus" style="font-size:0.68rem;opacity:0;transition:opacity 0.4s;letter-spacing:0.05em;"></span> <button onclick="closeAdmin()" style="background:none;border:none;color:var(--gold);font-size:1.5rem;cursor:pointer;">✕</button> </div> </div> <div class="admin-tabs"> <button class="admin-tab active" onclick="switchAdminTab('menu-it')">Menù IT</button> <button class="admin-tab" onclick="switchAdminTab('menu-en')">Menù EN</button> <button class="admin-tab" onclick="switchAdminTab('menu-de')">Menù DE</button> <button class="admin-tab" onclick="switchAdminTab('hours-admin')">Orari</button> <button class="admin-tab" onclick="switchAdminTab('info-admin')">Info Caffè</button> </div> <div class="admin-section active" id="admin-menu-it"> <p style="color:var(--white-dim);font-size:0.75rem;margin-bottom:1.2rem;">Modifica nomi e descrizioni in italiano</p> <div style="display:flex;gap:0.6rem;flex-wrap:wrap;margin-bottom:1.2rem;" id="menuCatTabs"> <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:1.2rem;">
           <button class="admin-tab active" onclick="loadMenuAdmin('caffetteria','it',this)">Caffetteria</button>
@@ -530,7 +531,7 @@
     </div>
     <button onclick="closePrivacyPolicy()" class="btn btn-outline" style="margin-top:1.5rem;width:100%;">Chiudi</button>
   </div>
-</div> <div id="lightbox"><img id="lbImg" src="" alt=""/></div> <script>const IMGS = {
+</div> <div id="lightbox"><img id="lbImg" src="" alt=""/></div> <script>var IMGS = {
   branded: 'images/branded.webp',
   matcha: 'images/matcha.webp',
   tea: 'images/tea.webp',
@@ -541,7 +542,7 @@
   cocktail_red: 'images/cocktail_red.webp',
   croissants: 'images/croissants.webp',
 };
-const LOGO_SRC = 'images/logo.webp';
+var LOGO_SRC = 'images/logo.webp';
 
 // TG handled by Cloudflare Worker
 // TG_CHAT handled by Cloudflare Worker
@@ -581,11 +582,13 @@ document.getElementById('resDate').min = new Date().toISOString().split('T')[0];
 document.getElementById('evDate').min  = new Date().toISOString().split('T')[0];
 
 setTimeout(function(){
-  const hero = document.getElementById('hero');
+  var hero = document.getElementById('hero');
   if(hero) hero.classList.add('visible');
 },200);
 
-let lang = 'it';
+var lang = 'it';
+var currentCat = 'caffetteria';
+var activeCat = 'caffetteria';
 function setLang(l) {
   lang = l;
   localStorage.setItem('hn_lang', l);
@@ -629,14 +632,14 @@ function toggleMenu() {
 
 function showSection(id) {
   var _ps=document.querySelectorAll('.page-section');if(_ps)_ps.forEach(function(s){s.classList.remove('active','visible');});
-  const target = document.getElementById(id);
+  var target = document.getElementById(id);
   if(target) {
     target.classList.add('active');
     requestAnimationFrame(function(){requestAnimationFrame(function(){target.classList.add('visible');});});
   }
-  const backBtn = document.getElementById('backBtn');
+  var backBtn = document.getElementById('backBtn');
   if(backBtn) backBtn.style.display = id === 'hero' ? 'none' : 'flex';
-  const navEl = document.getElementById('navLinks');
+  var navEl = document.getElementById('navLinks');
   if (navEl.classList.contains('open')) {
     navEl.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
     navEl.style.opacity = '0';
@@ -665,12 +668,12 @@ function showSection(id) {
 document.querySelectorAll('.nav-links a').forEach(function(a){
   a.addEventListener('click', function(e){
     e.preventDefault();
-    const href = a.getAttribute('href');
+    var href = a.getAttribute('href');
     if(href && href.startsWith('#')) showSection(href.slice(1));
   });
 });
 
-const menuData = {
+var menuData = {
   caffetteria: [
     {it:'Espresso',en:'Espresso',de:'Espresso',es:'Espresso',fr:'Expresso',dit:'',den:'',dde:'',des:'',dfr:'',price:'€1.20'},
     {it:'Decaffeinato',en:'Decaffeinated',de:'Entkoffeiniert',es:'Descafeinado',fr:'Décaféiné',dit:'',den:'',dde:'',des:'',dfr:'',price:'€1.40'},
@@ -699,6 +702,7 @@ const menuData = {
     {it:'Le Nostre Crostate',en:'Our Fruit Tarts',de:'Unsere Obstkuchen',es:'Nuestras tartas de frutas',fr:'Nos tartes aux fruits',dit:'Fatti in casa',den:'Homemade',dde:'Hausgemacht',des:'Caseras',dfr:'Faites maison',price:'€4.00 / 5.00'},
     {it:'I Nostri Cookies',en:'Our Cookies',de:'Unsere Cookies',es:'Nuestras galletas',fr:'Nos cookies',dit:'Fatti in casa',den:'Homemade',dde:'Hausgemacht',des:'Caseras',dfr:'Faits maison',price:'€3.00 / 4.00'},
     {it:'I Nostri Biscotti',en:'Our Biscuits',de:'Unsere Kekse',es:'Nuestras galletas',fr:'Nos biscuits',dit:'Shortbread, Danese, Girella, Alla Nocciola',den:'Shortbread, Danish, Girella, Hazelnut',dde:'Shortbread, Dänisch, Girella, Haselnuss',des:'Shortbread, Danés, Girella, Avellana',dfr:'Shortbread, Danois, Girella, Noisette',price:'€1.00 / 1.50 / 2.00'},
+    {it:'Brioche con Gelato alla Vaniglia',en:'Brioche with Vanilla Ice Cream',de:'Brioche mit Vanilleeis',es:'Brioche con helado de vainilla',fr:'Brioche avec glace à la vanille',dit:'',den:'',dde:'',des:'',dfr:'',price:'€5.00'},
     {it:'Cinnamon Roll',en:'Cinnamon Roll',de:'Zimtschnecke',es:'Rollo de canela',fr:'Roulé à la cannelle',dit:'Solo nel weekend',den:'Weekends only',dde:'Nur am Wochenende',des:'Solo fines de semana',dfr:'Week-end uniquement',price:'€4.00 / 5.00'},
   ],
   savory_breakfast: [
@@ -716,6 +720,8 @@ const menuData = {
     {it:'Insalata del Giorno',en:'Salad of the Day',de:'Tagessalat',es:'Ensalada del día',fr:'Salade du jour',dit:'Tonno / Uovo Sodo / Feta / Salmone / Patate / Pollo',den:'Tuna / Hard Boiled Egg / Feta / Salmon / Potatoes / Chicken',dde:'Thunfisch / Hartgekochtes Ei / Feta / Lachs / Kartoffeln / Hähnchen',des:'Atún / Huevo duro / Feta / Salmón / Patatas / Pollo',dfr:'Thon / Oeuf dur / Feta / Saumon / Pommes de terre / Poulet',price:'€10.00 / 12.00'},
     {it:'Aperitivo Gourmet',en:'Gourmet Aperitif',de:'Gourmet-Aperitif',es:'Aperitivo Gourmet',fr:'Apéritif Gourmet',dit:'Minimo 2 persone — 5 portate a testa secondo menù del giorno',den:'Minimum 2 people — 5 courses per person according to the daily menu',dde:'Mindestens 2 Personen — 5 Gänge pro Person nach Tagesmenü',des:'Mínimo 2 personas — 5 platos por persona según el menú del día',dfr:'Minimum 2 personnes — 5 plats par personne selon le menu du jour',price:'€12.00'},
     {it:'Piatto del Giorno',en:'Plate of the Day',de:'Tagesgericht',es:'Plato del día',fr:'Plat du jour',dit:'',den:'',dde:'',des:'',dfr:'',price:'€10.00 / 12.00'},
+    {it:'Fashion Fresella',en:'Fashion Fresella',de:'Fashion Fresella',es:'Fashion Fresella',fr:'Fashion Fresella',dit:'Fresella napoletana, pomodoro fresco, tonno, origano, basilico e olio extravergine d\'oliva — con burrata €12 (secondo disponibilità)',den:'Neapolitan fresella, fresh tomato, tuna, oregano, basil and extra virgin olive oil — with burrata €12 (subject to availability)',dde:'Neapolitanische Fresella, frische Tomate, Thunfisch, Oregano, Basilikum und natives Olivenöl — mit Burrata €12 (je nach Verfügbarkeit)',des:'Fresella napolitana, tomate fresco, atún, orégano, albahaca y aceite de oliva virgen extra — con burrata €12 (según disponibilidad)',dfr:'Fresella napolitaine, tomate fraîche, thon, origan, basilic et huile d\'olive extra vierge — avec burrata €12 (selon disponibilité)',price:'€10.00'},
+    {it:'Profumo di Capri',en:'Profumo di Capri',de:'Profumo di Capri',es:'Profumo di Capri',fr:'Profumo di Capri',dit:'Pomodoro, mozzarella, basilico fresco, olio extravergine d\'oliva e buccia di limone',den:'Tomato, mozzarella, fresh basil, extra virgin olive oil and lemon zest',dde:'Tomate, Mozzarella, frisches Basilikum, natives Olivenöl und Zitronenschale',des:'Tomate, mozzarella, albahaca fresca, aceite de oliva virgen extra y ralladura de limón',dfr:'Tomate, mozzarella, basilic frais, huile d\'olive extra vierge et zeste de citron',price:'€10.00'},
   ],
   spritz: [
     {it:'Aperol Spritz',en:'Aperol Spritz',de:'Aperol Spritz',es:'Aperol Spritz',fr:'Aperol Spritz',dit:'Prosecco Extra Dry, Aperol, Soda',den:'Prosecco Extra Dry, Aperol, Soda',dde:'Prosecco Extra Dry, Aperol, Soda',des:'Prosecco Extra Dry, Aperol, Soda',dfr:'Prosecco Extra Dry, Aperol, Soda',price:'€8.00'},
@@ -731,7 +737,8 @@ const menuData = {
     {it:'Negroni',en:'Negroni',de:'Negroni',es:'Negroni',fr:'Negroni',dit:'Gin, Vermouth Rosso, Campari',den:'Gin, Red Vermouth, Campari',dde:'Gin, Roter Wermut, Campari',des:'Gin, Vermut rojo, Campari',dfr:'Gin, Vermouth rouge, Campari',price:'€9.00'},
     {it:'Martini Dry',en:'Martini Dry',de:'Martini Dry',es:'Martini Seco',fr:'Martini Dry',dit:'Gin, Dry Vermouth',den:'Gin, Dry Vermouth',dde:'Gin, Trockener Wermut',des:'Gin, Vermut seco',dfr:'Gin, Vermouth dry',price:'€9.00'},
     {it:'Paloma',en:'Paloma',de:'Paloma',es:'Paloma',fr:'Paloma',dit:'Tequila, Soda al Pompelmo, Lime, Sale',den:'Tequila, Grapefruit Soda, Lime, Salt',dde:'Tequila, Grapefruit-Soda, Limette, Salz',des:'Tequila, Soda de pomelo, Lima, Sal',dfr:'Tequila, Soda pamplemousse, Citron vert, Sel',price:'€9.00'},
-    {it:'Hush Paloma',en:'Hush Paloma',de:'Hush Paloma',es:'Hush Paloma',fr:'Hush Paloma',dit:'Tequila, soda al pompelmo rosa, lime, sale agli agrumi e rosmarino',den:'Tequila, pink grapefruit soda, lime, citrus and rosemary salt',dde:'Tequila, rosa Grapefruit-Soda, Limette, Zitrus- und Rosmarinsalz',des:'Tequila, soda de pomelo rosa, lima, sal de cítricos y romero',dfr:'Tequila, soda pamplemousse rose, citron vert, sel aux agrumes et romarin',price:'€9.00'},
+    {it:'Hush Bellini Napoletano',en:'Hush Bellini Napoletano',de:'Hush Bellini Napoletano',es:'Hush Bellini Napoletano',fr:'Hush Bellini Napoletano',dit:'Prosecco Doc, pesca bianca, limone di Capri, nota di bergamotto',den:'Prosecco Doc, white peach, Capri lemon, bergamot note',dde:'Prosecco Doc, weißer Pfirsich, Capri-Zitrone, Bergamotte-Note',des:'Prosecco Doc, melocotón blanco, limón de Capri, nota de bergamota',dfr:'Prosecco Doc, pêche blanche, citron de Capri, note de bergamote',price:'€10.00'},
+    {it:'Hush Paloma',en:'Hush Paloma',de:'Hush Paloma',es:'Hush Paloma',fr:'Hush Paloma',dit:'Tequila, soda al pompelmo rosa, lime, sale agli agrumi e rosmarino',den:'Tequila, pink grapefruit soda, lime, citrus and rosemary salt',dde:'Tequila, rosa Grapefruit-Soda, Limette, Zitrus- und Rosmarinsalz',des:'Tequila, soda de pomelo rosa, lima, sal de cítricos y romero',dfr:'Tequila, soda pamplemousse rose, citron vert, sel aux agrumes et romarin',price:'€10.00'},
   ],
   analcolici: [
     {it:'Virgin Spritz',en:'Virgin Spritz',de:'Virgin Spritz',es:'Virgin Spritz',fr:'Virgin Spritz',dit:"Succo d'arancia, Bitter Analcolico, Soda",den:'Orange juice, Non-alcoholic Bitter, Soda',dde:'Orangensaft, Alkoholfreier Bitter, Soda',des:'Zumo de naranja, Bitter sin alcohol, Soda',dfr:"Jus d'orange, Bitter sans alcool, Soda",price:'€8.00'},
@@ -781,13 +788,26 @@ const menuData = {
     {it:'Zubrowka Black',en:'Zubrowka Black',de:'Zubrowka Black',es:'Zubrowka Black',fr:'Zubrowka Black',dit:'Vodka — Polonia',den:'Vodka — Poland',dde:'Vodka — Polen',des:'Vodka — Polonia',dfr:'Vodka — Pologne',price:'€8.00'},
   ],
   vini: [
-    {it:'El Sior Prosecco',en:'El Sior Prosecco',de:'El Sior Prosecco',es:'El Sior Prosecco',fr:'El Sior Prosecco',dit:'Veneto',den:'Veneto',dde:'Venetien',des:'Veneto',dfr:'Vénétie',price:'€7 / 28'},
-    {it:'Berlucchi Satèn',en:'Berlucchi Satèn',de:'Berlucchi Satèn',es:'Berlucchi Satèn',fr:'Berlucchi Satèn',dit:'Saten / Rosè',den:'Saten / Rosé',dde:'Saten / Rosé',des:'Saten / Rosé',dfr:'Saten / Rosé',price:'€10 / 40'},
-    {it:'Vino Bianco',en:'White Wine',de:'Weißwein',es:'Vino blanco',fr:'Vin blanc',dit:'Falanghina €6 — Fiano / Greco / Chardonnay / Gewürztraminer / Sauvignon / Ribolla €7',den:'Falanghina €6 — Fiano / Greco / Chardonnay / Gewürztraminer / Sauvignon / Ribolla €7',dde:'Falanghina €6 — Fiano / Greco / Chardonnay / Gewürztraminer / Sauvignon / Ribolla €7',des:'Falanghina €6 — Fiano / Greco / Chardonnay / Gewürztraminer / Sauvignon / Ribolla €7',dfr:'Falanghina €6 — Fiano / Greco / Chardonnay / Gewürztraminer / Sauvignon / Ribolla €7',price:'€6.00 / 7.00'},
+    {it:'Vino Bianco',en:'White Wine',de:'Weißwein',es:'Vino blanco',fr:'Vin blanc',dit:'Falanghina €6–25 / Fiano €7–28 / Greco €7–30 / Chardonnay €7–28 / Gewürztraminer €7–30 / Sauvignon €28 / Ribolla €7–28',den:'Falanghina €6–25 / Fiano €7–28 / Greco €7–30 / Chardonnay €7–28 / Gewürztraminer €7–30 / Sauvignon €28 / Ribolla €7–28',dde:'Falanghina €6–25 / Fiano €7–28 / Greco €7–30 / Chardonnay €7–28 / Gewürztraminer €7–30 / Sauvignon €28 / Ribolla €7–28',des:'Falanghina €6–25 / Fiano €7–28 / Greco €7–30 / Chardonnay €7–28 / Gewürztraminer €7–30 / Sauvignon €28 / Ribolla €7–28',dfr:'Falanghina €6–25 / Fiano €7–28 / Greco €7–30 / Chardonnay €7–28 / Gewürztraminer €7–30 / Sauvignon €28 / Ribolla €7–28',price:'€6.00 – 30.00'},
     {it:'Vino Rosè',en:'Rosé Wine',de:'Roséwein',es:'Vino rosado',fr:'Vin rosé',dit:'Vita Nuova / Pinot Ramato',den:'Vita Nuova / Pinot Ramato',dde:'Vita Nuova / Pinot Ramato',des:'Vita Nuova / Pinot Ramato',dfr:'Vita Nuova / Pinot Ramato',price:'€7.00 / 28.00'},
     {it:'Vino Rosso',en:'Red Wine',de:'Rotwein',es:'Vino tinto',fr:'Vin rouge',dit:'Aglianico €6–25 / Taurasi €8–35 / Piedirosso €7–30 / Pinot Nero €7–30 / Morellino €6–25 / Valpolicella €8–30 / Chianti €6–25',den:'Aglianico €6–25 / Taurasi €8–35 / Piedirosso €7–30 / Pinot Nero €7–30 / Morellino €6–25 / Valpolicella €8–30 / Chianti €6–25',dde:'Aglianico €6–25 / Taurasi €8–35 / Piedirosso €7–30 / Pinot Nero €7–30 / Morellino €6–25 / Valpolicella €8–30 / Chianti €6–25',des:'Aglianico €6–25 / Taurasi €8–35 / Piedirosso €7–30 / Pinot Nero €7–30 / Morellino €6–25 / Valpolicella €8–30 / Chianti €6–25',dfr:'Aglianico €6–25 / Taurasi €8–35 / Piedirosso €7–30 / Pinot Nero €7–30 / Morellino €6–25 / Valpolicella €8–30 / Chianti €6–25',price:'€6.00 – 35.00'},
-    {it:'Laurent Perrier Champagne',en:'Laurent Perrier Champagne',de:'Laurent Perrier Champagne',es:'Laurent Perrier Champagne',fr:'Laurent Perrier Champagne',dit:'Champagne, Francia',den:'Champagne, France',dde:'Champagne, Frankreich',des:'Champagne, Francia',dfr:'Champagne, France',price:'€80'},
-    {it:'Louis Roederer',en:'Louis Roederer',de:'Louis Roederer',es:'Louis Roederer',fr:'Louis Roederer',dit:'Champagne (Collection / Vintage / Rosè / Blanc De Blancs), Francia',den:'Champagne (Collection / Vintage / Rosé / Blanc De Blancs), France',dde:'Champagne (Collection / Vintage / Rosé / Blanc De Blancs), Frankreich',des:'Champagne (Collection / Vintage / Rosé / Blanc De Blancs), Francia',dfr:'Champagne (Collection / Vintage / Rosé / Blanc De Blancs), France',price:'€115 / 170 / 180 / 185 / 470'},
+    {it:'Vino Dolce e Liquori',en:'Sweet Wine & Liqueurs',de:'Dessertwein & Liköre',es:'Vino dulce y licores',fr:'Vin doux et liqueurs',dit:'Vin Santo Frescobaldi',den:'Vin Santo Frescobaldi',dde:'Vin Santo Frescobaldi',des:'Vin Santo Frescobaldi',dfr:'Vin Santo Frescobaldi',price:'€8.00'},
+  ],
+  spumanti: [
+    {it:'El Sior Prosecco Extra Dry',en:'El Sior Prosecco Extra Dry',de:'El Sior Prosecco Extra Dry',es:'El Sior Prosecco Extra Dry',fr:'El Sior Prosecco Extra Dry',dit:'Veneto',den:'Veneto',dde:'Venetien',des:'Veneto',dfr:'Vénétie',price:'€7.00 / 28.00'},
+    {it:'Berlucchi Satèn',en:'Berlucchi Satèn',de:'Berlucchi Satèn',es:'Berlucchi Satèn',fr:'Berlucchi Satèn',dit:'Franciacorta — 70% Chardonnay, 30% Pinot Nero',den:'Franciacorta — 70% Chardonnay, 30% Pinot Noir',dde:'Franciacorta — 70% Chardonnay, 30% Pinot Noir',des:'Franciacorta — 70% Chardonnay, 30% Pinot Nero',dfr:'Franciacorta — 70% Chardonnay, 30% Pinot Noir',price:'€10.00 / 40.00'},
+    {it:'Berlucchi Rosé',en:'Berlucchi Rosé',de:'Berlucchi Rosé',es:'Berlucchi Rosé',fr:'Berlucchi Rosé',dit:'Franciacorta — 60% Pinot Nero, 40% Chardonnay',den:'Franciacorta — 60% Pinot Noir, 40% Chardonnay',dde:'Franciacorta — 60% Pinot Noir, 40% Chardonnay',des:'Franciacorta — 60% Pinot Noir, 40% Chardonnay',dfr:'Franciacorta — 60% Pinot Noir, 40% Chardonnay',price:'€7.00 / 25.00'},
+    {it:'Santa Margherita Valdobbiadene',en:'Santa Margherita Valdobbiadene',de:'Santa Margherita Valdobbiadene',es:'Santa Margherita Valdobbiadene',fr:'Santa Margherita Valdobbiadene',dit:'Valdobbiadene',den:'Valdobbiadene',dde:'Valdobbiadene',des:'Valdobbiadene',dfr:'Valdobbiadene',price:'€70.00'},
+    {it:"Ca' del Bosco",en:"Ca' del Bosco",de:"Ca' del Bosco",es:"Ca' del Bosco",fr:"Ca' del Bosco",dit:'Franciacorta — Chardonnay 79.5%, Pinot Nero 19%, Pinot Bianco 1.5%',den:'Franciacorta — Chardonnay 79.5%, Pinot Noir 19%, Pinot Blanc 1.5%',dde:'Franciacorta — Chardonnay 79.5%, Pinot Noir 19%, Pinot Blanc 1.5%',des:'Franciacorta — Chardonnay 79.5%, Pinot Nero 19%, Pinot Bianco 1.5%',dfr:'Franciacorta — Chardonnay 79.5%, Pinot Noir 19%, Pinot Blanc 1.5%',price:'€8.00 / 35.00'},
+    {it:'Ferghettina Franciacorta Brut',en:'Ferghettina Franciacorta Brut',de:'Ferghettina Franciacorta Brut',es:'Ferghettina Franciacorta Brut',fr:'Ferghettina Franciacorta Brut',dit:'Franciacorta — Chardonnay 85%, Pinot Nero 15%',den:'Franciacorta — Chardonnay 85%, Pinot Noir 15%',dde:'Franciacorta — Chardonnay 85%, Pinot Noir 15%',des:'Franciacorta — Chardonnay 85%, Pinot Nero 15%',dfr:'Franciacorta — Chardonnay 85%, Pinot Noir 15%',price:'€8.00 / 35.00'},
+  ],
+  champagne: [
+    {it:'Laurent Perrier',en:'Laurent Perrier',de:'Laurent Perrier',es:'Laurent Perrier',fr:'Laurent Perrier',dit:'Chardonnay 55%, Pinot Nero 35%, Pinot Meunier 10%',den:'Chardonnay 55%, Pinot Noir 35%, Pinot Meunier 10%',dde:'Chardonnay 55%, Pinot Noir 35%, Pinot Meunier 10%',des:'Chardonnay 55%, Pinot Noir 35%, Pinot Meunier 10%',dfr:'Chardonnay 55%, Pinot Noir 35%, Pinot Meunier 10%',price:'€80.00'},
+    {it:'Louis Roederer Collection',en:'Louis Roederer Collection',de:'Louis Roederer Collection',es:'Louis Roederer Collection',fr:'Louis Roederer Collection',dit:'42% Chardonnay, 36% Pinot Nero, 22% Pinot Meunier',den:'42% Chardonnay, 36% Pinot Noir, 22% Pinot Meunier',dde:'42% Chardonnay, 36% Pinot Noir, 22% Pinot Meunier',des:'42% Chardonnay, 36% Pinot Noir, 22% Pinot Meunier',dfr:'42% Chardonnay, 36% Pinot Noir, 22% Pinot Meunier',price:'€115.00'},
+    {it:'Louis Roederer Vintage',en:'Louis Roederer Vintage',de:'Louis Roederer Vintage',es:'Louis Roederer Vintage',fr:'Louis Roederer Vintage',dit:'70% Pinot Nero, 30% Chardonnay',den:'70% Pinot Noir, 30% Chardonnay',dde:'70% Pinot Noir, 30% Chardonnay',des:'70% Pinot Noir, 30% Chardonnay',dfr:'70% Pinot Noir, 30% Chardonnay',price:'€170.00'},
+    {it:'Louis Roederer Rosé',en:'Louis Roederer Rosé',de:'Louis Roederer Rosé',es:'Louis Roederer Rosé',fr:'Louis Roederer Rosé',dit:'65% Pinot Nero, 35% Chardonnay',den:'65% Pinot Noir, 35% Chardonnay',dde:'65% Pinot Noir, 35% Chardonnay',des:'65% Pinot Noir, 35% Chardonnay',dfr:'65% Pinot Noir, 35% Chardonnay',price:'€180.00'},
+    {it:'Louis Roederer Blanc de Blancs',en:'Louis Roederer Blanc de Blancs',de:'Louis Roederer Blanc de Blancs',es:'Louis Roederer Blanc de Blancs',fr:'Louis Roederer Blanc de Blancs',dit:'100% Chardonnay',den:'100% Chardonnay',dde:'100% Chardonnay',des:'100% Chardonnay',dfr:'100% Chardonnay',price:'€185.00'},
+    {it:'Louis Roederer Cristal',en:'Louis Roederer Cristal',de:'Louis Roederer Cristal',es:'Louis Roederer Cristal',fr:'Louis Roederer Cristal',dit:'55% Pinot Nero, 45% Chardonnay',den:'55% Pinot Noir, 45% Chardonnay',dde:'55% Pinot Noir, 45% Chardonnay',des:'55% Pinot Noir, 45% Chardonnay',dfr:'55% Pinot Noir, 45% Chardonnay',price:'€470.00'},
   ],
   birre: [
     {it:'Nastro Azzurro',en:'Nastro Azzurro',de:'Nastro Azzurro',es:'Nastro Azzurro',fr:'Nastro Azzurro',dit:'Italia',den:'Italy',dde:'Italien',des:'Italia',dfr:'Italie',price:'€5.00'},
@@ -810,8 +830,8 @@ const menuData = {
 };
 
 
-const ALCOHOLIC_CATS = ['spritz','iconic','analcolici','gin_tonics','whiskey','rum','cognac','grappe','tequila_vodka','vini','birre','bevande'];
-const WELCOME_NOTE = {
+var ALCOHOLIC_CATS = ['spritz','iconic','analcolici','gin_tonics','whiskey','rum','cognac','grappe','tequila_vodka','vini','spumanti','champagne','birre','bevande'];
+var WELCOME_NOTE = {
   it: 'Ogni consumazione al tavolo è accompagnata dal nostro mix (patatine · nachos · arachidi) e da un piccolo benvenuto del giorno della nostra chef.',
   en: 'Every table order is accompanied by our mix (chips · nachos · peanuts) and a small daily welcome from our chef.',
   de: 'Jede Bestellung am Tisch wird von unserem Mix (Chips · Nachos · Erdnüsse) und einem kleinen Tagesgruß unserer Köchin begleitet.',
@@ -851,6 +871,30 @@ function renderMenu(cat, btn) {
       : 'Disponibile dalle 08:00 alle 12:00';
     welcomeHtml = '<div class="menu-welcome"><p>' + timeNote + '</p></div>';
   }
+  if(cat === 'whiskey' || cat === 'rum') {
+    var rwNote = lang==='en'
+      ? 'All rums and whiskies are accompanied by a selection of chocolates to enhance their characteristics.'
+      : lang==='de'
+      ? 'Alle Rums und Whiskys werden mit einer Auswahl an Schokoladen serviert, um ihre Eigenschaften zu unterstreichen.'
+      : lang==='es'
+      ? 'Todos los rones y whiskies se acompañan de una selección de chocolates para realzar sus características.'
+      : lang==='fr'
+      ? 'Tous les rhums et whiskies sont accompagnés d\'une sélection de chocolats pour valoriser leurs caractéristiques.'
+      : 'Tutti i rum e i whisky sono accompagnati da una selezione di cioccolato per valorizzarne le caratteristiche.';
+    welcomeHtml = '<div class="menu-welcome"><p>' + rwNote + '</p></div>';
+  }
+  if(cat === 'vini' || cat === 'spumanti' || cat === 'champagne') {
+    var viniNote = lang==='en'
+      ? 'Our small wine selection is organised by grape variety and not by winery, favouring small and medium producers from south to north who tell their territory through authentic wines.'
+      : lang==='de'
+      ? 'Unsere kleine Weinauswahl ist nach Rebsorte und nicht nach Weingut geordnet und bevorzugt kleine und mittlere Produzenten von Süd nach Nord.'
+      : lang==='es'
+      ? 'Nuestra pequeña selección de vinos está organizada por variedad de uva y no por bodega, favoreciendo a pequeños y medianos productores.'
+      : lang==='fr'
+      ? 'Notre petite sélection de vins est organisée par cépage et non par domaine, privilégiant les petits et moyens producteurs du sud au nord.'
+      : 'La nostra piccola selezione di vini è organizzata per vitigno e non per cantina, privilegiando piccoli e medi produttori dal sud al nord che raccontano il territorio attraverso vini autentici.';
+    welcomeHtml = '<div class="menu-welcome"><p>' + viniNote + '</p></div>';
+  }
   if(cat === 'quick_lunch') {
     var foodNote = lang==='en'
       ? 'From 12:00 to 15:30 — All preparations are made to order. Average waiting time 8/10 minutes.'
@@ -874,16 +918,16 @@ function renderMenu(cat, btn) {
 // ═══════════════════════════════════════════════════════════════
 // ☁️  JSONBIN CLOUD STORAGE — دیتابیس ابری رایگان
 // ═══════════════════════════════════════════════════════════════
-const MENU_VERSION = '4.3'; // هر بار منو عوض شد این رو بالا ببر
+var MENU_VERSION = '4.8'; // هر بار منو عوض شد این رو بالا ببر
 // راهنما: برای راه‌اندازی یک بار:
 //   1. به https://jsonbin.io بروید و ثبت نام کنید (رایگان)
 //   2. یک Bin جدید بسازید با محتوای: {}
 //   3. API Key و Bin ID را اینجا وارد کنید
-const JSONBIN_API_KEY = '$2a$10$xMX34k4eS3exUT3ELJxisOr8yqUe80BNCXwGegdrOj1haq.cQOima';
-const JSONBIN_BIN_ID  = '6a16b001f47d5c455c3c3880';
-const JSONBIN_URL     = 'https://api.jsonbin.io/v3/b/' + JSONBIN_BIN_ID;
+var JSONBIN_API_KEY = '$2a$10$xMX34k4eS3exUT3ELJxisOr8yqUe80BNCXwGegdrOj1haq.cQOima';
+var JSONBIN_BIN_ID  = '6a16b001f47d5c455c3c3880';
+var JSONBIN_URL     = 'https://api.jsonbin.io/v3/b/' + JSONBIN_BIN_ID;
 
-let _cloudSynced = false; // آیا داده از ابر بارگذاری شد؟
+var _cloudSynced = false; // آیا داده از ابر بارگذاری شد؟
 
 // ── نمایش وضعیت سینک در پنل ادمین ────────────────────────────
 function showSyncStatus(msg, color) {
@@ -911,8 +955,8 @@ async function saveToStorage() {
 
   showSyncStatus('⏳ در حال ذخیره روی سرور...', 'var(--gold)');
   try {
-    const payload = { menu: menuData, hours: hoursData, updated: new Date().toISOString() };
-    const res = await fetch(JSONBIN_URL, {
+    var payload = { menu: menuData, hours: hoursData, updated: new Date().toISOString() };
+    var res = await fetch(JSONBIN_URL, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
@@ -941,15 +985,15 @@ async function loadFromStorage() {
   if (JSONBIN_API_KEY.includes('REPLACE') || JSONBIN_BIN_ID.includes('REPLACE')) return;
 
   try {
-    const res = await fetch(JSONBIN_URL + '/latest', {
+    var res = await fetch(JSONBIN_URL + '/latest', {
       headers: {
         'X-Master-Key': JSONBIN_API_KEY,
         'X-Bin-Meta': 'false'
       }
     });
     if (!res.ok) throw new Error('HTTP ' + res.status);
-    const data = await res.json();
-    const record = data.record;
+    var data = await res.json();
+    var record = data.record;
 
     if (record && record.menu) {
       Object.keys(record.menu).forEach(function(cat) {
@@ -1001,7 +1045,7 @@ function _applyLocalStorage() {
 }
 // INIT MOVED TO END
 
-const hoursData = [
+var hoursData = [
   {day_it:'Lunedì',day_en:'Monday',day_de:'Montag',day_es:'Lunes',day_fr:'Lundi',time:'08:00 – 16:00'},
   {day_it:'Martedì',day_en:'Tuesday',day_de:'Dienstag',day_es:'Martes',day_fr:'Mardi',time:'08:00 – 22:00'},
   {day_it:'Mercoledì',day_en:'Wednesday',day_de:'Mittwoch',day_es:'Miércoles',day_fr:'Mercredi',time:'08:00 – 22:00'},
@@ -1021,22 +1065,22 @@ renderHours();
 
 function submitReservation(e) {
   e.preventDefault();
-  const name    = document.getElementById('resName').value.trim();
-  const contact = document.getElementById('resContact').value.trim();
-  const date    = document.getElementById('resDate').value;
-  const time    = document.getElementById('resTime').value;
-  const guests  = document.getElementById('resGuests').value;
-  const occasion= document.getElementById('resOccasion').value || '—';
-  const notes   = document.getElementById('resNotes').value.trim() || '—';
+  var name    = document.getElementById('resName').value.trim();
+  var contact = document.getElementById('resContact').value.trim();
+  var date    = document.getElementById('resDate').value;
+  var time    = document.getElementById('resTime').value;
+  var guests  = document.getElementById('resGuests').value;
+  var occasion= document.getElementById('resOccasion').value || '—';
+  var notes   = document.getElementById('resNotes').value.trim() || '—';
   if(!name||!contact||!date||!time||!guests){
     alert(lang==='it'?'Compila tutti i campi obbligatori.':'Please fill in all required fields.');
     return;
   }
-  const btn = e.target.querySelector('button[type="submit"]');
-  const origText = btn.textContent;
+  var btn = e.target.querySelector('button[type="submit"]');
+  var origText = btn.textContent;
   btn.textContent = '...';
   btn.disabled = true;
-  const message = '🍽 <b>NUOVA PRENOTAZIONE</b>\n<b>HUSHNOW CAFÉ °5</b>\n\n👤 <b>Nome:</b> '+name+'\n📞 <b>Contatto:</b> '+contact+'\n📅 <b>Data:</b> '+date+'\n🕐 <b>Orario:</b> '+time+'\n👥 <b>Persone:</b> '+guests+'\n🎉 <b>Occasione:</b> '+occasion+'\n📝 <b>Note:</b> '+notes;
+  var message = '🍽 <b>NUOVA PRENOTAZIONE</b>\n<b>HUSHNOW CAFÉ °5</b>\n\n👤 <b>Nome:</b> '+name+'\n📞 <b>Contatto:</b> '+contact+'\n📅 <b>Data:</b> '+date+'\n🕐 <b>Orario:</b> '+time+'\n👥 <b>Persone:</b> '+guests+'\n🎉 <b>Occasione:</b> '+occasion+'\n📝 <b>Note:</b> '+notes;
   // WhatsApp notification
   var waTxt = '🍽 *NUOVA PRENOTAZIONE*\n*HUSHNOW CAFÉ °5*\n\n'
     + '👤 Nome: ' + name + '\n'
@@ -1056,7 +1100,13 @@ function submitReservation(e) {
       body: JSON.stringify({_subject:'Prenotazione HUSHNOW CAFÉ °5 — '+date+' ore '+time, nome:name, contatto:contact, data:date, orario:time, persone:guests, occasione:occasion, note:notes})
     }),
     sendTelegram(message)
-  ]).catch(function(err){ console.log('Error:',err); }).finally(function(){
+  ]).catch(function(err){ 
+    console.log('Reservation error:',err);
+    btn.textContent = origText;
+    btn.disabled = false;
+    alert(lang==='it'?'Errore di rete. Riprova.':'Network error. Please try again.');
+  }).then(function(){
+    if(!btn.disabled) return;
     btn.textContent = origText;
     btn.disabled = false;
     document.getElementById('resForm').style.display = 'none';
@@ -1075,29 +1125,29 @@ function selectToggle(groupId, btn) {
   btn.classList.add('active');
 }
 function getToggleVal(groupId) {
-  const a=document.querySelector('#'+groupId+' .toggle-btn.active');
+  var a=document.querySelector('#'+groupId+' .toggle-btn.active');
   return a?a.dataset.val:'no';
 }
 function submitEvent(e) {
   e.preventDefault();
-  const name    = document.getElementById('evName').value.trim();
-  const contact = document.getElementById('evContact').value.trim();
-  const date    = document.getElementById('evDate').value;
-  const time    = document.getElementById('evTime').value;
-  const guests  = document.getElementById('evGuests').value;
-  const type    = document.getElementById('evType').value;
-  const ff      = getToggleVal('ffGroup') === 'si' ? 'Si ✓' : 'No';
-  const dj      = getToggleVal('djGroup') === 'si' ? 'Si ✓' : 'No';
-  const notes   = document.getElementById('evNotes').value.trim() || '—';
+  var name    = document.getElementById('evName').value.trim();
+  var contact = document.getElementById('evContact').value.trim();
+  var date    = document.getElementById('evDate').value;
+  var time    = document.getElementById('evTime').value;
+  var guests  = document.getElementById('evGuests').value;
+  var type    = document.getElementById('evType').value;
+  var ff      = getToggleVal('ffGroup') === 'si' ? 'Si ✓' : 'No';
+  var dj      = getToggleVal('djGroup') === 'si' ? 'Si ✓' : 'No';
+  var notes   = document.getElementById('evNotes').value.trim() || '—';
   if(!name||!contact||!date||!time||!guests||!type){
     alert(lang==='it'?'Compila tutti i campi obbligatori.':'Please fill in all required fields.');
     return;
   }
-  const btn = e.target.querySelector('button[type="submit"]');
-  const origText = btn.textContent;
+  var btn = e.target.querySelector('button[type="submit"]');
+  var origText = btn.textContent;
   btn.textContent = '...';
   btn.disabled = true;
-  const message = '🎉 <b>NUOVO EVENTO</b>\n<b>HUSHNOW CAFÉ °5</b>\n\n👤 <b>Nome:</b> '+name+'\n📞 <b>Contatto:</b> '+contact+'\n📅 <b>Data:</b> '+date+'\n🕐 <b>Orario:</b> '+time+'\n👥 <b>Ospiti:</b> '+guests+'\n🎭 <b>Tipo:</b> '+type+'\n🍢 <b>Finger Food:</b> '+ff+'\n🎵 <b>DJ Set:</b> '+dj+'\n📝 <b>Note:</b> '+notes;
+  var message = '🎉 <b>NUOVO EVENTO</b>\n<b>HUSHNOW CAFÉ °5</b>\n\n👤 <b>Nome:</b> '+name+'\n📞 <b>Contatto:</b> '+contact+'\n📅 <b>Data:</b> '+date+'\n🕐 <b>Orario:</b> '+time+'\n👥 <b>Ospiti:</b> '+guests+'\n🎭 <b>Tipo:</b> '+type+'\n🍢 <b>Finger Food:</b> '+ff+'\n🎵 <b>DJ Set:</b> '+dj+'\n📝 <b>Note:</b> '+notes;
   // WhatsApp notification
   var waTxt = '🎉 *NUOVO EVENTO*\n*HUSHNOW CAFÉ °5*\n\n'
     + '👤 Nome: ' + name + '\n'
@@ -1119,7 +1169,13 @@ function submitEvent(e) {
       body: JSON.stringify({_subject:'Richiesta Evento HUSHNOW CAFÉ °5 — '+date+' — '+type, nome:name, contatto:contact, data:date, orario:time, ospiti:guests, tipo:type, finger_food:ff, dj_set:dj, note:notes})
     }),
     sendTelegram(message)
-  ]).catch(function(err){ console.log('Error:',err); }).finally(function(){
+  ]).catch(function(err){ 
+    console.log('Event error:',err);
+    btn.textContent = origText;
+    btn.disabled = false;
+    alert(lang==='it'?'Errore di rete. Riprova.':'Network error. Please try again.');
+  }).then(function(){
+    if(!btn.disabled) return;
     btn.textContent = origText;
     btn.disabled = false;
     document.getElementById('eventForm').style.display = 'none';
@@ -1134,7 +1190,7 @@ function resetEvent() {
   document.querySelectorAll('#ffGroup .toggle-btn,#djGroup .toggle-btn').forEach(function(b,i){ b.classList.toggle('active',i%2===0); });
 }
 
-const galleryItems = [
+var galleryItems = [
   {key:'espresso',    cap_it:'Espresso Napoletano',  cap_en:'Neapolitan Espresso'},
   {key:'cappuccino',  cap_it:'Cappuccino in Vetro',  cap_en:'Glass Cappuccino'},
   {key:'matcha',      cap_it:'Matcha Latte',         cap_en:'Matcha Latte'},
@@ -1168,13 +1224,12 @@ document.getElementById('heroBg').style.backgroundImage = 'url(' + LOGO_SRC + ')
 document.getElementById('heroBg').style.backgroundSize = 'cover';
 document.getElementById('heroBg').style.backgroundRepeat = 'no-repeat';
 document.getElementById('heroBg').style.backgroundPosition = 'center center';
-const reviews = [
-  { stars:5, text_it:"Un posto meraviglioso nel cuore di Napoli. Il caffè è eccezionale e l'atmosfera è unica. Ci torneremo sicuramente!", text_en:"A wonderful place in the heart of Naples. The coffee is exceptional and the atmosphere is unique. We will definitely come back!", text_de:"Ein wunderbarer Ort im Herzen von Neapel. Der Kaffee ist außergewöhnlich und die Atmosphäre einzigartig. Wir kommen definitiv wieder!", author:"Sofia M.", flag:"🇮🇹" },
-  { stars:5, text_it:"Il miglior matcha latte che abbia mai assaggiato a Napoli. Il design del locale è raffinatissimo.", text_en:"The best matcha latte I've ever had in Naples. The interior design is incredibly refined.", text_de:"Der beste Matcha Latte, den ich je in Neapel getrunken habe. Das Interieur ist unglaublich raffiniert.", author:"Thomas K.", flag:"🇩🇪" },
-  { stars:5, text_it:"Aperitivo perfetto, cocktail creativi e personale gentilissimo. Un'esperienza da non perdere!", text_en:"Perfect aperitif, creative cocktails and very kind staff. An experience not to be missed!", text_de:"Perfekter Aperitif, kreative Cocktails und sehr freundliches Personal. Ein Erlebnis, das man nicht verpassen sollte!", author:"Emma L.", flag:"🇬🇧" },
-  { stars:5, text_it:"L'atmosfera è magica, sembrava di essere in un set fotografico. I croissant sono deliziosi.", text_en:"The atmosphere is magical, it felt like being in a photo shoot. The croissants are delicious.", text_de:"Die Atmosphäre ist magisch, es fühlte sich an wie in einem Fotoshooting. Die Croissants sind köstlich.", author:"Giulia R.", flag:"🇮🇹" },
-  { stars:5, text_it:"Posto unico a Napoli. La colazione qui è un rituale, non solo un pasto. Tornerò presto!", text_en:"Unique place in Naples. Breakfast here is a ritual, not just a meal. I will be back soon!", text_de:"Einzigartiger Ort in Neapel. Das Frühstück hier ist ein Ritual. Ich komme bald wieder!", author:"Marco B.", flag:"🇮🇹" },
-  { stars:5, text_it:"Servizio impeccabile, ambiente elegante e caffè napoletano autentico. Consigliatissimo!", text_en:"Impeccable service, elegant atmosphere and authentic Neapolitan coffee. Highly recommended!", text_de:"Tadelloser Service, elegante Atmosphäre und authentischer neapolitanischer Kaffee. Sehr empfehlenswert!", author:"Hans W.", flag:"🇩🇪" },
+var reviews = [
+  { stars:5, text_it:"Un bar bellissimo. Sono stato accolto da una cameriera bionda dagli occhi chiari, incredibilmente gentile e accogliente, come solo noi a Napoli sappiamo fare. Brava anche nei consigli — ammetto di essere un cliente esigente, ma ha saputo accontentarmi. La qualità dei prodotti era eccellente.", text_en:"A lovely bar. I was greeted by a blonde waitress with light eyes who was incredibly kind and welcoming, as only we in Naples know how. She was also good at giving me advice — the quality of the products was excellent.", text_de:"Eine wunderschöne Bar. Ich wurde von einer blonden Kellnerin mit hellen Augen empfangen, unglaublich freundlich und zuvorkommend. Die Qualität der Produkte war ausgezeichnet.", author:"Vincenzo C.", flag:"🇮🇹" },
+  { stars:5, text_it:"Io e mia moglie siamo stati in questo bellissimo bar 'nascosto' nel cuore di Napoli due volte ed è stata un'immersione totale. Tutto fantastico, dai cocktail al cibo che il cameriere Filippo ci ha gentilmente offerto per farci assaggiare le loro specialità. Torneremo sicuramente!", text_en:"My wife and I have been in this beautiful hidden bar in the heart of Naples twice — full immersion experience. Amazing cocktails, and the waiter Filippo gently offered us their specialties. We will surely come back! Kiss from the states ❤️", text_de:"Meine Frau und ich waren zweimal in dieser wunderschönen versteckten Bar im Herzen von Neapel. Fantastische Cocktails und der Kellner Filippo war unglaublich aufmerksam. Wir kommen definitiv wieder!", author:"Michael W.", flag:"🇺🇸" },
+  { stars:5, text_it:"Appena entri, sei colpito dal colore e dall'atmosfera dell'ambiente caldo e accogliente, perfetto per un caffè o un tè nel pomeriggio. Perfetto anche per un aperitivo serale con gli amici.", text_en:"As soon as you enter, you're struck by the warm and comfortable setting, perfect for afternoon coffee or tea. Also perfect for an evening drink with friends.", text_de:"Sobald man eintritt, beeindruckt die warme und gemütliche Atmosphäre, perfekt für Nachmittagskaffee oder Tee. Auch ideal für einen abendlichen Aperitif.", author:"Roberto E.", flag:"🇮🇹" },
+  { stars:5, text_it:"Se soggiornate a Chiaia, questa è un'ottima opzione per una colazione varia e di alta qualità.", text_en:"If you are staying in Chiaia, this is a very good option for a varied and high-quality breakfast.", text_de:"Wenn Sie in Chiaia wohnen, ist dies eine sehr gute Option für ein abwechslungsreiches und hochwertiges Frühstück.", author:"M.E. A.", flag:"🌍" },
+  { stars:5, text_it:"Il locale è nuovo e accogliente. Il cibo è buono, ma soprattutto il personale, per lo più giovane, è preparato, disponibile e molto professionale.", text_en:"The place is new and welcoming. The food is good, but above all the staff, mostly young, is well-trained, helpful and very professional.", text_de:"Das Lokal ist neu und einladend. Das Essen ist gut, aber vor allem das Personal, überwiegend jung, ist gut ausgebildet, hilfsbereit und sehr professionell.", author:"Laura G.", flag:"🇮🇹" },
 ];
 function renderReviews() {
   var g = document.getElementById('reviewsGrid');
@@ -1225,10 +1280,10 @@ function drawQR() {
 setTimeout(drawQR, 300);
 
 function downloadQR() {
-  const div = document.getElementById('qrDiv');
-  const img = div ? div.querySelector('img') : null;
+  var div = document.getElementById('qrDiv');
+  var img = div ? div.querySelector('img') : null;
   if(img) {
-    const a = document.createElement('a');
+    var a = document.createElement('a');
     a.download = 'hushnow-qr.png';
     a.href = img.src;
     a.click();
@@ -1288,25 +1343,25 @@ function closePrivacyPolicy() {
 }
 initCookies();
 
-const cookieTexts = {
+var cookieTexts = {
   it: 'Utilizziamo cookie tecnici necessari e, con il tuo consenso, cookie analitici per migliorare la tua esperienza. <a href="#" onclick="showPrivacyPolicy()" style="color:var(--gold2)">Privacy Policy</a> 🇪🇺 GDPR',
   en: 'We use necessary cookies and, with your consent, analytics cookies to improve your experience. <a href="#" onclick="showPrivacyPolicy()" style="color:var(--gold2)">Privacy Policy</a> 🇪🇺 GDPR',
   de: 'Wir verwenden notwendige Cookies und mit Ihrer Zustimmung Analyse-Cookies. <a href="#" onclick="showPrivacyPolicy()" style="color:var(--gold2)">Datenschutz</a> 🇪🇺 DSGVO',
   es: 'Usamos cookies necesarias y, con su consentimiento, cookies analíticas. <a href="#" onclick="showPrivacyPolicy()" style="color:var(--gold2)">Privacidad</a> 🇪🇺 RGPD',
   fr: 'Nous utilisons des cookies nécessaires et, avec votre consentement, des cookies analytiques. <a href="#" onclick="showPrivacyPolicy()" style="color:var(--gold2)">Confidentialité</a> 🇪🇺 RGPD',
 };
-const cookieBtnTexts = {
+var cookieBtnTexts = {
   it: ['Accetta Tutto','Solo Necessari'], en: ['Accept All','Necessary Only'],
   de: ['Alles Akzeptieren','Nur Notwendige'], es: ['Aceptar Todo','Solo Necesarias'],
   fr: ['Tout Accepter','Seulement Nécessaires']
 };
 
-const _setLang = setLang;
+var _setLang = setLang;
 window.setLang = function(l) {
   _setLang(l);
-  const ct = document.getElementById('cookieText');
-  const ca = document.getElementById('cookieAccept');
-  const cd = document.getElementById('cookieDecline');
+  var ct = document.getElementById('cookieText');
+  var ca = document.getElementById('cookieAccept');
+  var cd = document.getElementById('cookieDecline');
   if(ct) ct.innerHTML = cookieTexts[l]||cookieTexts.en;
   if(ca) ca.textContent = (cookieBtnTexts[l]||cookieBtnTexts.en)[0];
   if(cd) cd.textContent = (cookieBtnTexts[l]||cookieBtnTexts.en)[1];
@@ -1314,14 +1369,14 @@ window.setLang = function(l) {
 
 ;
 
-const ALLERGENS = {
+var ALLERGENS = {
   it: ['Pesce','Molluschi','Latticini','Glutine','Frutta a guscio','Crostacei','Arachidi','Lupini','Uova','Anidride solforosa, Solfiti','Soia','Sesamo','Senape','Sedano'],
   en: ['Fish','Molluscs','Dairy','Gluten','Tree nuts','Crustaceans','Peanuts','Lupin','Eggs','Sulphur dioxide, Sulphites','Soya','Sesame','Mustard','Celery'],
   de: ['Fisch','Weichtiere','Milchprodukte','Gluten','Schalenfrüchte','Krebstiere','Erdnüsse','Lupinen','Eier','Schwefeldioxid, Sulfite','Soja','Sesam','Senf','Sellerie'],
   es: ['Pescado','Moluscos','Lácteos','Gluten','Frutos secos','Crustáceos','Cacahuetes','Altramuces','Huevos','Dióxido de azufre, Sulfitos','Soja','Sésamo','Mostaza','Apio'],
   fr: ['Poisson','Mollusques','Produits laitiers','Gluten','Fruits à coque','Crustacés','Arachides','Lupin','Oeufs','Dioxyde de soufre, Sulfites','Soja','Sésame','Moutarde','Céleri'],
 };
-const ALLERGEN_TEXTS = {
+var ALLERGEN_TEXTS = {
   title: {it:'ALLERGENI & INFORMAZIONI',en:'ALLERGENS & INFORMATION',de:'ALLERGENE & INFORMATIONEN',es:'ALÉRGENOS & INFORMACIÓN',fr:'ALLERGÈNES & INFORMATIONS'},
   subtitle: {
     it:'Elenco dei 14 principali allergeni che in base alla legislazione comunitaria devono essere identificati se usati nella preparazione degli alimenti:',
@@ -1376,22 +1431,28 @@ function openWhatsApp() {
   var msg = encodeURIComponent('Ciao HUSHNOW CAFÉ °5! Vorrei alcune informazioni.');
   window.open('https://wa.me/' + WHATSAPP_NUMBER + '?text=' + msg, '_blank');
 }
-let currentAdminCat = 'caffetteria';
-let currentAdminLang = 'it';
+
 
 function openAdmin() {
   var panel = document.getElementById('adminPanel');
   if(!panel) return;
-  panel.style.cssText = '';
-  panel.classList.add('open');
-  var lb = document.getElementById('loginBox');
-  var ad = document.getElementById('adminDash');
-  if(lb) lb.style.display = 'block';
-  if(ad) ad.style.display = 'none';
+  panel.style.display = 'block';
+  panel.style.position = 'fixed';
+  panel.style.top = '0';
+  panel.style.left = '0';
+  panel.style.right = '0';
+  panel.style.bottom = '0';
+  panel.style.zIndex = '99999';
+  panel.style.background = '#050505';
+  panel.style.overflowY = 'auto';
   panel.scrollTop = 0;
+  document.getElementById('loginBox').style.display = 'block';
+  document.getElementById('adminDash').style.display = 'none';
+  document.getElementById('adminPwd').value = '';
+  document.getElementById('loginErr').style.display = 'none';
 }
 
-let adminKeySeq = '';
+var adminKeySeq = '';
 document.addEventListener('keydown', function(e){
   if(document.getElementById('adminPanel').classList.contains('open')) return;
   adminKeySeq += e.key.toLowerCase();
@@ -1402,22 +1463,27 @@ document.addEventListener('keydown', function(e){
 function closeAdmin() {
   var panel = document.getElementById('adminPanel');
   if(!panel) return;
-  panel.classList.remove('open');
-  panel.style.cssText = '';
+  panel.style.display = 'none';
 }
 
+var ADMIN_PWD_HASH = 'aHVzaG5vdzU=';
+var currentAdminCat = 'caffetteria';
+var currentAdminLang = 'it';
+
 function checkPwd() {
-  const pwd = document.getElementById('adminPwd').value;
-  if (pwd === ADMIN_PWD) {
-    document.getElementById('loginBox').style.display = 'none';
-    document.getElementById('adminDash').style.display = 'block';
-    currentAdminCat = 'caffetteria';
-    loadMenuAdmin('caffetteria', 'it');
-    loadHoursAdmin();
-  } else {
-    document.getElementById('loginErr').style.display = 'block';
-    document.getElementById('adminPwd').value = '';
-  }
+  try {
+    var pwd = document.getElementById('adminPwd').value;
+    if (btoa(pwd) === ADMIN_PWD_HASH) {
+      document.getElementById('loginBox').style.display = 'none';
+      document.getElementById('adminDash').style.display = 'block';
+      currentAdminCat = 'caffetteria';
+      loadMenuAdmin('caffetteria', 'it');
+      loadHoursAdmin();
+    } else {
+      document.getElementById('loginErr').style.display = 'block';
+      document.getElementById('adminPwd').value = '';
+    }
+  } catch(err) { console.warn('checkPwd error:', err); }
 }
 
 function switchAdminTab(tabId) {
@@ -1498,7 +1564,7 @@ function saveMenuAdmin(lang) {
 }
 
 function addMenuItem(cat, lang) {
-  const newItem = {
+  var newItem = {
     it: 'Nuovo piatto', en: 'New item', de: 'Neues Gericht',
     dit: 'Descrizione', den: 'Description', dde: 'Beschreibung',
     price: '€0.00'
@@ -1515,7 +1581,7 @@ function deleteMenuItem(cat, idx, lang) {
 }
 
 function loadHoursAdmin() {
-  const list = document.getElementById('hoursAdminList');
+  var list = document.getElementById('hoursAdminList');
   if (!list) return;
   list.innerHTML = hoursData.map(function(h, i){
     var openVal = h.time ? h.time.split(' – ')[0] : '';
@@ -1529,24 +1595,24 @@ function loadHoursAdmin() {
 }
 
 function saveHoursAdmin() {
-  const rows = document.querySelectorAll('.hours-admin-item');
+  var rows = document.querySelectorAll('.hours-admin-item');
   rows.forEach(function(row, i){
-    const open = row.querySelector('.ha-open').value;
-    const close = row.querySelector('.ha-close').value;
+    var open = row.querySelector('.ha-open').value;
+    var close = row.querySelector('.ha-close').value;
     hoursData[i].time = (open && close) ? open + ' – ' + close : '';
   });
   renderHours();
   saveToStorage();
-  const saved = document.getElementById('saved-hours');
+  var saved = document.getElementById('saved-hours');
   saved.style.opacity = '1';
   setTimeout(function(){ saved.style.opacity='0'; }, 2500);
 }
 
 function saveInfoAdmin() {
-  const addr = document.getElementById('ai-address').value;
-  const email = document.getElementById('ai-email').value;
-  const ig = document.getElementById('ai-instagram').value;
-  const fb = document.getElementById('ai-facebook').value;
+  var addr = document.getElementById('ai-address').value;
+  var email = document.getElementById('ai-email').value;
+  var ig = document.getElementById('ai-instagram').value;
+  var fb = document.getElementById('ai-facebook').value;
   document.querySelectorAll('.contact-val').forEach(function(el){
     if (el.textContent.includes('Carlo Poerio')) el.innerHTML = addr.replace(',', ',<br>');
   });
@@ -1554,31 +1620,33 @@ function saveInfoAdmin() {
     a.href = 'mailto:' + email;
     a.textContent = email;
   });
-  const saved = document.getElementById('saved-info');
+  var saved = document.getElementById('saved-info');
   saved.style.opacity = '1';
   setTimeout(function(){ saved.style.opacity='0'; }, 2500);
 }
 
 document.addEventListener('keydown', function(e){
-  if (e.key === 'Escape') closeAdmin();
+  try { if (e.key === 'Escape') closeAdmin(); } catch(err){}
 });
 
 window.addEventListener('scroll', function(){
-  document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 60);
+  try { document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 60); } catch(err){}
 });
 
 // ─── INIT ────────────────────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', function() {
-  var savedLang = localStorage.getItem('hn_lang') || 'it';
-  // بارگذاری اولیه از localStorage (سریع)
-  _applyLocalStorage();
-  renderMenu('caffetteria');
-  renderHours();
-  renderGallery();
-  renderReviews();
-  setLang(savedLang);
-  // سپس از ابر آپدیت کن (در پس‌زمینه)
-  loadFromStorage();
+  try {
+    var savedLang = localStorage.getItem('hn_lang') || 'it';
+    _applyLocalStorage();
+    renderMenu('caffetteria');
+    renderHours();
+    renderGallery();
+    renderReviews();
+    setLang(savedLang);
+    loadFromStorage();
+  } catch(err) {
+    console.warn('Init error:', err);
+  }
 });
 </script>
 </body>
