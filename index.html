@@ -864,12 +864,12 @@ function renderMenu(cat, btn) {
     var note = WELCOME_NOTE[lang] || WELCOME_NOTE.it;
     welcomeHtml = '<div class="menu-welcome"><p>' + note + '</p></div>';
   }
-  if(cat === 'savory_breakfast') {
-    var timeNote = lang==='en' ? 'Available from 08:00 to 12:00'
-      : lang==='de' ? 'Verfügbar von 08:00 bis 12:00 Uhr'
-      : lang==='es' ? 'Disponible de 08:00 a 12:00'
-      : lang==='fr' ? 'Disponible de 08h00 à 12h00'
-      : 'Disponibile dalle 08:00 alle 12:00';
+  if(cat === 'dolce' || cat === 'savory_breakfast') {
+    var timeNote = lang==='en' ? 'Breakfast available from 08:00 to 12:00'
+      : lang==='de' ? 'Frühstück verfügbar von 08:00 bis 12:00 Uhr'
+      : lang==='es' ? 'Desayuno disponible de 08:00 a 12:00'
+      : lang==='fr' ? 'Petit-déjeuner disponible de 08h00 à 12h00'
+      : 'La colazione è disponibile dalle 08:00 alle 12:00';
     welcomeHtml = '<div class="menu-welcome"><p>' + timeNote + '</p></div>';
   }
   if(cat === 'whiskey' || cat === 'rum') {
