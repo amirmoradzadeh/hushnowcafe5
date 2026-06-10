@@ -158,11 +158,11 @@
     .menu-tab{background:none;border:1px solid var(--gold-line);color:var(--white-dim);border-radius:50px;padding:0.5rem 1.4rem;font-size:0.65rem;letter-spacing:0.18em;text-transform:uppercase;cursor:pointer;font-family:'Montserrat',sans-serif;transition:all 0.3s;}
     .menu-tab.active,.menu-tab:hover{background:var(--gold-dim);color:var(--gold2);border-color:var(--gold);}
     .menu-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.4rem;}
-    .menu-item{background:var(--bg3);border:1px solid rgba(201,169,110,0.12);border-radius:var(--radius);padding:1.4rem 1.6rem;display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;transition:border-color 0.3s;}
+    .menu-item{background:var(--bg3);border:1px solid rgba(201,169,110,0.15);border-radius:var(--radius);padding:1.4rem 1.6rem;display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;transition:border-color 0.3s;}
     .menu-item:hover{border-color:var(--gold-line);}
-    .menu-item-name{font-family:'Josefin Sans',sans-serif;font-size:1.05rem;font-weight:500;color:var(--white);margin-bottom:0.35rem;}
-    .menu-item-desc{font-size:0.72rem;color:var(--white-dim);line-height:1.6;}
-    .menu-item-price{font-family:'Josefin Sans',sans-serif;font-size:1rem;color:var(--gold2);white-space:nowrap;}
+    .menu-item-name{font-family:'Josefin Sans',sans-serif;font-size:1.05rem;font-weight:500;color:#ffffff;margin-bottom:0.35rem;letter-spacing:0.04em;}
+    .menu-item-desc{font-size:0.74rem;color:rgba(255,255,255,0.75);line-height:1.65;}
+    .menu-item-price{font-family:'Josefin Sans',sans-serif;font-size:1rem;color:var(--gold2);white-space:nowrap;font-weight:500;}
     /* HOURS */
     .hours-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem;margin-top:2rem;}
     .hours-card{background:var(--bg2);border:1px solid var(--gold-line);border-radius:var(--radius);padding:1.3rem 1.5rem;}
@@ -720,7 +720,8 @@ var menuData = {
     {it:'Insalata del Giorno',en:'Salad of the Day',de:'Tagessalat',es:'Ensalada del día',fr:'Salade du jour',dit:'Tonno / Uovo Sodo / Feta / Salmone / Patate / Pollo',den:'Tuna / Hard Boiled Egg / Feta / Salmon / Potatoes / Chicken',dde:'Thunfisch / Hartgekochtes Ei / Feta / Lachs / Kartoffeln / Hähnchen',des:'Atún / Huevo duro / Feta / Salmón / Patatas / Pollo',dfr:'Thon / Oeuf dur / Feta / Saumon / Pommes de terre / Poulet',price:'€10.00 / 12.00'},
     {it:'Aperitivo Gourmet',en:'Gourmet Aperitif',de:'Gourmet-Aperitif',es:'Aperitivo Gourmet',fr:'Apéritif Gourmet',dit:'Minimo 2 persone — 5 portate a testa secondo menù del giorno',den:'Minimum 2 people — 5 courses per person according to the daily menu',dde:'Mindestens 2 Personen — 5 Gänge pro Person nach Tagesmenü',des:'Mínimo 2 personas — 5 platos por persona según el menú del día',dfr:'Minimum 2 personnes — 5 plats par personne selon le menu du jour',price:'€12.00'},
     {it:'Piatto del Giorno',en:'Plate of the Day',de:'Tagesgericht',es:'Plato del día',fr:'Plat du jour',dit:'',den:'',dde:'',des:'',dfr:'',price:'€10.00 / 12.00'},
-    {it:'Fashion Fresella',en:'Fashion Fresella',de:'Fashion Fresella',es:'Fashion Fresella',fr:'Fashion Fresella',dit:'Fresella napoletana, pomodoro fresco, tonno, origano, basilico e olio extravergine d\'oliva — con burrata €12 (secondo disponibilità)',den:'Neapolitan fresella, fresh tomato, tuna, oregano, basil and extra virgin olive oil — with burrata €12 (subject to availability)',dde:'Neapolitanische Fresella, frische Tomate, Thunfisch, Oregano, Basilikum und natives Olivenöl — mit Burrata €12 (je nach Verfügbarkeit)',des:'Fresella napolitana, tomate fresco, atún, orégano, albahaca y aceite de oliva virgen extra — con burrata €12 (según disponibilidad)',dfr:'Fresella napolitaine, tomate fraîche, thon, origan, basilic et huile d\'olive extra vierge — avec burrata €12 (selon disponibilité)',price:'€10.00'},
+    {it:'Fashion Fresella',en:'Fashion Fresella',de:'Fashion Fresella',es:'Fashion Fresella',fr:'Fashion Fresella',dit:"Fresella napoletana, pomodoro fresco, tonno, origano, basilico e olio extravergine d'oliva",den:"Neapolitan fresella, fresh tomato, tuna, oregano, basil and extra virgin olive oil",dde:"Neapolitanische Fresella, frische Tomate, Thunfisch, Oregano, Basilikum und natives Olivenöl",des:"Fresella napolitana, tomate fresco, atún, orégano, albahaca y aceite de oliva virgen extra",dfr:"Fresella napolitaine, tomate fraîche, thon, origan, basilic et huile d'olive extra vierge",price:'€10.00'},
+    {it:'Fashion Fresella con Burrata',en:'Fashion Fresella with Burrata',de:'Fashion Fresella mit Burrata',es:'Fashion Fresella con Burrata',fr:'Fashion Fresella avec Burrata',dit:"Fresella napoletana, pomodoro fresco, origano, basilico, olio extravergine d'oliva e burrata — senza tonno",den:"Neapolitan fresella, fresh tomato, oregano, basil, extra virgin olive oil and burrata — without tuna",dde:"Neapolitanische Fresella, frische Tomate, Oregano, Basilikum, natives Olivenöl und Burrata — ohne Thunfisch",des:"Fresella napolitana, tomate fresco, orégano, albahaca, aceite de oliva virgen extra y burrata — sin atún",dfr:"Fresella napolitaine, tomate fraîche, origan, basilic, huile d'olive extra vierge et burrata — sans thon",price:'€12.00'},
     {it:'Profumo di Capri',en:'Profumo di Capri',de:'Profumo di Capri',es:'Profumo di Capri',fr:'Profumo di Capri',dit:'Pomodoro, mozzarella, basilico fresco, olio extravergine d\'oliva e buccia di limone',den:'Tomato, mozzarella, fresh basil, extra virgin olive oil and lemon zest',dde:'Tomate, Mozzarella, frisches Basilikum, natives Olivenöl und Zitronenschale',des:'Tomate, mozzarella, albahaca fresca, aceite de oliva virgen extra y ralladura de limón',dfr:'Tomate, mozzarella, basilic frais, huile d\'olive extra vierge et zeste de citron',price:'€10.00'},
   ],
   spritz: [
@@ -918,7 +919,7 @@ function renderMenu(cat, btn) {
 // ═══════════════════════════════════════════════════════════════
 // ☁️  JSONBIN CLOUD STORAGE — دیتابیس ابری رایگان
 // ═══════════════════════════════════════════════════════════════
-var MENU_VERSION = '4.8'; // هر بار منو عوض شد این رو بالا ببر
+var MENU_VERSION = '4.9'; // هر بار منو عوض شد این رو بالا ببر
 // راهنما: برای راه‌اندازی یک بار:
 //   1. به https://jsonbin.io بروید و ثبت نام کنید (رایگان)
 //   2. یک Bin جدید بسازید با محتوای: {}
